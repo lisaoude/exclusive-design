@@ -3,6 +3,9 @@
 ## :pencil2: Debrief
 Onze debrief is te vinden op [deze Notion pagina](https://www.notion.so/lisaoude/Debrief-991ec9b658554cc7b65f7a474989638f).
 
+</br>
+
+---
 
 
 ## :crown: Prioriteitenlijst (MoSCoW):
