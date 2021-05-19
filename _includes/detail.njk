@@ -8,6 +8,8 @@ site_title: Minor Exclusive Design
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asset&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Sansita:wght@400;700&display=swap" rel="stylesheet">
     <title>{{ site_title }}</title>
   </head>
 
@@ -17,12 +19,13 @@ site_title: Minor Exclusive Design
       <h1>{{ site_title }}</h1>
 
       <nav> 
-        <ul>
-            <li> <a href="/">Terug naar de homepagina</a></li>
+         <a href="/">Terug naar de homepagina</a>
       </nav>
     </header>
 
-    {{ content | safe }}
+    <main>
+      {{ content | safe }}
+    </main>
 
     <footer>
       <p> <a href="https://minoren.mijnhva.nl/2021-2022/exclusive-design" target="_blank">Naar HvA minor pagina</a> </p>
