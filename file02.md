@@ -1,5 +1,5 @@
 ---
-layout: detail.njk
+layout: template.njk
 title: Pagina 2
 ---
 

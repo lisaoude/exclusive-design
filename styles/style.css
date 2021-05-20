@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(229,229,229);
+  background-color: rgb(229, 229, 229);
 }
 
 main {
@@ -35,7 +35,7 @@ header::before {
   height: 160px;
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
-} 
+}
 
 header::after {
   content: '';
@@ -87,7 +87,6 @@ nav::after {
 
 nav {
   position: absolute;
-  background-color: white;
   max-width: 350px;
   height: auto;
   padding: 1em;
@@ -102,12 +101,12 @@ nav {
   top: 10em;
 }
 
-nav p{
+nav p {
   max-width: 60%;
 }
 
 nav ul {
-    display: none;
+  display: none;
 }
 
 nav button {
@@ -135,7 +134,7 @@ nav button:hover {
 /**********************/
 h1 {
   /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: clamp(1rem, -0.875rem + 7.666vw, 6rem); 
+  font-size: clamp(1rem, -0.875rem + 7.666vw, 6rem);
   font-family: 'Asset', cursive;
 }
 
@@ -165,10 +164,10 @@ a {
 }
 
 a:hover {
-  color:#565656;
+  color: #565656;
 }
 
-ul li{
+ul li {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -181,7 +180,7 @@ section:nth-of-type(2) h1 {
 /*     INFO MINOR     */
 /***********************/
 
-h2{
+h2 {
   position: relative;
 }
 
@@ -190,7 +189,7 @@ section:nth-of-type(1) {
   margin: 5em 0em 0em 0em;
 }
 
-section:nth-of-type(1) h2::before{
+section:nth-of-type(1) h2::before {
   content: '';
   position: absolute;
   top: 15px;
@@ -227,14 +226,14 @@ div {
   height: 650px;
 }
 
-div > article:nth-of-type(2) {
+div>article:nth-of-type(2) {
   position: absolute;
   top: 3em;
   left: 35vw;
   transform: rotate(10deg);
 }
 
-div > article:nth-of-type(3) {
+div>article:nth-of-type(3) {
   position: absolute;
   top: 12vw;
   left: 69vw;
@@ -257,7 +256,7 @@ section h1 {
   margin-bottom: 0.75em;
 }
 
-section::before {
+.overview section::before {
   content: '';
   position: absolute;
   top: 600px;
@@ -266,7 +265,7 @@ section::before {
   height: 500px;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -1;
-} 
+}
 
 
 section h1::before {
@@ -278,7 +277,7 @@ section h1::before {
   height: 170px;
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -2;
-} 
+}
 
 section h1::after {
   content: '';
@@ -291,20 +290,19 @@ section h1::after {
   z-index: -1;
 }
 
-section:nth-of-type(2) h2{
+section:nth-of-type(2) h2 {
   margin: .5em;
   text-align: right;
 }
 
-section:nth-of-type(2) article{
+section:nth-of-type(2) article {
   width: 20vw;
   text-align: right;
 }
 
-section:nth-of-type(2) article p:nth-of-type(1){
+section:nth-of-type(2) article p:nth-of-type(1) {
   font-weight: 700;
   font-family: 'Sansita', sans-serif;
-
 }
 
 
@@ -332,7 +330,7 @@ footer a:hover {
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
-@media (max-width: 720px){
+@media (max-width: 720px) {
   /**********************/
   /*      NAVIGATIE     */
   /**********************/
@@ -344,7 +342,7 @@ footer a:hover {
     left: auto;
   }
 
-  nav p{
+  nav p {
     max-width: 70%;
     font-size: 16px;
   }
@@ -354,7 +352,7 @@ footer a:hover {
     height: 70px;
     min-width: 70px;
   }
-  
+
   /***********************/
   /*     INFO MINOR     */
   /***********************/
@@ -362,7 +360,7 @@ footer a:hover {
   section:nth-of-type(1) {
     width: auto;
   }
-  
+
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
@@ -371,30 +369,30 @@ footer a:hover {
     align-items: center;
   }
 
-  div > article {
+  div>article {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  div > article p {
+  div>article p {
     width: 50vw;
     text-align: center;
     background-color: yellow;
   }
 
-  div > article:nth-of-type(1) {
+  div>article:nth-of-type(1) {
     transform: rotate(-20deg);
   }
-  
-  div > article:nth-of-type(2) {
+
+  div>article:nth-of-type(2) {
     position: relative;
     top: 3em;
     left: 0;
     transform: rotate(20deg);
   }
-  
-  div > article:nth-of-type(3) {
+
+  div>article:nth-of-type(3) {
     position: relative;
     top: 6em;
     left: 0;

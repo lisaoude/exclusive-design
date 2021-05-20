@@ -13,7 +13,7 @@ site_title: Exclusive Design
     <title>{{ site_title }}</title>
   </head>
 
-  <body>
+  <body class='overview'>
     <header>
       <h1>Exclusive De <br>
         sign</h1>
@@ -34,7 +34,9 @@ site_title: Exclusive Design
     </nav>
 
     <main>
-      <section>
+            {{ content | safe }}
+            
+      {# <section>
         <article>
           <h2>In de minor Exclusive Design..</h2>
             <p>.. ga je dingen bedenken en maken voor die mensen die we vaak vergeten. 
@@ -82,8 +84,7 @@ site_title: Exclusive Design
         </div>
 
         <a href="/minor-uitleg">Meer werk bekijken...</a>
-      </section>
-
+      </section> #}
 
     </main>
 

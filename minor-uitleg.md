@@ -1,5 +1,5 @@
 ---
-layout: detail.njk
+layout: template.njk
 title: Informatie Minor
 ---
 
@@ -118,7 +118,7 @@ Lijkt deze minor je wat? Tof! We horen heel graag van je waarom dat zo is.
 
 **Thema's:** Mens en Maatschappij, Media en Communicatie, Design en Creatie, Gezondheid, Techniek, ICT
 
-**Contacttijd:** Het is een intensive, fulltime minor
+**Contacttijd:** Het is een intensieve, fulltime minor
 
 **Contactpersoon:** Vasilis van Gemert
 
