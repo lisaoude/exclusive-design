@@ -1,5 +1,5 @@
 ---
-layout: template.njk
+layout: ./template.njk
 title: Informatie Minor
 ---
 
@@ -31,7 +31,7 @@ Na afloop van deze minor heb je grondige theoretische én praktische kennis van,
 <!------- Semester ------->
 <section>
 
-### In welk semester volgen:
+## In welk semester volgen:
 Blok 3 of 4
 
 </section>
@@ -40,7 +40,7 @@ Blok 3 of 4
 <!------- Aantal studenten ------->
 <section>
 
-### Aantal studenten
+## Aantal studenten
 **Minimaal:** 20 studenten  
 
 **Maximaal:** 25 studenten
