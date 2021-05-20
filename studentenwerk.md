@@ -1,5 +1,5 @@
 ---
-layout: ./template.njk
+layout: template.njk
 title: Studentenwerk
 ---
 
