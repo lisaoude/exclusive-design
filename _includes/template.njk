@@ -1,0 +1,102 @@
+--- 
+site_title: Exclusive Design
+---
+
+<!doctype html>
+<html lang="nl"> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/styles/general.css" rel="stylesheet">
+    <link href="/styles/overview.css" rel="stylesheet">
+    <link href="/styles/detail.css" rel="stylesheet">
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asset&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ site_title }}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Exclusive De <br>
+        sign</h1>
+    </header>
+    
+    <nav> 
+      <div class="circle"></div>
+      <p> Enig idee hoe het is om deze website te bekijken met een beperking?
+          Test het eens! </p>
+      <button> Klik</button>
+
+      <ul>
+        <li><button id='macula'>Macula Degeneratie (oogaandoening)</button></li>
+        <li><button id='motoriek'>Motorische aandoening</button></li>
+        <li><button id='concentratie'>Concentratiestoornis</button></li>
+        <li><button id='laaggeletterd'>Laaggeletterd</button></li>
+        <li><button id='doof'>Doof</button></li>
+      </ul>
+    </nav>
+
+    <main>
+            {{ content | safe }}
+            
+      {# <section>
+        <article>
+          <h2>In de minor Exclusive Design..</h2>
+            <p>.. ga je dingen bedenken en maken voor die mensen die we vaak vergeten. 
+           Je gaat tailor made oplossingen ontwerpen voor én met echte mensen met 
+           echte beperkingen, lichamelijk of geestelijk. Heel specifiek en heel 
+           exclusief voor één enkel mens. Vandaar de naam Exclusive Design.</p>
+
+            <p>.. ga je intensief samenwerken met studenten van uiteenlopende studies. 
+            Iedereen brengt zijn eigen expertise mee. Net als degene voor wie, en 
+            met wie, je gaat ontwerpen. Het is je wellicht al opgevallen maar 
+            telkens wordt er benadrukt dat je niet alleen voor iemand gaat ontwerpen, 
+            maar vooral ook samen met deze persoon. Het is de bedoeling dat zijn of haar 
+           identiteit en expertise een grote rol spelen in het ontwerpproces; net zoals 
+           jouw identiteit en expertise.</p>
+
+            <a href="/minor-uitleg">Lees meer over de minor...</a>
+        </article>
+      </section>
+
+      <section>
+        <h1>Studenten <br>
+          werk</h1>
+
+        <div> 
+          <article>
+            <h2>Werk 1</h2>
+            <img src="images/dummy_img_01.png" alt="dummy img 01">
+            <p>Studentnaam</p>
+            <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
+          </article>
+
+          <article>
+            <h2> Werk 2</h2>
+            <img src="images/dummy_img_02.png" alt="dummy img 02">
+            <p>Studentnaam</p>
+            <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
+          </article>
+
+          <article>
+            <h2> Werk 3</h2>
+           0 <img src="images/dummy_img_03.png" alt="dummy img 03">
+            <p>Studentnaam</p>
+            <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
+          </article>
+        </div>
+
+        <a href="/minor-uitleg">Meer werk bekijken...</a>
+      </section> #}
+
+    </main>
+
+    <footer>
+      <p> <a href="https://minoren.mijnhva.nl/2021-2022/exclusive-design" target="_blank">Naar HvA minor pagina</a> </p>
+    </footer>
+
+  </body>
+
+</html>
