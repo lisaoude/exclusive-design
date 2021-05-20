@@ -17,6 +17,7 @@ main {
   margin: 0 auto;
 }
 
+
 /*********************/
 /*       HEADER      */
 /*********************/
@@ -85,10 +86,10 @@ nav::after {
   z-index: -1;
 }
 
+
 /**********************/
 /*      NAVIGATIE     */
 /**********************/
-
 div > p a {
   position: absolute;
   top: 1em;
@@ -110,7 +111,6 @@ nav {
   left: 35em;
   top: 10em;
 }
-
 
 nav p {
   max-width: 60%;
@@ -139,6 +139,7 @@ nav button:hover {
   cursor: pointer;
   box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.25);
 }
+
 
 /**********************/
 /*     TYPOGRAFIE     */
@@ -187,10 +188,10 @@ section:nth-of-type(2) h1 {
   text-align: right;
 }
 
-/***********************/
-/*     INFO MINOR     */
-/***********************/
 
+/*************************/
+/*  INFO MINOR OVERVIEW  */
+/*************************/
 h2 {
   position: relative;
 }
@@ -222,33 +223,13 @@ section:nth-of-type(1) h2::after {
   z-index: -2;
 }
 
-/***********************/
-/*    STUDENTENWERK    */
-/***********************/
+
+/****************************/
+/*  STUDENTENWERK OVERVIEW  */
+/****************************/
 img {
   width: 20vw;
   height: auto;
-}
-
-.overview div {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  height: 650px;
-}
-
-.overview div > article:nth-of-type(2) {
-  position: absolute;
-  top: 3em;
-  left: 33vw;
-  transform: rotate(10deg);
-}
-
-.overview div > article:nth-of-type(3) {
-  position: absolute;
-  top: 12vw;
-  left: 65vw;
-  transform: rotate(20deg);
 }
 
 section:nth-of-type(2) a {
@@ -266,21 +247,6 @@ section {
 section h1 {
   position: relative;
   margin-bottom: 0.75em;
-}
-
-.overview section:nth-of-type(2) {
-  position: relative;
-}
-
-.overview section:nth-of-type(2)::before {
-  content: '';
-  position: absolute;
-  top: -250px;
-  left: 480px;
-  width: 130px;
-  height: 600px;
-  background-color: rgba(150, 231, 168, 0.7);
-  z-index: -1;
 }
 
 section h1::before {
@@ -305,11 +271,6 @@ section h1::after {
   z-index: -1;
 }
 
-.overview section:nth-of-type(2) h2 {
-  margin: .5em;
-  text-align: right;
-}
-
 section:nth-of-type(2) article {
   width: 20vw;
   text-align: right;
@@ -318,57 +279,6 @@ section:nth-of-type(2) article {
 section:nth-of-type(2) article p:nth-of-type(1) {
   font-weight: 700;
   font-family: 'Sansita', sans-serif;
-}
-
-/****************************/
-/*  LAYOUT - MINOR UITLEG  */
-/**************************/
-
-.minor-uitleg h2{
-  font-size: 42px;
-}
-
-.minor-uitleg section {
-  width: 50vw;
-}
-
-.minor-uitleg section:nth-of-type(odd):not(section:nth-of-type(1)) {
-  text-align: right;
-  margin: 0 0 0 auto;
-}
-
-.minor-uitleg section:nth-of-type(4) h3:nth-of-type(1) {
-  width: 6.75em;
-  background-color: #fffb00;
-  box-shadow: -0.4em 0 0 0 #fffb00;
-}
-
-.minor-uitleg section:nth-of-type(4) h3:nth-of-type(2) {
-  width: 8.35em;
-  background-color: #de6ee2;
-  box-shadow: -0.4em 0 0 0 #de6ee2;
-}
-
-.minor-uitleg section:nth-of-type(4) h3:nth-of-type(3) {
-  width: 7.5em;
-  background-color: #8cd7ed;
-  box-shadow: -0.4em 0 0 0 #8cd7ed;
-}
-
-.minor-uitleg section:nth-of-type(4) h3:nth-of-type(4) {
-  width: 6.35em;
-  background-color: #8ec84c;
-  box-shadow: -0.4em 0 0 0 #8ec84c;
-}
-
-.minor-uitleg ul {
-  margin: 0.25em 0 2em 2em;
-}
-
-.minor-uitleg ul li::marker {
-  position: absolute;
-  left: 30em;
-  font-size: 20px;
 }
 
 
@@ -393,14 +303,15 @@ footer a:hover {
   color: #b6b6b6;
 }
 
+
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
 @media (max-width: 720px) {
+
   /**********************/
   /*      NAVIGATIE     */
   /**********************/
-
   nav {
     width: auto;
     position: relative;
@@ -419,54 +330,18 @@ footer a:hover {
     min-width: 70px;
   }
 
+
   /***********************/
   /*     INFO MINOR     */
   /***********************/
-
   section:nth-of-type(1) {
     width: auto;
   }
 
+  
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
-  .overview div {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    height: 1560px;
-  }
-
-  .overview div > article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .overview div > article p {
-    width: 50vw;
-    text-align: center;
-    background-color: yellow;
-  }
-
-  .overview div > article:nth-of-type(1) {
-    transform: rotate(-20deg);
-  }
-
-  .overview div > article:nth-of-type(2) {
-    position: relative;
-    top: 3em;
-    left: 0;
-    transform: rotate(20deg);
-  }
-
-  .overview div > article:nth-of-type(3) {
-    position: relative;
-    top: 6em;
-    left: 0;
-    transform: rotate(-20deg);
-  }
-
   img {
     width: 40vw;
     height: auto;
