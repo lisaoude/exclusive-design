@@ -4,14 +4,17 @@
 * {
   margin: 0rem;
   padding: 0rem;
+  box-sizing: border-box;
 }
+
 
 body {
   background-color: rgb(229, 229, 229);
+  overflow-x: hidden;
 }
 
 main {
-  width: 96%;
+  width: 88%;
   margin: 0 auto;
 }
 
@@ -19,17 +22,19 @@ main {
 /*       HEADER      */
 /**********************/
 header {
+  position: relative;
   margin-top: 4em;
 }
 
 header h1 {
+  position: relative;
   margin-left: 0.25em;
 }
 
 header::before {
   content: '';
   position: absolute;
-  top: 20px;
+  top: -30px;
   left: 340px;
   width: 970px;
   height: 160px;
@@ -40,7 +45,7 @@ header::before {
 header::after {
   content: '';
   position: absolute;
-  top: 140px;
+  top: 70px;
   left: 1110px;
   width: 180px;
   height: 90px;
@@ -51,8 +56,8 @@ header::after {
 header h1::before {
   content: '';
   position: absolute;
-  top: 40px;
-  left: 8px;
+  top: -10px;
+  left: -10px;
   width: 110px;
   height: 140px;
   background-color: rgba(237, 122, 205, 0.9);
@@ -62,10 +67,10 @@ header h1::before {
 header h1::after {
   content: '';
   position: absolute;
-  top: 140px;
-  left: 80px;
+  top: 70px;
+  left: 50px;
   width: 650px;
-  height: 180px;
+  height: 190px;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -2;
 }
@@ -74,7 +79,7 @@ nav::after {
   content: '';
   position: absolute;
   top: -86px;
-  left: -115px;
+  left: -150px;
   width: 395px;
   height: 140px;
   background-color: rgba(237, 122, 205, 0.9);
@@ -85,21 +90,28 @@ nav::after {
 /*      NAVIGATIE     */
 /**********************/
 
+div > p a {
+  position: absolute;
+  top: 1em;
+  font-size: 24px;
+}
+
 nav {
   position: absolute;
-  max-width: 350px;
+  max-width: 550px;
   height: auto;
   padding: 1em;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   margin: 1em;
   margin-top: 3em;
-  text-align: right;
+  text-align: right; 
   left: 35em;
   top: 10em;
 }
+
 
 nav p {
   max-width: 60%;
@@ -185,7 +197,7 @@ h2 {
 }
 
 section:nth-of-type(1) {
-  width: 65vw;
+  width: 50vw;
   margin: 5em 0em 0em 0em;
 }
 
@@ -219,24 +231,24 @@ img {
   height: auto;
 }
 
-div {
+.overview div {
   position: relative;
   display: flex;
   flex-direction: row;
   height: 650px;
 }
 
-div>article:nth-of-type(2) {
+.overview div > article:nth-of-type(2) {
   position: absolute;
   top: 3em;
-  left: 35vw;
+  left: 33vw;
   transform: rotate(10deg);
 }
 
-div>article:nth-of-type(3) {
+.overview div > article:nth-of-type(3) {
   position: absolute;
   top: 12vw;
-  left: 69vw;
+  left: 65vw;
   transform: rotate(20deg);
 }
 
@@ -253,26 +265,30 @@ section {
 }
 
 section h1 {
+  position: relative;
   margin-bottom: 0.75em;
 }
 
-.overview section::before {
+.overview section:nth-of-type(2) {
+  position: relative;
+}
+
+.overview section:nth-of-type(2)::before {
   content: '';
   position: absolute;
-  top: 600px;
-  left: 630px;
+  top: -250px;
+  left: 480px;
   width: 130px;
-  height: 500px;
+  height: 600px;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -1;
 }
 
-
 section h1::before {
   content: '';
   position: absolute;
-  top: 860px;
-  left: 280px;
+  top: 70px;
+  left: 150px;
   width: 1160px;
   height: 170px;
   background-color: rgba(237, 122, 205, 0.9);
@@ -282,8 +298,8 @@ section h1::before {
 section h1::after {
   content: '';
   position: absolute;
-  top: 920px;
-  left: 700px;
+  top: 150px;
+  left: 550px;
   width: 330px;
   height: 140px;
   background-color: rgba(139, 225, 231, 0.8);
@@ -303,6 +319,19 @@ section:nth-of-type(2) article {
 section:nth-of-type(2) article p:nth-of-type(1) {
   font-weight: 700;
   font-family: 'Sansita', sans-serif;
+}
+
+/****************************/
+/*  LAYOUT - MINOR UITLEG  */
+/**************************/
+
+.minor-uitleg section {
+  width: 65vw;
+}
+
+.minor-uitleg section:nth-of-type(even) {
+  text-align: right;
+  margin: 0 0 0 auto;
 }
 
 
@@ -364,35 +393,35 @@ footer a:hover {
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
-  div {
+  .overview div {
     flex-direction: column;
     align-items: center;
   }
 
-  div>article {
+  .overview div > article {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  div>article p {
+  .overview div > article p {
     width: 50vw;
     text-align: center;
     background-color: yellow;
   }
 
-  div>article:nth-of-type(1) {
+  .overview div > article:nth-of-type(1) {
     transform: rotate(-20deg);
   }
 
-  div>article:nth-of-type(2) {
+  .overview div > article:nth-of-type(2) {
     position: relative;
     top: 3em;
     left: 0;
     transform: rotate(20deg);
   }
 
-  div>article:nth-of-type(3) {
+  .overview div > article:nth-of-type(3) {
     position: relative;
     top: 6em;
     left: 0;

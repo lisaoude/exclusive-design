@@ -4,6 +4,11 @@ title: Informatie Minor
 ---
 
 <!------- Minor Beschrijving ------->
+
+<div class="minor-uitleg">
+
+[terug naar home](/)
+
 <section>
 
 ## Wat houdt de minor in?
@@ -123,3 +128,5 @@ Lijkt deze minor je wat? Tof! We horen heel graag van je waarom dat zo is.
 **Contactpersoon:** Vasilis van Gemert
 
 </section>
+
+</div>

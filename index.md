@@ -3,6 +3,8 @@ layout: template.njk
 title: Overview Minor
 ---
 
+<div class="overview">
+
 <section>
 <article>
 
@@ -29,7 +31,7 @@ jouw identiteit en expertise.
 </section>
 
 <!------- Studentenwerk ------->
-<section>
+<section class='werk'>
 
 # Studenten <br> werk 
 
@@ -82,3 +84,5 @@ Verhaaltje Verhaaltje Verhaaltje Verhaaltje
 [Meer werk bekijken...](/minor-uitleg)  
 
 </section>
+
+</div>
