@@ -1,4 +1,4 @@
 ---
 layout: template.njk
-title: Studentenwerk
+title: Omschrijving Minor
 ---

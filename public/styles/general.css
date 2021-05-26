@@ -10,6 +10,7 @@
 body {
   background-color: rgb(229, 229, 229);
   overflow-x: hidden;
+  position: relative;
 }
 
 main {
@@ -17,6 +18,52 @@ main {
   margin: 0 auto;
 }
 
+/**********************/
+/*     TYPOGRAFIE     */
+/**********************/
+h1 {
+  /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
+  font-size: clamp(1rem, -0.875rem + 7.666vw, 6rem);
+  font-family: 'Asset', cursive;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: 'Sansita', sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 1em 0em;
+}
+
+a {
+  font-size: 20px;
+  font-family: 'Sansita', sans-serif;
+  text-decoration: underline;
+  color: black;
+}
+
+a:hover {
+  color: #565656;
+}
+
+ul li {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section:nth-of-type(2) h1 {
+  text-align: right;
+}
 
 /*********************/
 /*       HEADER      */
@@ -78,7 +125,7 @@ header h1::after {
 nav::after {
   content: '';
   position: absolute;
-  top: -86px;
+  top: -60px;
   left: -150px;
   width: 395px;
   height: 140px;
@@ -98,7 +145,7 @@ div > p a {
 
 nav {
   position: absolute;
-  max-width: 550px;
+  width: 10vw;
   height: auto;
   padding: 1em;
   display: flex; 
@@ -109,18 +156,35 @@ nav {
   margin-top: 3em;
   text-align: right; 
   left: 35em;
-  top: 10em;
-}
-
-nav p {
-  max-width: 60%;
+  top: 4em;
 }
 
 nav ul {
-  display: none;
+  display: inline-block;
+  list-style: none;
+  background-color: rgb(235, 128, 66);
+  padding: 1em;
+  margin:1em;
+  position: absolute;
+  right: -10000px;
+  top: 0;
+  max-width: 300px;
+  transition: .5s ease-in-out;
 }
 
-nav button {
+nav ul button {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  width: auto;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: .5em;
+  margin: .5em;
+  width: 550px;
+}
+
+nav button#klik {
   background-color: black;
   border-radius: 50%;
   height: 100px;
@@ -134,58 +198,19 @@ nav button {
   box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-nav button:hover {
+nav button#klik:hover {
   background-color: rgb(56, 56, 56);
   cursor: pointer;
   box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-
+/************************/
+/*     SHOW BUTTON     */
 /**********************/
-/*     TYPOGRAFIE     */
-/**********************/
-h1 {
-  /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: clamp(1rem, -0.875rem + 7.666vw, 6rem);
-  font-family: 'Asset', cursive;
-}
 
-h2 {
-  font-size: 28px;
-  font-family: 'Sansita', sans-serif;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 28px;
-  font-family: 'Sansita', sans-serif;
-  font-weight: 400;
-}
-
-p {
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  margin: 1em 0em;
-}
-
-a {
-  font-size: 20px;
-  font-family: 'Sansita', sans-serif;
-  text-decoration: underline;
-  color: black;
-}
-
-a:hover {
-  color: #565656;
-}
-
-ul li {
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-section:nth-of-type(2) h1 {
-  text-align: right;
+.show ul {
+  display: inline-block;
+  right: -52vw;
 }
 
 
