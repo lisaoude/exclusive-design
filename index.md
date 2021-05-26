@@ -1,4 +1,4 @@
 ---
-layout: template.njk
+layout: template-index.njk
 title: Overview Minor
 ---

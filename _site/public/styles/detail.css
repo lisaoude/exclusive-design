@@ -48,3 +48,19 @@
   left: 30em;
   font-size: 20px;
 }
+
+/* .minor-uitleg section p:not(p::first-letter) {
+  margin-top: 2000px;
+}  */
+
+
+.minor-uitleg section p::first-letter {
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Sansita', sans-serif;
+  margin-right: 2px;
+}
+
+/* .minor-uitleg section p::first-line {
+  line-height: 40px;
+} */
