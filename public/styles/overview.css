@@ -1,12 +1,49 @@
 /***********************/
+/*    IN DE MINOR..    */
+/***********************/
+.overview section:nth-of-type(1) h2::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 185px;
+  height: 30px;
+  background-color: rgba(139, 225, 231, 0.8);
+  z-index: -1;
+  animation-name: blue-to-green;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+.overview section:nth-of-type(1) h2::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 115px;
+  width: 180px;
+  height: 40px;
+  background-color: rgba(237, 122, 205, 0.9);
+  z-index: -2;
+  animation-name: pink-to-purple;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+}
+
+
+/***********************/
 /*    STUDENTENWERK    */
 /***********************/
-.overview div {
+.overview section:nth-of-type(2) div {
   position: relative;
   display: flex;
   flex-direction: row;
   height: 650px;
 }
+
+.overview section:nth-of-type(1) {
+  width: auto;
+}
+
 
 .overview div > article:nth-of-type(2) {
   position: absolute;
@@ -42,6 +79,31 @@
   text-align: right;
 }
 
+.overview section:first-of-type p::first-line{
+  font-weight: 700;
+}
+
+.overview section:first-of-type{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0fr);
+}
+
+.overview section:first-of-type div{
+  margin: auto;
+  grid-area: 1 / 2 / 3 / 2;
+}
+
+.overview section:first-of-type div img{
+  width: 20vw;
+  height: 20vw;
+  transform: rotate(20deg);
+}
+
+.overview section:first-of-type article:nth-of-type(2){
+  grid-row-start: 2;
+}
+
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
@@ -52,6 +114,7 @@
   /***********************/
   .overview div {
     position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 1560px;

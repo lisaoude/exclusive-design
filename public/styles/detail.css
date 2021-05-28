@@ -9,7 +9,6 @@
 .minor-uitleg section {
   width: 50vw;
 }
-
 .minor-uitleg section:nth-of-type(odd):not(section:nth-of-type(1)) {
   text-align: right;
   margin: 0 0 0 auto;
@@ -48,3 +47,112 @@
   left: 30em;
   font-size: 20px;
 }
+
+/****************************/
+/*      TEKST STYLING      */
+/**************************/
+
+
+.minor-uitleg section:first-of-type p::first-letter {
+  font-weight: bold;
+  font-size: 88px;
+  font-family: 'Sansita', sans-serif;
+  float: left;
+  line-height: 1em;
+  margin: 0 .3em;
+}
+
+.minor-uitleg section:first-of-type p {
+  position: relative;
+}
+
+/* alle articles before */
+.minor-uitleg section:first-of-type article p::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  /* verwijderen  */
+  top: .5em;
+  left: -.6em;
+  width: 90px;
+  height: 90px;
+  background-color: hotpink;
+}
+
+/* article 1 */
+.minor-uitleg section:first-of-type article:nth-of-type(1) p::before {
+  top: .5em;
+  left: -.6em;
+  width: 90px;
+  height: 90px;
+  background-color: green;
+  transform: rotate(-15deg);
+}
+
+/* article 2 */
+.minor-uitleg section:first-of-type article:nth-of-type(2) p::before {
+  top: .5em;
+  left: -.7em;
+  width: 130px;
+  height: 100px;
+  background-color: purple;
+  transform: rotate(105deg);
+}
+
+/* article 3 */
+.minor-uitleg section:first-of-type article:nth-of-type(3) p::before {
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 70px;
+  background-color: blue;
+  transform: rotate(10deg);
+}
+
+.minor-uitleg section:first-of-type article:nth-of-type(3) p::after {
+  content: '';
+  position: absolute;
+  top: 3em;
+  left: -1em;
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  transform: rotate(-20deg);
+  z-index: -2;
+}
+
+/* article 4 */
+.minor-uitleg section:first-of-type article:nth-of-type(4) p::before {
+  top: .25em;
+  left: .25em;
+  width: 70px;
+  height: 100px;
+  background-color: orange;
+  transform: rotate(17deg);
+}
+
+/* article 5 */
+.minor-uitleg section:first-of-type article:nth-of-type(5) p::before {
+  top: -9em;
+  left: 2em;
+  width: 80px;
+  height: 300px;
+  background-color: cyan;
+  transform: rotate(17deg);
+  z-index: -3;
+}
+
+
+.minor-uitleg section article > p::first-line {
+  font-weight: 700;
+}
+
+.minor-uitleg section h2 {
+  margin-top: 2em;
+}
+
+
+/* .minor-uitleg section p::first-line {
+  line-height: 40px;
+} */
