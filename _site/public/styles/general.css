@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(229, 229, 229);
   overflow-x: hidden;
@@ -28,26 +33,26 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2.5rem;
   font-family: 'Sansita', sans-serif;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-family: 'Sansita', sans-serif;
   font-weight: 400;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-family: 'Open Sans', sans-serif;
   margin: 1em 0em;
   line-height: 2rem;
 }
 
 a {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: 'Sansita', sans-serif;
   text-decoration: underline;
   color: black;
@@ -58,7 +63,7 @@ a:hover {
 }
 
 ul li {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 2rem;
 }
@@ -72,33 +77,34 @@ section:nth-of-type(2) h1 {
 /*********************/
 header {
   position: relative;
-  margin-top: 4em;
+  margin-top: 4rem;
   transition: .5s;
+  z-index: 100;
 }
 
 header h1 {
   position: relative;
-  margin-left: 0.25em;
+  margin-left: 1.5rem;
   transition: .5s;
 }
 
 /*state*/
 header:hover {
   transform: scale(1.02);
-  filter: drop-shadow(1em 1em #2e05131a);
+  filter: drop-shadow(1rem 1rem #2e05131a);
 }
 
 header:hover span{
-  filter: drop-shadow(.1em .1em #2e05131a);
+  filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
 header::before {
   content: '';
   position: absolute;
-  top: -30px;
-  left: 340px;
-  width: 970px;
-  height: 160px;
+  top: -1.875rem;
+  left: 21.25rem;
+  width: 60.625rem;
+  height: 10rem;
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
   animation-name: blue-to-green;
@@ -109,10 +115,10 @@ header::before {
 header::after {
   content: '';
   position: absolute;
-  top: 70px;
-  left: 1110px;
-  width: 180px;
-  height: 90px;
+  top: 4.375rem;
+  left: 69.375rem;
+  width: 11.25rem;
+  height: 5.625rem;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -1;
   animation-name: green-to-pink;
@@ -123,10 +129,10 @@ header::after {
 header h1::before {
   content: '';
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 110px;
-  height: 140px;
+  top: -0.625rem;
+  left: -0.625rem;
+  width: 6.875rem;
+  height: 8.75rem;
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -1;
   animation-name: pink-to-purple;
@@ -137,10 +143,10 @@ header h1::before {
 header h1::after {
   content: '';
   position: absolute;
-  top: 70px;
-  left: 50px;
-  width: 650px;
-  height: 190px;
+  top: 4.375rem;
+  left: 3.125rem;
+  width: 40.625rem;
+  height: 11.875rem;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -2;
   animation-name: green-to-pink;
@@ -151,9 +157,9 @@ header h1::after {
 nav::after {
   content: '';
   position: absolute;
-  top: -60px;
-  left: -150px;
-  width: 395px;
+  top: -3.75rem;
+  left: -9.375rem;
+  width: 24.7rem;
   height: 140px;
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -1;
@@ -171,28 +177,27 @@ nav {
   position: absolute;
   width: 10vw;
   height: auto;
-  padding: 1em;
+  padding: 1rem;
   display: flex; 
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 1em;
-  margin-top: 3em;
+  margin: 1rem;
   text-align: right; 
-  left: 35em;
-  top: 4em;
+  left: 35rem;
+  top: 6.5rem;
 }
 
 nav ul {
   display: inline-block;
   list-style: none;
   background-color:  #B55721;
-  padding: 1em;
-  margin:1em;
+  padding: 1rem;
+  margin: 1rem;
   position: absolute;
-  right: -10000px;
+  right: -10000rem;
   top: 0;
-  max-width: 300px;
+  max-width: 18.75rem;
   transition: .5s ease-in-out;
   color: white;
   text-align: center;
@@ -200,18 +205,18 @@ nav ul {
 }
 
 nav ul li {
-  margin: 1em;
+  margin: 1rem;
 }
 
 
 nav ul button {
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   width: auto;
   color: white;
   border: none;
-  padding: .5em;
-  margin: .5em auto;
+  padding: .5rem;
+  margin: .5rem auto;
   display: block;
   width: auto;
 }
@@ -219,12 +224,12 @@ nav ul button {
 nav button#klik {
   background-color: black;
   border-radius: 50%;
-  height: 100px;
-  min-width: 100px;
+  height: 6.25rem;
+  min-width: 6.25rem;
   color: white;
   border: none;
   transition: .5s ease;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-family: 'Sansita', sans-serif;
   font-weight: 700;
   box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.25);
@@ -266,7 +271,7 @@ h2 {
 
 section:nth-of-type(1) {
   width: 50vw;
-  margin: 5em 0em 0em 5em;
+  margin: 5rem 0em 0em 5rem;
 }
 
 /****************************/
@@ -280,27 +285,27 @@ img {
 section:nth-of-type(2) a {
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 section {
-  margin-top: 6em;
+  margin-top: 6rem;
 }
 
 section h1 {
   position: relative;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.75rem;
 }
 
 section h1::before {
   content: '';
   position: absolute;
-  top: 70px;
-  left: 150px;
-  width: 1160px;
-  height: 170px;
+  top: 4.375rem;
+  left: 9.375rem;
+  width: 72.5rem;
+  height: 10.625rem;
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -2;
   animation-name: pink-to-purple;
@@ -311,14 +316,14 @@ section h1::before {
 section h1::after {
   content: '';
   position: absolute;
-  top: 150px;
-  left: 550px;
-  width: 330px;
-  height: 140px;
+  top: 9.375rem;
+  left: 34.375rem;
+  width: 20.625rem;
+  height: 8.75rem;
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
   animation-name: blue-to-green;
-  animation-duration: 609+s;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
 }
 
@@ -343,7 +348,7 @@ footer {
   align-items: center;
   background-color: #000000;
   width: 100%;
-  height: 4.5em;
+  height: 4.5rem;
 }
 
 footer a {
@@ -372,13 +377,13 @@ footer a:hover {
 
   nav p {
     max-width: 70%;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   nav button {
     border-radius: 50%;
-    height: 70px;
-    min-width: 70px;
+    height: 4.375rem;
+    min-width: 4.375rem;
   }
 
 
@@ -501,5 +506,15 @@ footer a:hover {
   100% {
     background-color: rgba(139, 225, 231, 0.8);
     animation-timing-function: ease-out;
+  }
+}
+
+@keyframes rotate-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(20deg);
   }
 }

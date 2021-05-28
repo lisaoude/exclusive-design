@@ -4,10 +4,10 @@
 .overview section:nth-of-type(1) h2::before {
   content: '';
   position: absolute;
-  top: 15px;
-  left: -10px;
-  width: 185px;
-  height: 30px;
+  top: 1rem;
+  left: -0.8rem;
+  width: 11rem;
+  height: 1.8rem;
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
   animation-name: blue-to-green;
@@ -18,15 +18,75 @@
 .overview section:nth-of-type(1) h2::after {
   content: '';
   position: absolute;
-  top: -5px;
-  left: 115px;
-  width: 180px;
-  height: 40px;
+  top: -.2rem;
+  left: 7rem;
+  width: 11rem;
+  height: 2.5rem;
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -2;
   animation-name: pink-to-purple;
   animation-duration: 80s;
   animation-iteration-count: infinite;
+}
+
+
+.overview section:first-of-type p::first-line{
+  font-weight: 700;
+}
+
+.overview section article a, .overview section:nth-of-type(2) a{ 
+  position: relative;
+}
+
+.overview section:first-of-type article a::before, .overview section:nth-of-type(2) a::before{
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  top: -.5rem;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* src: https://bennettfeely.com/clippy/ */ 
+  z-index: -1;
+  transform: rotate(90deg);
+}
+
+.overview section:nth-of-type(2) a::before{
+  left:42%;
+}
+
+
+.overview section:first-of-type{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0fr);
+  transition: 1s ease-in-out;
+}
+
+.overview section:first-of-type div{
+  margin: auto;
+  grid-area: 1 / 2 / 3 / 2;
+  transition: 1s ease-in-out;
+  transform: rotate(20deg);
+  animation-name: rotate-animate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.overview section:first-of-type div img{
+  width: 20vw;
+  height: 20vw;
+}
+
+.overview section:first-of-type div p{
+  margin: 0;
+  transform: rotate(-90deg);
+  position: relative;
+  top: -12rem;
+  right: 11rem;
+}
+
+.overview section:first-of-type article:nth-of-type(2){
+  grid-row-start: 2;
 }
 
 
@@ -37,17 +97,16 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  height: 650px;
+  height: 42rem;
 }
 
 .overview section:nth-of-type(1) {
   width: auto;
 }
 
-
 .overview div > article:nth-of-type(2) {
   position: absolute;
-  top: 3em;
+  top: 3rem;
   left: 33vw;
   transform: rotate(10deg);
 }
@@ -66,42 +125,17 @@
 .overview section:nth-of-type(2)::before {
   content: '';
   position: absolute;
-  top: -250px;
-  left: 480px;
-  width: 130px;
-  height: 600px;
+  top: -16rem;
+  left: 30rem;
+  width: 8.2rem;
+  height: 37.5rem;
   background-color: rgba(150, 231, 168, 0.7);
   z-index: -1;
 }
 
 .overview section:nth-of-type(2) h2 {
-  margin: .5em;
+  margin: .5rem;
   text-align: right;
-}
-
-.overview section:first-of-type p::first-line{
-  font-weight: 700;
-}
-
-.overview section:first-of-type{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 0fr);
-}
-
-.overview section:first-of-type div{
-  margin: auto;
-  grid-area: 1 / 2 / 3 / 2;
-}
-
-.overview section:first-of-type div img{
-  width: 20vw;
-  height: 20vw;
-  transform: rotate(20deg);
-}
-
-.overview section:first-of-type article:nth-of-type(2){
-  grid-row-start: 2;
 }
 
 /**********************/
@@ -117,7 +151,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1560px;
+    height: 97.5rem;
   }
 
   .overview div > article {
@@ -138,14 +172,14 @@
 
   .overview div > article:nth-of-type(2) {
     position: relative;
-    top: 3em;
+    top: 3rem;
     left: 0;
     transform: rotate(20deg);
   }
 
   .overview div > article:nth-of-type(3) {
     position: relative;
-    top: 6em;
+    top: 6rem;
     left: 0;
     transform: rotate(-20deg);
   }
