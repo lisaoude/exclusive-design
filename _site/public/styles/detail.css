@@ -6,6 +6,12 @@
   font-size: 42px;
 }
 
+.minor-uitleg div > p a{
+  position: absolute;
+  top: 1em;
+  font-size: 24px;
+}
+
 .minor-uitleg section {
   width: 50vw;
 }
@@ -51,7 +57,33 @@
 /****************************/
 /*      TEKST STYLING      */
 /**************************/
+.minor-uitleg section:nth-of-type(1) h2::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 185px;
+  height: 30px;
+  background-color: rgba(139, 225, 231, 0.8);
+  z-index: -1;
+  animation-name: blue-to-green;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
 
+.minor-uitleg section:nth-of-type(1) h2::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 115px;
+  width: 180px;
+  height: 40px;
+  background-color: rgba(237, 122, 205, 0.9);
+  z-index: -2;
+  animation-name: pink-to-purple;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+}
 
 .minor-uitleg section:first-of-type p::first-letter {
   font-weight: bold;
