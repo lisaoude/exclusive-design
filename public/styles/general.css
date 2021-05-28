@@ -166,11 +166,6 @@ nav::after {
 /**********************/
 /*      NAVIGATIE     */
 /**********************/
-div > p a {
-  position: absolute;
-  top: 1em;
-  font-size: 24px;
-}
 
 nav {
   position: absolute;
