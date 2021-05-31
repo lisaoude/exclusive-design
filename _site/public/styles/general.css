@@ -10,6 +10,7 @@
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
@@ -79,7 +80,7 @@ header {
   position: relative;
   margin-top: 4rem;
   transition: .5s;
-  z-index: 100;
+  z-index: 60;
 }
 
 header h1 {
@@ -88,11 +89,36 @@ header h1 {
   transition: .5s;
 }
 
+/************************/
+/*     halve minor     */
+/**********************/
+
+header h2{
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  filter: drop-shadow(.5rem .5rem #2e05131a); 
+}
+
+header section{
+  margin: 1rem 0rem 0rem 2rem;
+  background-color: #ffd92f;
+  max-width: 40rem;
+  padding: 10rem 5rem 1rem 10rem;
+  text-align: center;
+  position: fixed;
+  top: -7rem;
+  right: -8rem;
+  z-index: 70;
+  transform: rotate(30deg);
+}
+
+
 /*state*/
-header:hover {
+h1:hover {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
 }
+
 
 header:hover span{
   filter: drop-shadow(.5rem .5rem #2e05131a);
@@ -258,7 +284,7 @@ nav button#klik:hover {
 
 .show ul {
   display: inline-block;
-  right: -52vw;
+  left: 100vw;
 }
 
 
@@ -267,9 +293,10 @@ nav button#klik:hover {
 /*************************/
 h2 {
   position: relative;
+  z-index: 50;
 }
 
-section:nth-of-type(1) {
+div > section:nth-of-type(1) {
   width: 50vw;
   margin: 5rem 0em 0em 5rem;
 }
@@ -290,7 +317,7 @@ section:nth-of-type(2) a {
   margin-bottom: 1rem;
 }
 
-section {
+section:not(header section) {
   margin-top: 6rem;
 }
 
@@ -403,6 +430,8 @@ footer a:hover {
     height: auto;
   }
 }
+
+
 
 
 /***********************/
