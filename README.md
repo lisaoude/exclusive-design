@@ -3,13 +3,13 @@
 **NOTE:** de website staat nog niet online.
 
 ## Table of Contents
-- [💬 Opdracht]()
-    - [✏️ Debrief]()
-    - [👑 prioriteitenlijst]()
-- [💻 Opbouw project]()
-- [⬇️ Hoe te installeren]()
-- [📦 npm Packages]()
-- [📚 bronnen]()
+- [💬 Opdracht](#-opdracht)
+    - [✏️ Debrief](#pencil2-debrief)
+    - [👑 prioriteitenlijst](#crown-prioriteitenlijst-moscow)
+- [💻 Opbouw project](#-opbouw-project)
+- [⬇️ Hoe te installeren](#%EF%B8%8F-hoe-te-installeren)
+- [📦 npm Packages](#-npm-packages)
+- [📚 bronnen](#-bronnen)
 
 # 💬 Opdracht 
 
@@ -59,7 +59,7 @@ De volledige debrief is te vinden op [deze Notion pagina](https://www.notion.so/
 
 # 💻 Opbouw Project
 
-Binnen dit project werken we met **[11ty](https://www.11ty.dev/)**, dit is een simpele statische site generator. De map `_site` zijn alle bestanden die *client side* worden ingeladen en gegenereert zodra de server is opgestart. Dit kan met `npm run watch` of `nmp run start`. De map `_includes`bevat de template van de verschillende pagina's en partials die we inladen in de templates. Dit zijn *html* en *Nunjucks* bestanden. 11ty werkt samen met .md bestanden, hiermee worden verschillende webpagina's aangemaakt. In de `public` map staan de bestanden die wij binnen het project het meeste inwerken, dat is de styling, javascript en afbeeldingen dat we binnen de website gebruiken. *Binnen het project zijn we vooral veel gefocust op de CSS en daarmee experimenteren en opmaak van de tekst.* 
+Binnen dit project werken we met **[11ty](https://www.11ty.dev/)**, dit is een simpele statische site generator. De map `_site` zijn alle bestanden die *client side* worden ingeladen en gegenereert zodra de server is opgestart. Dit kan met `npm run watch` of `nmp run start`. De map `_includes`bevat de template van de verschillende pagina's en partials die we inladen in de templates. Dit zijn *html* en *Nunjucks* bestanden. 11ty werkt samen met .md bestanden, hiermee worden verschillende webpagina's aangemaakt. In de `public` map staan de bestanden waar wij binnen het project het meeste inwerken, dat is de styling, javascript en afbeeldingen dat we binnen de website gebruiken. *Binnen het project zijn we vooral veel gefocust op de CSS en daarmee experimenteren en de opmaak van de tekst.* 
 
 # ⬇️ Hoe te installeren
 
