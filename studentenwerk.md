@@ -1,4 +1,4 @@
 ---
-layout: template-detail.njk
+layout: template-studentenwerk.njk
 title: Studentenwerk
 ---

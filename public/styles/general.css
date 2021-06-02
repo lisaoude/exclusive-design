@@ -10,6 +10,7 @@
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
@@ -76,23 +77,51 @@ section:nth-of-type(2) h1 {
 /*       HEADER      */
 /*********************/
 header {
-  position: relative;
+  /* position: relative; */
   margin-top: 4rem;
   transition: .5s;
-  z-index: 100;
+  z-index: 10;
 }
 
 header h1 {
-  position: relative;
+  /* position: relative; */
   margin-left: 1.5rem;
   transition: .5s;
 }
 
+header h1 span{
+  filter: drop-shadow(.5rem .5rem #2e05131a);
+}
+
+/************************/
+/*     halve minor     */
+/**********************/
+
+header h2{
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  filter: drop-shadow(.5rem .5rem #2e05131a); 
+}
+
+header section{
+  margin: 1rem 0rem 0rem 2rem;
+  background-color: #ffd92f;
+  max-width: 40rem;
+  padding: 10rem 5rem 1rem 10rem;
+  text-align: center;
+  position: fixed;
+  top: -8rem;
+  right: -8rem;
+  z-index: 9;
+  transform: rotate(30deg);
+}
+
 /*state*/
-header:hover {
+header h1:hover {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
 }
+
 
 header:hover span{
   filter: drop-shadow(.5rem .5rem #2e05131a);
@@ -168,7 +197,6 @@ nav::after {
   animation-iteration-count: infinite;
 }
 
-
 /**********************/
 /*      NAVIGATIE     */
 /**********************/
@@ -184,30 +212,40 @@ nav {
   align-items: center;
   margin: 1rem;
   text-align: right; 
-  left: 35rem;
+  right: 35rem;
   top: 6.5rem;
 }
 
 nav ul {
   display: inline-block;
   list-style: none;
-  background-color:  #B55721;
+  background-color:  #000000;
+  border-radius: 5px 0px 0px 0px;
   padding: 1rem;
   margin: 1rem;
-  position: absolute;
-  right: -10000rem;
-  top: 0;
+  position: fixed;
+  right: -100rem;
+  bottom: -1.5rem;
   max-width: 18.75rem;
-  transition: .5s ease-in-out;
+  transition: .8s ease-in-out;
   color: white;
   text-align: center;
-  box-shadow: -3px 4px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: -4px -4px 1px 1px rgba(131, 131, 131, 0.25);
+  z-index: 8;
 }
 
 nav ul li {
   margin: 1rem;
 }
 
+nav ul p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+nav ul a {
+  color: white;
+}
 
 nav ul button {
   font-size: 0.9rem;
@@ -237,13 +275,23 @@ nav button#klik {
 
 /* state */ 
 nav ul li, nav ul button {
-  background-color: rgb(136 60 16);
-  transition: 1s;
+  background-color: #000000;
+  transition: .5s;
+}
+
+nav ul button {
+  border: solid 2px white;
+  width: 16vw;
+  border-radius: 5px;
+}
+
+nav ul a:hover {
+  color: rgb(205, 205, 205);
 }
 
 nav ul li:hover, nav ul button:hover, nav ul li:hover button {
   cursor: pointer;
-  background-color: rgb(68, 38, 21);
+  background-color:#232323;
 }
 
 nav button#klik:hover {
@@ -256,11 +304,10 @@ nav button#klik:hover {
 /*     SHOW BUTTON     */
 /**********************/
 
-.show ul {
+.show ul{
   display: inline-block;
-  right: -52vw;
+  right: -16px;
 }
-
 
 /*************************/
 /*  INFO MINOR OVERVIEW  */
@@ -269,7 +316,7 @@ h2 {
   position: relative;
 }
 
-section:nth-of-type(1) {
+div > section:nth-of-type(1) {
   width: 50vw;
   margin: 5rem 0em 0em 5rem;
 }
@@ -290,7 +337,7 @@ section:nth-of-type(2) a {
   margin-bottom: 1rem;
 }
 
-section {
+section:not(header section) {
   margin-top: 6rem;
 }
 
@@ -348,15 +395,19 @@ footer {
   align-items: center;
   background-color: #000000;
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
 }
 
-footer a {
+/* footer a {
   color: #ffffff;
 }
 
 footer a:hover {
   color: #b6b6b6;
+} */
+
+footer img{
+  width: 15vw;
 }
 
 
@@ -386,6 +437,11 @@ footer a:hover {
     min-width: 4.375rem;
   }
 
+  .show ul{
+    display: inline-block;
+    right: -6vw;
+  }
+
 
   /***********************/
   /*     INFO MINOR     */
@@ -403,6 +459,8 @@ footer a:hover {
     height: auto;
   }
 }
+
+
 
 
 /***********************/
