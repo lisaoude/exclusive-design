@@ -21,6 +21,14 @@
   width: 45vw;
 }
 
+.minor-uitleg {
+  display: grid;
+  grid-template-columns: 2fr max-content 5fr;
+}
+
+.minor-uitleg > * {
+  grid-column-start: 2;
+}
 
 /* 
 .minor-uitleg section:nth-of-type(odd):not(section:nth-of-type(1)) {

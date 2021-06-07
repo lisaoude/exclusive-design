@@ -1,19 +1,46 @@
 <h1>Exclusive Design</h1>
+<p><strong>NOTE:</strong> de website staat nog niet online.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#-opdracht">💬 Opdracht</a>
+<ul>
+<li><a href="#pencil2-debrief">✏️ Debrief</a></li>
+<li><a href="#crown-prioriteitenlijst-moscow">👑 prioriteitenlijst</a></li>
+</ul>
+</li>
+<li><a href="#-opbouw-project">💻 Opbouw project</a></li>
+<li><a href="#%EF%B8%8F-hoe-te-installeren">⬇️ Hoe te installeren</a></li>
+<li><a href="#-npm-packages">📦 npm Packages</a></li>
+<li><a href="#-bronnen">📚 bronnen</a></li>
+</ul>
+<h1>💬 Opdracht</h1>
+<p>Volgend jaar begint de (halve) <strong>minor Exclusive Design.</strong> Wat jullie hebben gedaan bij het
+vak Human Centered Design gaan andere studenten dan tien weken lang doen. Ze gaan tien
+weken lang prototypes maken voor echte mensen met echte beperkingen.</p>
+<p><strong>Voor deze minor is een goede website nodig.</strong></p>
+<p><em>Het concept is als volgt:</em> de website moet de bezoeker een indruk geven van hoe het is
+om het web te bezoeken met beperkingen. Terwijl het tegelijkertijd natuurlijk wel
+<em>informatief</em> is. Én <em>toegankelijk</em>.</p>
+<p>Het is de bedoeling dat er in de toekomst ook <em>werk uit de minor</em> op komt te staan. Dat is
+er nu nog niet, dus wordt er in eerste instantie werk uit andere minoren getoond wat
+aansluit bij de minor. De projecten die jullie bij het van HCD hebben gedaan
+bijvoorbeeld.</p>
 <h2>:pencil2: Debrief</h2>
-<p>Onze debrief is te vinden op <a href="https://www.notion.so/lisaoude/Debrief-991ec9b658554cc7b65f7a474989638f">deze Notion pagina</a>.</p>
+<p>De volledige debrief is te vinden op <a href="https://www.notion.so/lisaoude/Debrief-991ec9b658554cc7b65f7a474989638f">deze Notion pagina</a>.</p>
 </br>
 <hr>
 <h2>:crown: Prioriteitenlijst (MoSCoW):</h2>
 <h3>Must have</h3>
 <ul>
 <li>[ ] Showcase studentenwerk</li>
-<li>[ ] Informatie Minor</li>
+<li>[X] Informatie Minor</li>
 <li>[ ] Verbeterde ervaring voor mensen met beperking</li>
 <li>[ ] Ervaren hoe het is om een beperking te hebben</li>
+<li>[X] halve minor vermelden</li>
 </ul>
 <h3>Should Have</h3>
 <ul>
-<li>[ ] Maken in 11ty</li>
+<li>[X] Maken in 11ty</li>
 <li>[ ] Meerdere beperkingen ervaren + optie uit/aan zetten</li>
 <li>[ ] Nonsense</li>
 </ul>
@@ -26,3 +53,36 @@
 <ul>
 <li>[ ] Website ziet er elke keer anders uit als je hem bezoekt</li>
 </ul>
+<h1>💻 Opbouw Project</h1>
+<p>Binnen dit project werken we met <strong><a href="https://www.11ty.dev/">11ty</a></strong>, dit is een simpele statische site generator. De map <code>_site</code> zijn alle bestanden die <em>client side</em> worden ingeladen en gegenereert zodra de server is opgestart. Dit kan met <code>npm run watch</code> of <code>nmp run start</code>. De map <code>_includes</code>bevat de template van de verschillende pagina's en partials die we inladen in de templates. Dit zijn <em>html</em> en <em>Nunjucks</em> bestanden. 11ty werkt samen met .md bestanden, hiermee worden verschillende webpagina's aangemaakt. In de <code>public</code> map staan de bestanden waar wij binnen het project het meeste inwerken, dat is de styling, javascript en afbeeldingen dat we binnen de website gebruiken. <em>Binnen het project zijn we vooral veel gefocust op de CSS en daarmee experimenteren en de opmaak van de tekst.</em></p>
+<h1>⬇️ Hoe te installeren</h1>
+<ol>
+<li>
+<p>Clone dit project</p>
+<p>In terminal:</p>
+<pre><code>git clone https://github.com/lisaoude/exclusive-design/
+</code></pre>
+</li>
+<li>
+<p>Installeer dependencies</p>
+<pre><code>npm install
+</code></pre>
+</li>
+<li>
+<p>Start the server:</p>
+<pre><code>npm run start
+</code></pre>
+<p>of als je aanpassingen maakt en meteen wilt dat de server opnieuw opstart:</p>
+<pre><code>npm run watch
+</code></pre>
+</li>
+<li>
+<p>Ga naar localhost</p>
+<pre><code>http://localhost:8080/
+</code></pre>
+</li>
+</ol>
+<h1>📦 npm Packages</h1>
+<p>We hebben de package, 11ty gebruikt voor de opbouw van dit project.</p>
+<h1>📚 bronnen</h1>
+<p>hier komen bronnen te staan</p>

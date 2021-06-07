@@ -1,0 +1,53 @@
+.halve-minor section > section article {
+    margin: 5rem 0rem;
+}
+
+/************************/
+/*  eerste stuk tekst */
+/*********************/
+
+.halve-minor section:first-of-type article p:first-of-type {
+    background-color: #ffffff;
+    padding: 1rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.halve-minor section:first-of-type article p:first-of-type::before {
+    content: '';
+    position: absolute;
+    top: -27%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #8be1e7cc;
+    padding: 1rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* src: https://bennettfeely.com/clippy/ */ 
+    transform: rotate(90deg);
+}
+
+.halve-minor section:first-of-type article p:first-of-type strong {
+    text-decoration: underline dashed 2px;
+}
+
+/*********************/
+/*  LIJSTJES MINORs  */
+/*******************/
+
+.halve-minor section article ul li {
+    margin-left: 3rem;
+}
+
+.halve-minor section ul {
+    margin-top: 2rem;
+}
+
+/*********************/
+/*      LAYOUT      */
+/*******************/
+
+/* .halve-minor section > section {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
