@@ -317,8 +317,10 @@ h2 {
 }
 
 div > section:nth-of-type(1) {
-  width: 50vw;
-  margin: 5rem 0em 0em 5rem;
+  width: 100vw;
+  max-width: 40em;
+  margin: 5rem 0em 0em 0rem;
+
 }
 
 /****************************/
