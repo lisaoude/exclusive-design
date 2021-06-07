@@ -1,7 +1,6 @@
 /****************************/
 /*  LAYOUT - MINOR UITLEG  */
-/**************************/
-.minor-uitleg > a:first-of-type {
+ div > a:first-of-type {
   position: absolute;
   top: 14rem;
   left: 70rem; 
@@ -38,6 +37,7 @@
   position: absolute;
   font-size: 1.5rem;
 }
+
 .minor-uitleg section:nth-of-type(2) ul li:nth-of-type(1) {
   font-size: 1.75rem;
   font-family: 'Sansita', sans-serif;
