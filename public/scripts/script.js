@@ -1,14 +1,14 @@
-const button = document.querySelector('#klik');
-const nav = document.querySelector('nav');
-const link = document.querySelector('nav ul a');
+const buttonShowMenu = document.querySelector('#klik');
+const menuDisabilities = document.querySelector('nav');
+const hideMenu = document.querySelector('nav ul a');
 
-button.addEventListener('click', () => {
-    nav.classList.toggle('show');
+buttonShowMenu.addEventListener('click', () => {
+    menuDisabilities.classList.toggle('show');
 })
 
-link.addEventListener('click', (e) => {
+hideMenu.addEventListener('click', (e) => {
     e.preventDefault
-    if(nav.classList.contains('show')){
-        nav.classList.remove('show');
+    if(menuDisabilities.classList.contains('show')){
+        menuDisabilities.classList.remove('show');
     }
 })
