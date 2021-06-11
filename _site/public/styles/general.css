@@ -1,0 +1,595 @@
+/**********************/
+/*      ALGEMEEN      */
+/**********************/
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+html {
+  /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(229, 229, 229);
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  width: 88%;
+  margin: 0 auto;
+}
+
+/**********************/
+/*     TYPOGRAFIE     */
+/**********************/
+h1 {
+  /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
+  font-size: max(2.35rem, -0.875rem + 7.1vw);
+  font-family: 'Asset', cursive;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: 'Sansita', sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  margin: 1em 0em;
+  line-height: 2rem;
+}
+
+a {
+  font-size: 1.25rem;
+  font-family: 'Sansita', sans-serif;
+  text-decoration: underline;
+  color: black;
+}
+
+main a:hover {
+  color: #565656;
+}
+
+ul li {
+  font-size: 1.125rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2rem;
+}
+
+section:nth-of-type(2) h1 {
+  text-align: right;
+}
+
+/*********************/
+/*       HEADER      */
+/*********************/
+header {
+  /* door margin verschuiven de blokken steeds */
+  margin-top: 45px;
+  margin-left: 25px;
+  z-index: 10;
+  transition: 1s;
+}
+
+header > a{
+  text-decoration-line: none;
+}
+
+header h1 {
+  transition: .5s;
+}
+
+header h1 span{
+  filter: drop-shadow(.5rem .5rem #2e05131a);
+}
+
+/************************/
+/*     halve minor     */
+/**********************/
+
+header h2{
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  filter: drop-shadow(.5rem .5rem #2e05131a); 
+}
+
+header section{
+  margin: 1rem 0rem 0rem 2rem;
+  background-color: #ffd92f;
+  max-width: 40rem;
+  padding: 10rem 5rem 1rem 10rem;
+  text-align: center;
+  position: fixed;
+  top: -8rem;
+  right: -8rem;
+  z-index: 9;
+  transform: rotate(30deg);
+}
+
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -1.875rem;
+  left: 21.25rem;
+  width: 60.625rem;
+  height: 10rem;
+  background-color: #8be1e7cc;
+  z-index: -1;
+  animation-name: blue-to-green;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 4.375rem;
+  left: 69.375rem;
+  width: 11.25rem;
+  height: 5.625rem;
+  background-color: #96e7a8b3;
+  z-index: -1;
+  animation-name: green-to-pink;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+}
+
+header h1::before {
+  content: '';
+  position: absolute;
+  top: -0.625rem;
+  left: -0.625rem;
+  width: 6.875rem;
+  height: 8.75rem;
+  background-color: #ed7acde6;
+  z-index: -1;
+  animation-name: pink-to-purple;
+  animation-duration: 70s;
+  animation-iteration-count: infinite;
+}
+
+header h1::after {
+  content: '';
+  position: absolute;
+  top: 4.375rem;
+  left: 3.125rem;
+  width: 40.625rem;
+  height: 11.875rem;
+  background-color: #96e7a8b3;
+  z-index: -2;
+  animation-name: green-to-pink;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+
+nav::after {
+  content: '';
+  position: absolute;
+  top: -3.75rem;
+  left: -9.375rem;
+  width: 24.7rem;
+  height: 140px;
+  background-color: rgba(237, 122, 205, 0.9);
+  z-index: -1;
+  animation-name: pink-to-purple;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
+
+/**********************/
+/*      NAVIGATIE     */
+/**********************/
+
+nav {
+  position: absolute;
+  width: 10vw;
+  height: auto;
+  padding: 1rem;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+  text-align: right; 
+  right: 35rem;
+  top: 6.5rem;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+  background-color:  #000000;
+  border-radius: 5px 0px 0px 0px;
+  padding: 1rem;
+  margin: 1rem;
+  position: fixed;
+  right: -100rem;
+  bottom: -1.5rem;
+  max-width: 18.75rem;
+  transition: .8s ease-in-out;
+  color: white;
+  text-align: center;
+  box-shadow: -4px -4px 1px 1px rgba(131, 131, 131, 0.25);
+  z-index: 8;
+}
+
+nav ul li {
+  margin: 1rem;
+}
+
+nav ul p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+nav ul a {
+  color: white;
+}
+
+nav ul button {
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  width: auto;
+  color: white;
+  border: none;
+  padding: .5rem;
+  margin: .5rem auto;
+  display: block;
+  width: auto;
+}
+
+nav button#klik {
+  background-color: black;
+  border-radius: 50%;
+  height: 6.25rem;
+  min-width: 6.25rem;
+  color: white;
+  border: none;
+  transition: .5s ease;
+  font-size: 1.75rem;
+  font-family: 'Sansita', sans-serif;
+  font-weight: 700;
+  box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* state */ 
+nav ul li, nav ul button {
+  background-color: #000000;
+  transition: .5s;
+}
+
+nav ul button {
+  border: solid 2px white;
+  width: 16vw;
+  border-radius: 5px;
+}
+
+/**********************/
+/*       STATES       */
+/**********************/
+
+header h1:hover, header a:focus h1 {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+header:hover span{
+  filter: drop-shadow(.5rem .5rem #2e05131a);
+}
+
+a:focus {
+  border: dashed 2px black;
+  outline: none;
+}
+
+nav ul a:hover {
+  color: rgb(205, 205, 205);
+}
+
+nav ul li:hover, nav ul button:hover, nav ul li:hover button {
+  cursor: pointer;
+  background-color:#232323;
+}
+
+nav button#klik:hover, nav button#klik:focus {
+  background-color: rgb(56, 56, 56);
+  cursor: pointer;
+  box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+nav button#klik:focus {
+  transform: scale(1.2);
+  outline: none;
+}
+
+/************************/
+/*     SHOW BUTTON     */
+/**********************/
+
+.show ul{
+  display: inline-block;
+  right: -16px;
+}
+
+/*************************/
+/*  INFO MINOR OVERVIEW  */
+/*************************/
+h2 {
+  position: relative;
+}
+
+div > section:nth-of-type(1) {
+  /* width: 100vw; */
+  /* max-width: 40em; */
+  margin: 5rem 0em 0em 0rem;
+}
+
+/****************************/
+/*  STUDENTENWERK OVERVIEW  */
+/****************************/
+img {
+  width: 20vw;
+  height: auto;
+}
+
+section:nth-of-type(2) a {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+section:not(header section) {
+  margin-top: 2rem;
+}
+
+section h1 {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+section h1::before {
+  content: '';
+  position: absolute;
+  top: 4.375rem;
+  left: 9.375rem;
+  width: 72.5rem;
+  height: 10.625rem;
+  background-color: rgba(237, 122, 205, 0.9);
+  z-index: -2;
+  animation-name: pink-to-purple;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
+
+section h1::after {
+  content: '';
+  position: absolute;
+  top: 9.375rem;
+  left: 34.375rem;
+  width: 20.625rem;
+  height: 8.75rem;
+  background-color: rgba(139, 225, 231, 0.8);
+  z-index: -1;
+  animation-name: blue-to-green;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+section:nth-of-type(2) article {
+  width: 20vw;
+  text-align: right;
+}
+
+section:nth-of-type(2) article p:nth-of-type(1) {
+  font-weight: 700;
+  font-family: 'Sansita', sans-serif;
+}
+
+
+/* footer */
+footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  width: 100%;
+  height: 4rem;
+}
+
+/* footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #b6b6b6;
+} */
+
+footer img{
+  width: 15vw;
+}
+
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+@media (max-width: 720px) {
+
+  /**********************/
+  /*      NAVIGATIE     */
+  /**********************/
+  nav {
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  nav p {
+    max-width: 70%;
+    font-size: 1rem;
+  }
+
+  nav button {
+    border-radius: 50%;
+    height: 4.375rem;
+    min-width: 4.375rem;
+  }
+
+  .show ul{
+    display: inline-block;
+    right: -6vw;
+  }
+
+
+  /***********************/
+  /*     INFO MINOR     */
+  /***********************/
+  section:nth-of-type(1) {
+    width: auto;
+  }
+
+  
+  /***********************/
+  /*    STUDENTENWERK    */
+  /***********************/
+  img {
+    width: 40vw;
+    height: auto;
+  }
+}
+
+
+
+
+/***********************/
+/*      ANIMATIES      */
+/***********************/
+@keyframes green-to-pink {
+  0% {
+    background-color: rgba(150, 231, 168, 0.7);
+    animation-timing-function: ease-out;
+  }
+
+  17% {
+    background-color: rgba(150, 216, 231, 0.7);
+  }
+
+  34% {
+    background-color: rgba(150, 158, 231, 0.7);
+  }
+
+  51% {
+    background-color: rgba(237, 122, 205, 0.9);
+    animation-timing-function: ease-in-out;
+  }
+
+  68% {
+    background-color: rgba(150, 158, 231, 0.7);
+  }
+
+  85% {
+    background-color: rgba(150, 216, 231, 0.7);
+  }
+
+  100% {
+    background-color: rgba(150, 231, 168, 0.7);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes pink-to-purple {
+  0% {
+    background-color: rgba(237, 122, 205, 0.9);
+    animation-timing-function: ease-out;
+  }
+
+  17% {
+    background-color: rgba(220, 150, 231, 0.7);
+  }
+
+  34% {
+    background-color: rgba(161, 150, 231, 0.7);
+  }
+
+  51% {
+    background-color: rgba(182, 136, 239, 0.9);
+    animation-timing-function: ease-in-out;
+  }
+
+  68% {
+    background-color: rgba(161, 150, 231, 0.7);
+  }
+
+  85% {
+    background-color: rgba(220, 150, 231, 0.7);
+  }
+
+  100% {
+    background-color: rgba(237, 122, 205, 0.9);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes blue-to-green {
+  0% {
+    background-color: rgba(139, 225, 231, 0.8);
+    animation-timing-function: ease-out;
+  }
+
+  17% {
+    background-color: rgba(139, 231, 214, 0.8);
+  }
+
+  34% {
+    background-color: rgba(139, 231, 198, 0.8);
+  }
+
+  51% {
+    background-color: rgba(150, 231, 168, 0.7);
+    animation-timing-function: ease-in-out;
+  }
+
+  68% {
+    background-color: rgba(139, 231, 198, 0.8);
+  }
+
+  85% {
+    background-color: rgba(139, 231, 214, 0.8);
+  }
+
+  100% {
+    background-color: rgba(139, 225, 231, 0.8);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes rotate-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(20deg);
+  }
+}
