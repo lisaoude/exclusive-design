@@ -77,8 +77,11 @@
 }
 
 .overview section:first-of-type > a img {
-  width: 20vw;
-  height: 20vw;
+  max-width: 20vw;
+  max-height: 20vw;
+  filter: saturate(80%);
+  filter: drop-shadow(.5rem .5rem #2e05131a);
+
 }
 
 .overview > section:first-of-type > a span {
@@ -162,7 +165,7 @@
 
 .overview section:nth-of-type(2) a {
   position: absolute;
-  top: 42rem;
+  bottom: 2rem;
   left: 0;
 }
 
