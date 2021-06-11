@@ -1,6 +1,6 @@
 # Exclusive Design
 
-**NOTE:** de website staat nog niet online.
+[Livelink](https://exclusive-design.netlify.app/)
 
 ## Table of Contents
 - [💬 Opdracht](#-opdracht)
