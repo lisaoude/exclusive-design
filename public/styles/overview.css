@@ -30,7 +30,7 @@
 }
 
 
-.overview section:first-of-type p::first-line {
+.overview section:nth-of-type(1) p::first-line {
   font-weight: 700;
 }
 
@@ -55,11 +55,12 @@
   left:42%;
 }
 
-.overview > section:first-of-type {
+.overview > section:first-of-type  {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 0fr);
   transition: .7s ease-in-out;
+  position: relative;
 }
 
 .overview > section:first-of-type > a {
@@ -84,7 +85,7 @@
 
 }
 
-.overview > section:first-of-type > a span {
+.overview > section:first-of-type > a span{
   margin: 0;
   display: block;
   transform: rotate(-90deg);
@@ -97,10 +98,26 @@
   grid-row-start: 2;
 }
 
-
 /***********************/
 /*    STUDENTENWERK    */
 /***********************/
+.overview section:nth-of-type(2) > h1, .overview section:nth-of-type(2) > p  {
+  text-align: right;
+}
+
+.overview section:nth-of-type(2) h2  {
+  margin-bottom: 1rem;
+}
+
+.overview section:nth-of-type(2) > p {
+    position: absolute;
+    right: 0;
+}
+
+.overview section:nth-of-type(2) ul li p {
+  max-width: 20vw;
+}
+
 .overview section:nth-of-type(1) {
   width: auto;
 }
@@ -108,7 +125,6 @@
 .overview section:nth-of-type(2) {
   position: relative;
   height: 70rem;
-  /* background-color: cornflowerblue; */
 }
 
 .overview section:nth-of-type(2) > ul {
@@ -157,16 +173,16 @@
   z-index: -1;
 }
 
-.overview section:nth-of-type(2) h2 {
-  margin: .5rem;
-  text-align: right;
-}
 
-
-.overview section:nth-of-type(2) a {
+.overview section:nth-of-type(2) ul + a {
   position: absolute;
   bottom: 2rem;
   left: 0;
+}
+
+.overview section:nth-of-type(2) > p a {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /**********************/
