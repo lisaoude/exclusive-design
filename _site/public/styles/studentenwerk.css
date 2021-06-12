@@ -5,3 +5,32 @@
 .studentenwerk article p {
     width: 40vw;
 }
+
+/************************/
+/* PROJECT ERIC LAYOUT */
+/************************/
+
+.studentenwerk article:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.studentenwerk article:first-of-type h2, .studentenwerk article:first-of-type p:not(:last-of-type) {
+   grid-column-start: 1;
+   grid-column-end: 1;
+}
+
+.studentenwerk article:first-of-type video {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+ }
+
+ .studentenwerk article:first-of-type p:last-of-type {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+ }
+

@@ -131,7 +131,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  margin-top: 8rem;
+  margin-top: 11rem;
 }
 
 .overview section:nth-of-type(2) > ul li {
