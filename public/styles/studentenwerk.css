@@ -1,13 +1,9 @@
-.studentenwerk  p {
-    width: 60vw;
-}
-
-.studentenwerk article p {
+.studentenwerk > article p {
     width: 40vw;
 }
 
 .studentenwerk article {
-    margin: 4rem 0rem;
+    margin: 5rem 0rem;
 }
 
 /************************/
@@ -44,3 +40,101 @@
     grid-row-start: 2;
     grid-row-end: 2;
  }
+
+ /*************************/
+/*     TEKST STYLING     */
+/************************/
+
+.studentenwerk > h2::before {
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 3rem;
+    top: .3rem;
+    left: 25.5rem;
+    background-color:rgba(237, 122, 205, 0.9);
+    z-index: -1;
+  }
+  
+  .studentenwerk  > h2::after {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: 15.75rem;
+    width: 13rem;
+    height: 2.75rem;
+    background-color: #96e7a8b3;
+    z-index: -1;
+  }
+
+/*    PROJECT 1     */
+
+ .studentenwerk article:first-of-type h2::before {
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 6rem;
+    top: .3rem;
+    left: 2.5rem;
+    background-color:rgba(237, 122, 205, 0.9);
+    z-index: -1;
+  }
+  
+  .studentenwerk article:first-of-type h2::after {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: 4.75rem;
+    width: 13rem;
+    height: 2.75rem;
+    background-color: rgba(139, 225, 231, 0.8);
+    z-index: -1;
+  }
+
+  /*    PROJECT 2     */
+
+  .studentenwerk article:nth-of-type(2) h2::before {
+    content: '';
+    position: absolute;
+    width: 7rem;
+    height: 4rem;
+    top: .3rem;
+    left: 15.5rem;
+    background-color:#96e7a8b3;
+    z-index: -1;
+  }
+  
+  .studentenwerk article:nth-of-type(2) h2::after {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: 4.75rem;
+    width: 13rem;
+    height: 2.75rem;
+    background-color: rgba(237, 122, 205, 0.9);
+    z-index: -1;
+  }
+
+/*    PROJECT 3     */
+
+  .studentenwerk article:nth-of-type(3) h2::before {
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 7rem;
+    top: -3rem;
+    left: 10.5rem;
+    background-color:#96e7a8b3;
+    z-index: -1;
+  }
+  
+  .studentenwerk article:nth-of-type(3) h2::after {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: 2.75rem;
+    width: 13rem;
+    height: 2.75rem;
+    background-color:rgba(139, 225, 231, 0.8);
+    z-index: -1;
+  }
