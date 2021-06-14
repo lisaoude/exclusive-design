@@ -34,12 +34,11 @@
   font-weight: 700;
 }
 
-.overview section article a { 
+.overview a { 
   position: relative;
 }
 
-.overview section:first-of-type article a::before, 
-.overview section:nth-of-type(2) a::before {
+.overview section:first-of-type article a::before {
   content: '';
   width: 3rem;
   height: 3rem;
@@ -51,8 +50,9 @@
   transform: rotate(90deg);
 }
 
-.overview section:nth-of-type(2) a::before {
-  left:42%;
+.overview section:nth-of-type(2) > p a::before{
+  width: 0rem;
+  height: 0rem;
 }
 
 .overview > section:first-of-type  {
@@ -66,7 +66,7 @@
 .overview > section:first-of-type > a {
   margin: auto;
   grid-area: 1 / 2 / 3 / 2;
-  transition: 1s ease-in-out;
+  transition: .5s ease-in-out;
   transform: rotate(20deg);
   animation-name: rotate-animate;
   animation-duration: 1s;
@@ -85,14 +85,16 @@
 
 }
 
-.overview > section:first-of-type > a span{
+.overview > section > a span{
   margin: 0;
   display: block;
   transform: rotate(-90deg);
   position: relative;
   top: -12rem;
   right: 11rem;
+  text-decoration-line: underline 2px;
 }
+
 
 .overview > section:first-of-type article:nth-of-type(2) {
   grid-row-start: 2;
@@ -105,6 +107,24 @@
   text-align: right;
 }
 
+.overview ul li a span{
+  text-decoration-line: underline;
+}
+
+.overview section:nth-of-type(2) a::before {
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  bottom: -1rem;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: -1;
+  transform: rotate(
+90deg
+);
+}
+
 .overview section:nth-of-type(2) h2  {
   margin-bottom: 1rem;
 }
@@ -115,7 +135,7 @@
 }
 
 .overview section:nth-of-type(2) ul li p {
-  max-width: 20vw;
+  max-width: 26vw;
 }
 
 .overview section:nth-of-type(1) {
@@ -136,6 +156,11 @@
 
 .overview section:nth-of-type(2) > ul li {
   list-style: none;
+  transition: .5s ease-in-out;
+}
+
+.overview section:nth-of-type(2) > ul li > a {
+  text-decoration-line: none;
 }
 
 .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
@@ -147,7 +172,7 @@
 .overview section:nth-of-type(2) > ul > li:nth-of-type(2) {
   position: absolute;
   top: 3rem;
-  left: 33vw;
+  left: 30vw;
   transform: rotate(10deg);
 }
 
@@ -183,6 +208,14 @@
 .overview section:nth-of-type(2) > p a {
   font-size: 1.1rem;
   font-family: 'Open Sans', sans-serif;
+}
+
+/**********************/
+/*     STATES     */
+/**********************/
+
+.overview section:nth-of-type(2) > ul li:hover {
+  transform: scale(1.02);
 }
 
 /**********************/
