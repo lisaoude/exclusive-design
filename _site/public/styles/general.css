@@ -28,7 +28,7 @@ main > div {
   margin: 5rem 0rem 0rem 0rem;
 }
 
-img, video {
+img:not(footer img), video {
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
 
@@ -316,13 +316,17 @@ nav ul a:hover {
   color: rgb(205, 205, 205);
 }
 
-nav ul li:hover, nav ul button:hover, nav ul li:hover button, nav div #klik:hover, nav div #klik:focus  {
+nav ul li:hover:not(li:first-of-type),
+nav ul button:hover,
+nav ul li:hover button,
+nav div #klik:hover,
+nav div #klik:focus {
   cursor: pointer;
   background-color:#232323;
 }
 
 
-nav div #klik:focus, nav ul li:focus, nav ul button:focus {
+nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus {
   border: white dashed 1px;
   outline: none;
   background-color:#232323;
