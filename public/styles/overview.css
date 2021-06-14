@@ -157,6 +157,7 @@
 .overview section:nth-of-type(2) > ul li {
   list-style: none;
   transition: .5s ease-in-out;
+  padding: 1rem;
 }
 
 .overview section:nth-of-type(2) > ul li > a {
@@ -216,6 +217,24 @@
 
 .overview section:nth-of-type(2) > ul li:hover {
   transform: scale(1.02);
+  background-color: rgb(202, 202, 202);
+  box-shadow: 4px 4px 1px 1px rgba(22, 22, 22, 0.25);
+}
+
+.overview section:nth-of-type(2) > ul li:first-of-type:hover {
+  background-color: #8be1e775;
+}
+
+.overview section:nth-of-type(2) > ul li:nth-of-type(2):hover {
+  background-color: #ed7acc62;
+}
+
+.overview section:nth-of-type(2) > ul li:nth-of-type(3):hover {
+  background-color: #96e7a857;
+}
+
+.overview section:nth-of-type(2) > ul li:hover p,.overview section:nth-of-type(2) > ul li:hover h2 {
+  color: black;
 }
 
 /**********************/
