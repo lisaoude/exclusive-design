@@ -129,9 +129,9 @@ header section{
 header::before {
   content: '';
   position: absolute;
-  top: -1.875rem;
-  left: 21.25rem;
-  width: 60.625rem;
+  top: -1.5rem;
+  left: 21rem;
+  width: 61rem;
   height: 10rem;
   background-color: #8be1e7cc;
   z-index: -1;
@@ -143,10 +143,10 @@ header::before {
 header::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 69.375rem;
-  width: 11.25rem;
-  height: 5.625rem;
+  top: 6rem;
+  left: 73rem;
+  width: 13rem;
+  height: 6rem;
   background-color: #96e7a8b3;
   z-index: -1;
   animation-name: green-to-pink;
@@ -157,10 +157,10 @@ header::after {
 header h1::before {
   content: '';
   position: absolute;
-  top: -0.625rem;
-  left: -0.625rem;
-  width: 6.875rem;
-  height: 8.75rem;
+  top: -0.5rem;
+  left: 1rem;
+  width: 7rem;
+  height: 9rem;
   background-color: #ed7acde6;
   z-index: -1;
   animation-name: pink-to-purple;
@@ -171,10 +171,10 @@ header h1::before {
 header h1::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 3.125rem;
-  width: 40.625rem;
-  height: 11.875rem;
+  top: 4.5rem;
+  left: 3rem;
+  width: 41rem;
+  height: 12rem;
   background-color: #96e7a8b3;
   z-index: -2;
   animation-name: green-to-pink;
@@ -182,6 +182,7 @@ header h1::after {
   animation-iteration-count: infinite;
 }
 
+/* 
 nav::after {
   content: '';
   position: absolute;
@@ -194,7 +195,7 @@ nav::after {
   animation-name: pink-to-purple;
   animation-duration: 120s;
   animation-iteration-count: infinite;
-}
+} */
 
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
@@ -207,8 +208,8 @@ nav {
   padding: 1rem;
   margin: 1rem;
   text-align: right; 
-  right: 33rem;
-  top: 5.5rem;
+  right: 26rem;
+  top: 7.5rem;
 }
 
 nav div {
@@ -257,6 +258,7 @@ nav ul button {
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   width: auto;
+  max-width: 15rem;
   color: white;
   border: none;
   padding: .5rem;
@@ -332,7 +334,8 @@ nav div #klik:focus, nav ul li:focus, nav ul button:focus {
 
 .show ul{
   display: inline-block;
-  right: -16px;
+  right: 0;
+  bottom: 0;
 }
 
 /*************************/
