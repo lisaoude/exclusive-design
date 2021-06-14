@@ -1,26 +1,20 @@
-/****************************/
-/*  LAYOUT - MINOR UITLEG  */
- div > a:first-of-type {
+/********************************/
+/* DETAIL PAGINA - MINOR UITLEG */
+/********************************/
+
+/* Waar is dit voor?? Ik kan het opdracht niet vinden */
+
+ /* div > a:first-of-type {
   position: absolute;
   top: 8rem;
   left: 10rem;
   font-size: 1.5rem;
-}
+} */
 
-.minor-uitleg h2 {
-  font-size: 2.625rem;
-}
-
-.minor-uitleg div > p a {
-  position: absolute;
-  top: 1rem;
-  font-size: 1.5rem;
-}
-
-.minor-uitleg section {
-  width: 45vw;
-}
-
+/********************************/
+/*           ALGEMEEN           */
+/********************************/
+/* grid */
 .minor-uitleg {
   display: grid;
   grid-template-columns: 1fr max-content 5fr;
@@ -30,14 +24,252 @@
   grid-column-start: 2;
 }
 
-/* leerdoelen */
-.minor-uitleg section:nth-of-type(2) ul li:not(li:nth-of-type(1)) {
-  margin: 0 0 0 2rem;
+
+/* section */
+.minor-uitleg section {
+  width: 45vw;
 }
 
+
+/* h2 */
+.minor-uitleg h2 {
+  font-size: 2.625rem;
+}
+
+.minor-uitleg section article + article h2 {
+  margin-top: 2em;
+}
+
+
+/* span */
+.minor-uitleg section article > p > span {
+  font-weight: 700;
+}
+
+
+/* markers voor li */
 .minor-uitleg ul li::marker {
   position: absolute;
   font-size: 1.5rem;
+}
+
+/********************************/
+/*   SECTION 1 - MINOR UITLEG   */
+/********************************/
+
+/* Zelfde voor deze? Als ik hem uitcomment verandert er niks hahaha */
+/* .minor-uitleg div > p a {
+  position: absolute;
+  top: 1rem;
+  font-size: 1.5rem;
+} */
+
+
+/* first letters */
+.minor-uitleg section:nth-of-type(1) p::first-letter {
+  font-weight: bold;
+  font-size: 88px;
+  font-family: 'Sansita', sans-serif;
+  float: left;
+  line-height: 1em;
+  margin: 0 .3em;
+}
+
+.minor-uitleg section:nth-of-type(1) p {
+  position: relative;
+}
+
+
+.minor-uitleg section:nth-of-type(1) {
+  max-width: 40em;
+}
+
+/* BEFORE & AFTERS */
+/* alle articles before */
+.minor-uitleg section:nth-of-type(1) article h2::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  animation-iteration-count: infinite;
+}
+
+.minor-uitleg section:nth-of-type(1) article h2::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  animation-iteration-count: infinite;
+}
+
+.minor-uitleg section:nth-of-type(1) article p::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+
+/* article 1 */
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::before {
+  top: .3rem;
+  left: -2.5rem;
+  width: 14rem;
+  height: 3rem;
+  background-color:rgba(237, 122, 205, 0.9);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::after {
+  top: -.25rem;
+  left: 8.75rem;
+  width: 13rem;
+  height: 2.75rem;
+  background-color: rgba(139, 225, 231, 0.8);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(1) p::before {
+  top: .5em;
+  left: -.6em;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(150, 231, 168, 0.7);
+  transform: rotate(-15deg);
+}
+
+
+/* article 2 */
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::before {
+  top: .3rem;
+  left: 1.75rem;
+  width: 24rem;
+  height: 5rem;
+  background-color:rgba(150, 231, 168, 0.7);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::after {
+  top: -.3rem;
+  left: 14rem;
+  width: 21rem;
+  height: 4rem;
+  background-color: rgba(237, 122, 205, 0.9);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(2) p::before {
+  top: .5em;
+  left: -.7em;
+  width: 130px;
+  height: 100px;
+  background-color: rgba(139, 225, 231, 0.8);
+  transform: rotate(105deg);
+}
+
+
+/* article 3 */
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::before {
+  top: -.3rem;
+  left: -1.5rem;
+  width: 12rem;
+  height: 5rem;
+  background-color:rgba(139, 225, 231, 0.8);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::after {
+  top: 3rem;
+  left: 8.5rem;
+  width: 28rem;
+  height: 4rem;
+  background-color: rgba(150, 231, 168, 0.7);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:nth-of-type(1)::before {
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 70px;
+  background-color: rgba(237, 122, 205, 0.9);
+  transform: rotate(10deg);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:nth-of-type(1)::after {
+  content: '';
+  position: absolute;
+  top: 3em;
+  left: -1em;
+  width: 100px;
+  height: 50px;
+  background-color: rgba(150, 231, 168, 0.7);
+  transform: rotate(-20deg);
+  z-index: -2;
+}
+
+.minor-uitleg section:nth-of-type(1)e article:nth-of-type(3) p:last-of-type:before {
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 110px;
+  background-color: rgba(139, 225, 231, 0.8);
+  transform: rotate(-5deg);
+}
+
+
+/* article 4 */
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::before {
+  top: -1rem;
+  left: -1.5rem;
+  width: 22rem;
+  height: 4.5rem;
+  background-color:rgba(237, 122, 205, 0.9);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::after {
+  top: 2.5rem;
+  left: 18rem;
+  width: 18rem;
+  height: 5rem;
+  background-color: rgba(150, 231, 168, 0.7);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(4) p::before {
+  top: .25em;
+  left: .25em;
+  width: 70px;
+  height: 100px;
+  background-color: rgba(139, 225, 231, 0.8);
+  transform: rotate(-7deg);
+}
+
+
+/* article 5 */
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::before {
+  top: -.3rem;
+  left: -2.5rem;
+  width: 12rem;
+  height: 3.5rem;
+  background-color:rgba(139, 225, 231, 0.8);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::after {
+  top: 1rem;
+  left: 8.5rem;
+  width: 11rem;
+  height: 2.75rem;
+  background-color:rgba(237, 122, 205, 0.9);
+}
+
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(5) p::before {
+  top: -9em;
+  left: 2em;
+  width: 80px;
+  height: 300px;
+  background-color: rgba(150, 231, 168, 0.7);
+  transform: rotate(17deg);
+  z-index: -3;
+}
+
+
+
+/********************************/
+/*    SECTION 2 - LEERDOELEN    */
+/********************************/
+.minor-uitleg section:nth-of-type(2) ul li:not(li:nth-of-type(1)) {
+  margin: 0 0 0 2rem;
 }
 
 .minor-uitleg section:nth-of-type(2) ul li:nth-of-type(1) {
@@ -88,223 +320,16 @@
 }
 
 
-/****************************/
-/*      TEKST STYLING      */
-/**************************/
-
-.minor-uitleg section:first-of-type{
-    max-width: 40em;
-}
-
-.minor-uitleg section article > p > span {
-  font-weight: 700;
-}
-
-/* alle h2 */
-.minor-uitleg section article + article h2 {
-  margin-top: 2em;
-}
-
-.minor-uitleg section:nth-of-type(1) article h2::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  animation-iteration-count: infinite;
-}
-
-.minor-uitleg section:nth-of-type(1) article h2::after {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  animation-iteration-count: infinite;
-}
-
-/* article 1 */
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::before {
-  top: .3rem;
-  left: -2.5rem;
-  width: 14rem;
-  height: 3rem;
-  background-color:rgba(237, 122, 205, 0.9);
-}
-
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::after {
-  top: -.25rem;
-  left: 8.75rem;
-  width: 13rem;
-  height: 2.75rem;
-  background-color: rgba(139, 225, 231, 0.8);
-}
-
-
-/* article 2 */
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::before {
-  top: .3rem;
-  left: 1.75rem;
-  width: 24rem;
-  height: 5rem;
-  background-color:rgba(150, 231, 168, 0.7);
-}
-
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::after {
-  top: -.3rem;
-  left: 14rem;
-  width: 21rem;
-  height: 4rem;
-  background-color: rgba(237, 122, 205, 0.9);
-}
-
-
-/* article 3 */
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::before {
-  top: -.3rem;
-  left: -1.5rem;
-  width: 12rem;
-  height: 5rem;
-  background-color:rgba(139, 225, 231, 0.8);
-}
-
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::after {
-  top: 3rem;
-  left: 8.5rem;
-  width: 28rem;
-  height: 4rem;
-  background-color: rgba(150, 231, 168, 0.7);
-}
-
-/* article 4 */
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::before {
-  top: -1rem;
-  left: -1.5rem;
-  width: 22rem;
-  height: 4.5rem;
-  background-color:rgba(237, 122, 205, 0.9);
-}
-
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::after {
-  top: 2.5rem;
-  left: 18rem;
-  width: 18rem;
-  height: 5rem;
-  background-color: rgba(150, 231, 168, 0.7);
-}
-
-
-/* article 5 */
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::before {
-  top: -.3rem;
-  left: -2.5rem;
-  width: 12rem;
-  height: 3.5rem;
-  background-color:rgba(139, 225, 231, 0.8);
-}
-
-.minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::after {
-  top: 1rem;
-  left: 8.5rem;
-  width: 11rem;
-  height: 2.75rem;
-  background-color:rgba(237, 122, 205, 0.9);
-}
-
-
-/* first letters */
-.minor-uitleg section:first-of-type p::first-letter {
-  font-weight: bold;
-  font-size: 88px;
-  font-family: 'Sansita', sans-serif;
-  float: left;
-  line-height: 1em;
-  margin: 0 .3em;
-}
-
-.minor-uitleg section:first-of-type p {
-  position: relative;
-}
-
-/* alle articles before */
-.minor-uitleg section:first-of-type article p::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* article 1 */
-.minor-uitleg section:first-of-type article:nth-of-type(1) p::before {
-  top: .5em;
-  left: -.6em;
-  width: 90px;
-  height: 90px;
-  background-color: rgba(150, 231, 168, 0.7);
-  transform: rotate(-15deg);
-}
-
-/* article 2 */
-.minor-uitleg section:first-of-type article:nth-of-type(2) p::before {
-  top: .5em;
-  left: -.7em;
-  width: 130px;
-  height: 100px;
-  background-color: rgba(139, 225, 231, 0.8);
-  transform: rotate(105deg);
-}
-
-/* article 3 */
-.minor-uitleg section:first-of-type article:nth-of-type(3) p:first-of-type::before {
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 70px;
-  background-color: rgba(237, 122, 205, 0.9);
-  transform: rotate(10deg);
-}
-
-.minor-uitleg section:first-of-type article:nth-of-type(3) p:first-of-type::after {
-  content: '';
-  position: absolute;
-  top: 3em;
-  left: -1em;
-  width: 100px;
-  height: 50px;
-  background-color: rgba(150, 231, 168, 0.7);
-  transform: rotate(-20deg);
-  z-index: -2;
-}
-
-.minor-uitleg section:first-of-type article:nth-of-type(3) p:last-of-type:before {
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 110px;
-  background-color: rgba(139, 225, 231, 0.8);
-  transform: rotate(-5deg);
-}
-
-
-/* article 4 */
-.minor-uitleg section:first-of-type article:nth-of-type(4) p::before {
-  top: .25em;
-  left: .25em;
-  width: 70px;
-  height: 100px;
-  background-color: rgba(139, 225, 231, 0.8);
-  transform: rotate(-7deg);
-}
-
-/* article 5 */
-.minor-uitleg section:first-of-type article:nth-of-type(5) p::before {
-  top: -9em;
-  left: 2em;
-  width: 80px;
-  height: 300px;
-  background-color: rgba(150, 231, 168, 0.7);
-  transform: rotate(17deg);
-  z-index: -3;
-}
 
 
 
-/* semester - section 3*/
+
+
+
+
+/********************************/
+/*   SECTION 3 - SEMESTER/BLOK  */
+/********************************/
 .minor-uitleg section:nth-of-type(3){
   position: relative;
   top: -45rem;
@@ -332,7 +357,9 @@
   animation-iteration-count: infinite;
 }
 
-/* aantal studenten - section 4 */
+/********************************/
+/* SECTION 4 - AANTAL STUDENTEN */
+/********************************/
 .minor-uitleg section:nth-of-type(4){
   position: relative;
   top: -33rem;
@@ -353,7 +380,9 @@
 }
 
 
-/* courses - section 5 */
+/********************************/
+/*     SECTION 5 - COURSES      */
+/********************************/
 .minor-uitleg section:nth-of-type(5) {
   position: relative;
   top: -23rem;
@@ -447,7 +476,9 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 }
 
 
-/* toelatingseisen - section 6 */
+/********************************/
+/*  SECTION 6 - TOELATINGSEISEN  */
+/********************************/
 .minor-uitleg section:nth-of-type(6) {
   position: relative;
   top: -8rem;
@@ -458,7 +489,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   position: relative;
   top: -26rem;
 }
-
 
 .minor-uitleg section:nth-of-type(6) li {
   position: absolute;
@@ -612,7 +642,10 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   z-index: -1;
 }
 
-/* algemene informatie */
+
+/********************************/
+/*   SECTION 7 - ALGEMENE INFO  */
+/********************************/
 .minor-uitleg section:nth-of-type(7) {
   margin-bottom: 5rem;
 }
