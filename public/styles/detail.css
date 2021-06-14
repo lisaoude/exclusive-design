@@ -2,8 +2,8 @@
 /*  LAYOUT - MINOR UITLEG  */
  div > a:first-of-type {
   position: absolute;
-  top: 14rem;
-  left: 70rem; 
+  top: 8rem;
+  left: 10rem;
   font-size: 1.5rem;
 }
 
@@ -107,9 +107,10 @@
 }
 
 /* alle h2 */
-.minor-uitleg section h2 {
+.minor-uitleg section article + article h2 {
   margin-top: 2em;
 }
+
 .minor-uitleg section:nth-of-type(1) article h2::before {
   content: '';
   position: absolute;
@@ -360,7 +361,7 @@
 /* courses - section 5 */
 .minor-uitleg section:nth-of-type(5) {
   position: relative;
-  top: -25rem;
+  top: -23rem;
   left: 0rem;
 }
 
@@ -380,7 +381,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 /* prototyping */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(1) {
   position: absolute;
-  top: 20rem;
+  top: 15rem;
   left: -1rem;
   display: flex;
   align-items: center;
@@ -404,7 +405,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 /* richtlijnen */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(2) {
   position: absolute;
-  top: 26rem;
+  top: 19rem;
   left: 12rem;
   width: 23rem;
   height: 9rem;
@@ -427,7 +428,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 /* design research */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(3) {
   position: absolute;
-  top: 18rem;
+  top: 12rem;
   left: 24rem;
   display: flex;
   justify-content: center;
