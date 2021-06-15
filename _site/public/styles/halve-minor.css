@@ -1,10 +1,54 @@
-/*******************************/
-/*  heading  before, after   */
-/*****************************/
+/**********************************/
+/*  HEADINGS 2 | before, after */
+/********************************/
+
 .halve-minor h2{
     position: relative;
 }
 
+.halve-minor h2::before, .halve-minor h2::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.halve-minor > section h2:before{
+    width: 8rem;
+    height: 3rem;
+    left: 8rem;
+    background-color:  #8be1e7cc;
+}
+
+.halve-minor > section h2:after{
+    width: 5rem;
+    height: 4rem;
+    top: .5rem;
+    left: 15rem;
+    background-color: #ed7acde6;
+}
+
+.halve-minor > section > section h2::before{
+    width: 8rem;
+    height: 2rem;
+    left: 1rem;
+    background-color: #96e7a8b3;
+}
+
+.halve-minor > section > section h2::after{
+    width: 2rem;
+    height: 7rem;
+    top: -2rem;
+    left: 0;
+    background-color: #ed7acde6;
+    transform: rotate(30deg);
+}
+
+/**********************************/
+/*  MINORENLIJST | before, after */
+/********************************/
+.halve-minor h2{
+    position: relative;
+}
 
 .halve-minor h3{
     position: relative;
@@ -47,11 +91,9 @@
     z-index: -1;
 }
 
-
 /*******************************/
 /*  LAYOUT GRID MINOREN LIJST */
 /*****************************/
-
 
 .halve-minor section > section {
     display: grid;
@@ -75,10 +117,6 @@
     grid-row-end: 4;
 }
 
-.halve-minor > section > article {
-    max-width: 50em;
-}
-
 .halve-minor > section > section h2{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -92,14 +130,16 @@
 }
 
 /************************/
-/*  eerste stuk tekst */
-/*********************/
+/*         QUOTE       */
+/**********************/
 
 .halve-minor section:first-of-type article p:first-of-type {
     background-color: #ffffff;
     padding: 1rem;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 6rem;
+    max-height: 6rem;
+    max-width: 30rem;
 }
 
 .halve-minor section:first-of-type article p:first-of-type::before {
@@ -119,6 +159,30 @@
     text-decoration: underline dashed 2px;
 }
 
+/***************************/
+/*     LAYOUT ARTICLE 1   */
+/*************************/
+
+.halve-minor > section article:first-of-type {
+    display: grid;
+    grid-column-gap: 2rem;
+}
+
+.halve-minor > section article h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.halve-minor > section article p:first-of-type {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.halve-minor > section:first-of-type article p:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
 /*********************/
 /*  LIJSTJES MINORs  */
 /*******************/
@@ -130,6 +194,25 @@
 .halve-minor section ul {
     margin-top: 2rem;
 }
+
+/*****************************/
+/*  EXCLUSIVE DESIGN LINK  */
+/**************************/
+
+.halve-minor section > section div article:nth-of-type(1) ul li:nth-of-type(4) a::before{
+    content: '';
+    position: absolute;
+    width: 8.5rem;
+    height: 2rem;
+    background-color: #ffd92f;
+    z-index: -1;
+}
+
+.halve-minor section > section div article:nth-of-type(1) ul li:nth-of-type(4) a{
+    font-style: italic;
+}
+
+
 
 /*********************/
 /*    RESPONSIVE    */

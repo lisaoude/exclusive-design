@@ -5,6 +5,7 @@
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
+
 /* grid */
 .minor-uitleg {
   display: grid;
@@ -57,6 +58,7 @@
 .minor-uitleg section:nth-of-type(1) h2 span:hover {
   filter: drop-shadow(1rem 0.75rem #2e05131a);
 }
+
 
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
