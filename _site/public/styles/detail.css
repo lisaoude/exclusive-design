@@ -5,6 +5,7 @@
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
+
 /* grid */
 .minor-uitleg {
   display: grid;
@@ -301,14 +302,6 @@
   text-decoration: underline;
   color: black;
 }
-
-
-
-
-
-
-
-
 
 /********************************/
 /*   SECTION 3 - SEMESTER/BLOK  */

@@ -29,7 +29,6 @@
   animation-iteration-count: infinite;
 }
 
-
 .overview section:nth-of-type(1) p::first-line {
   font-weight: 700;
 }
@@ -103,14 +102,18 @@
 /***********************/
 /*    STUDENTENWERK    */
 /***********************/
+
+/* informatie stukje tekst over projecten */
 .overview section:nth-of-type(2) > h1, .overview section:nth-of-type(2) > p  {
   text-align: right;
 }
 
+/* linkje 'bekijk alle projecten' */
 .overview ul li a span{
   text-decoration-line: underline;
 }
 
+/* witte hva driehoekje in link */
 .overview section:nth-of-type(2) a::before {
   content: '';
   width: 3rem;
@@ -120,13 +123,13 @@
   background-color: rgb(255, 255, 255);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   z-index: -1;
-  transform: rotate(
-90deg
-);
+  transform: rotate(90deg);
 }
 
+/* project styling */
 .overview section:nth-of-type(2) h2  {
   margin-bottom: 1rem;
+  font-size: 2.5vw;
 }
 
 .overview section:nth-of-type(2) > p {
@@ -164,6 +167,8 @@
   text-decoration-line: none;
 }
 
+/* positie per project */
+
 .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
   position: absolute;
   top: 0;
@@ -199,18 +204,6 @@
   z-index: -1;
 }
 
-
-.overview section:nth-of-type(2) ul + a {
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-}
-
-.overview section:nth-of-type(2) > p a {
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
-}
-
 /*******************/
 /*     STATES     */
 /*****************/
@@ -242,54 +235,53 @@
 /**********************/
 @media (max-width: 720px) {
 
+  .overview section:first-of-type > a img {
+    max-width: 45vw;
+    max-height: 45vw;
+  }
+
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
-  .overview div {
+
+  .overview section:nth-of-type(2) > ul > li p{
+    max-width: 80%;
+  }
+
+  .overview ul li {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 97.5rem;
   }
 
-  .overview div > article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .overview div > article p {
-    width: 50vw;
-    text-align: center;
-    background-color: yellow;
-  }
-
-  .overview div > article:nth-of-type(1) {
+  .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
+    top: 5rem;
+    left: 3rem;
     transform: rotate(-20deg);
-  }
+}
 
-  .overview div > article:nth-of-type(2) {
-    position: relative;
-    top: 3rem;
-    left: 0;
+  /* project 2 */
+
+  .overview section:nth-of-type(2) > ul > li:nth-of-type(2) {
+    top: 41rem;
+    left: 5vw;
     transform: rotate(20deg);
   }
 
-  .overview div > article:nth-of-type(3) {
-    position: relative;
-    top: 6rem;
-    left: 0;
+  /* project 3 */
+
+  .overview section:nth-of-type(2) > ul > li:nth-of-type(3) {
+    position: absolute;
+    top: 75rem;
+    left: 3rem;
     transform: rotate(-20deg);
   }
 
-  .overview img {
-    width: 40vw;
-    height: auto;
-  }
 }
 
 @media (max-width: 1100px){
+
+  /********************************/
+  /*    IMG NAAST INFO MINOR    */
+  /*****************************/
 
   .overview > section:first-of-type {
     display: grid;
@@ -310,7 +302,7 @@
   }
 
   .overview > section:first-of-type > a img {
-    margin: 2em 2em 2em 0em;
+    margin: 3em 2em 2em 0em;
   }
 
   .overview > section:first-of-type > a span {
@@ -319,7 +311,12 @@
   }
 
   .overview > section:first-of-type > a { 
-    font-size: 16px;
+    font-size: 20px;
   }
+
+  /**********************/
+  /*   STUDENTENWERK   */
+  /********************/
+
 
 }
