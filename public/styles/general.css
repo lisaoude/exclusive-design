@@ -28,7 +28,7 @@ main > div {
   margin: 5rem 0rem 0rem 0rem;
 }
 
-img, video {
+img:not(footer img), video {
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
 
@@ -79,18 +79,18 @@ ul li {
   line-height: 2rem;
 }
 
+
 /*********************/
 /*       HEADER      */
 /*********************/
 header {
-  /* door margin verschuiven de blokken steeds */
   margin-top: 45px;
   margin-left: 25px;
+  position: relative;
   z-index: 10;
-  transition: 1s;
 }
 
-header > a{
+header > a {
   text-decoration-line: none;
 }
 
@@ -98,21 +98,21 @@ header h1 {
   transition: .5s;
 }
 
-header h1 span{
+header span:nth-of-type(1) {
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
+
 
 /************************/
 /*     halve minor     */
 /**********************/
-
-header h2{
+header h2 {
   font-size: 2rem;
   letter-spacing: .5rem;
   filter: drop-shadow(.5rem .5rem #2e05131a); 
 }
 
-header section{
+header section {
   margin: 1rem 0rem 0rem 2rem;
   background-color: #ffd92f;
   max-width: 40rem;
@@ -125,13 +125,12 @@ header section{
   transform: rotate(30deg);
 }
 
-
-header::before {
+header span:nth-of-type(2):before {
   content: '';
   position: absolute;
-  top: -1.875rem;
-  left: 21.25rem;
-  width: 60.625rem;
+  top: -1.5rem;
+  left: 21rem;
+  width: 61rem;
   height: 10rem;
   background-color: #8be1e7cc;
   z-index: -1;
@@ -140,13 +139,13 @@ header::before {
   animation-iteration-count: infinite;
 }
 
-header::after {
+header span:nth-of-type(2)::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 69.375rem;
-  width: 11.25rem;
-  height: 5.625rem;
+  top: 6rem;
+  left: 73rem;
+  width: 13rem;
+  height: 6rem;
   background-color: #96e7a8b3;
   z-index: -1;
   animation-name: green-to-pink;
@@ -157,10 +156,10 @@ header::after {
 header h1::before {
   content: '';
   position: absolute;
-  top: -0.625rem;
-  left: -0.625rem;
-  width: 6.875rem;
-  height: 8.75rem;
+  top: -0.5rem;
+  left: 0.75rem;
+  width: 7rem;
+  height: 9rem;
   background-color: #ed7acde6;
   z-index: -1;
   animation-name: pink-to-purple;
@@ -171,10 +170,10 @@ header h1::before {
 header h1::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 3.125rem;
-  width: 40.625rem;
-  height: 11.875rem;
+  top: 4.5rem;
+  left: 3.5rem;
+  width: 41rem;
+  height: 12rem;
   background-color: #96e7a8b3;
   z-index: -2;
   animation-name: green-to-pink;
@@ -182,24 +181,10 @@ header h1::after {
   animation-iteration-count: infinite;
 }
 
-nav::after {
-  content: '';
-  position: absolute;
-  top: -3.75rem;
-  left: -1.375rem;
-  width: 24.7rem;
-  height: 140px;
-  background-color: rgba(237, 122, 205, 0.9);
-  z-index: -1;
-  animation-name: pink-to-purple;
-  animation-duration: 120s;
-  animation-iteration-count: infinite;
-}
 
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
 /******************************/
-
 nav {
   position: absolute;
   max-width: 24rem;
@@ -207,8 +192,8 @@ nav {
   padding: 1rem;
   margin: 1rem;
   text-align: right; 
-  right: 33rem;
-  top: 5.5rem;
+  right: 26rem;
+  top: 7.5rem;
 }
 
 nav div {
@@ -220,7 +205,6 @@ nav div {
   border-radius: 5px;
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
-
 
 nav ul {
   display: inline-block;
@@ -257,6 +241,7 @@ nav ul button {
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   width: auto;
+  max-width: 15rem;
   color: white;
   border: none;
   padding: .5rem;
@@ -280,6 +265,7 @@ nav #klik {
   margin: 1rem;
 }
 
+
 /* state */ 
 nav ul li, nav ul button {
   background-color: #000000;
@@ -292,17 +278,15 @@ nav ul button {
   border-radius: 5px;
 }
 
+
+
 /**********************/
 /*       STATES       */
 /**********************/
-
-header h1:hover, header a:focus h1 {
+header h1:hover,
+header a:focus h1 {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
-}
-
-header:hover span{
-  filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
 a:focus {
@@ -314,26 +298,32 @@ nav ul a:hover {
   color: rgb(205, 205, 205);
 }
 
-nav ul li:hover, nav ul button:hover, nav ul li:hover button, nav div #klik:hover, nav div #klik:focus  {
+nav ul li:hover:not(li:first-of-type),
+nav ul button:hover,
+nav ul li:hover button,
+nav div #klik:hover,
+nav div #klik:focus {
   cursor: pointer;
   background-color:#232323;
 }
 
-
-nav div #klik:focus, nav ul li:focus, nav ul button:focus {
+nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus {
   border: white dashed 1px;
   outline: none;
   background-color:#232323;
 }
 
+
+
 /************************/
 /*     SHOW BUTTON     */
 /**********************/
-
 .show ul{
   display: inline-block;
-  right: -16px;
+  right: 0;
+  bottom: 0;
 }
+
 
 /*************************/
 /*  INFO MINOR OVERVIEW  */
@@ -341,6 +331,7 @@ nav div #klik:focus, nav ul li:focus, nav ul button:focus {
 h2 {
   position: relative;
 }
+
 
 /****************************/
 /*  STUDENTENWERK OVERVIEW  */
@@ -419,9 +410,8 @@ footer {
   height: 4rem;
 }
 
-
 footer img{
-  width: 15vw;
+  width: 12rem;
 }
 
 
@@ -439,23 +429,19 @@ footer img{
     top: auto;
     left: auto;
   }
-
   nav p {
     max-width: 70%;
     font-size: 1rem;
   }
-
   nav button {
     border-radius: 50%;
     height: 4.375rem;
     min-width: 4.375rem;
   }
-
   .show ul{
     display: inline-block;
     right: -6vw;
   }
-
 
   /***********************/
   /*     INFO MINOR     */
@@ -463,7 +449,6 @@ footer img{
   section:nth-of-type(1) {
     width: auto;
   }
-
   
   /***********************/
   /*    STUDENTENWERK    */
@@ -476,7 +461,6 @@ footer img{
 
 
 
-
 /***********************/
 /*      ANIMATIES      */
 /***********************/
@@ -485,96 +469,76 @@ footer img{
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(150, 216, 231, 0.7);
   }
-
   34% {
     background-color: rgba(150, 158, 231, 0.7);
   }
-
   51% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(150, 158, 231, 0.7);
   }
-
   85% {
     background-color: rgba(150, 216, 231, 0.7);
   }
-
   100% {
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-out;
   }
 }
-
 
 @keyframes pink-to-purple {
   0% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(220, 150, 231, 0.7);
   }
-
   34% {
     background-color: rgba(161, 150, 231, 0.7);
   }
-
   51% {
     background-color: rgba(182, 136, 239, 0.9);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(161, 150, 231, 0.7);
   }
-
   85% {
     background-color: rgba(220, 150, 231, 0.7);
   }
-
   100% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-out;
   }
 }
 
-
 @keyframes blue-to-green {
   0% {
     background-color: rgba(139, 225, 231, 0.8);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(139, 231, 214, 0.8);
   }
-
   34% {
     background-color: rgba(139, 231, 198, 0.8);
   }
-
   51% {
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(139, 231, 198, 0.8);
   }
-
   85% {
     background-color: rgba(139, 231, 214, 0.8);
   }
-
   100% {
     background-color: rgba(139, 225, 231, 0.8);
     animation-timing-function: ease-out;
@@ -585,7 +549,6 @@ footer img{
   0% {
     transform: rotate(0deg);
   }
-
   100%{
     transform: rotate(20deg);
   }
