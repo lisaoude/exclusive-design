@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
@@ -84,13 +83,14 @@ ul li {
 /*       HEADER      */
 /*********************/
 header {
+  /* door margin verschuiven de blokken steeds */
   margin-top: 45px;
   margin-left: 25px;
-  position: relative;
   z-index: 10;
+  transition: 1s;
 }
 
-header > a {
+header > a{
   text-decoration-line: none;
 }
 
@@ -98,7 +98,7 @@ header h1 {
   transition: .5s;
 }
 
-header span:nth-of-type(1) {
+header h1 span{
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
@@ -106,13 +106,13 @@ header span:nth-of-type(1) {
 /*     halve minor     */
 /**********************/
 
-header h2 {
+header h2{
   font-size: 2rem;
   letter-spacing: .5rem;
   filter: drop-shadow(.5rem .5rem #2e05131a); 
 }
 
-header section {
+header section{
   margin: 1rem 0rem 0rem 2rem;
   background-color: #ffd92f;
   max-width: 40rem;
@@ -126,7 +126,7 @@ header section {
 }
 
 
-header span:nth-of-type(2):before {
+header::before {
   content: '';
   position: absolute;
   top: -1.5rem;
@@ -140,7 +140,7 @@ header span:nth-of-type(2):before {
   animation-iteration-count: infinite;
 }
 
-header span:nth-of-type(2)::after {
+header::after {
   content: '';
   position: absolute;
   top: 6rem;
@@ -158,7 +158,7 @@ header h1::before {
   content: '';
   position: absolute;
   top: -0.5rem;
-  left: 0.75rem;
+  left: 1rem;
   width: 7rem;
   height: 9rem;
   background-color: #ed7acde6;
@@ -172,7 +172,7 @@ header h1::after {
   content: '';
   position: absolute;
   top: 4.5rem;
-  left: 3.5rem;
+  left: 3rem;
   width: 41rem;
   height: 12rem;
   background-color: #96e7a8b3;
@@ -182,6 +182,20 @@ header h1::after {
   animation-iteration-count: infinite;
 }
 
+/* 
+nav::after {
+  content: '';
+  position: absolute;
+  top: -3.75rem;
+  left: -1.375rem;
+  width: 24.7rem;
+  height: 140px;
+  background-color: rgba(237, 122, 205, 0.9);
+  z-index: -1;
+  animation-name: pink-to-purple;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+} */
 
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
@@ -207,6 +221,7 @@ nav div {
   border-radius: 5px;
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
+
 
 nav ul {
   display: inline-block;
@@ -283,10 +298,13 @@ nav ul button {
 /*       STATES       */
 /**********************/
 
-header h1:hover,
-header a:focus h1 {
+header h1:hover, header a:focus h1 {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+header:hover span{
+  filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
 a:focus {
@@ -313,7 +331,6 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
   outline: none;
   background-color:#232323;
 }
-
 
 /************************/
 /*     SHOW BUTTON     */
