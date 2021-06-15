@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
@@ -83,15 +84,13 @@ ul li {
 /*       HEADER      */
 /*********************/
 header {
-  /* door margin verschuiven de blokken steeds */
   margin-top: 45px;
   margin-left: 25px;
   position: relative;
   z-index: 10;
-  transition: 1s;
 }
 
-header > a{
+header > a {
   text-decoration-line: none;
 }
 
@@ -183,20 +182,6 @@ header h1::after {
   animation-iteration-count: infinite;
 }
 
-/* 
-nav::after {
-  content: '';
-  position: absolute;
-  top: -3.75rem;
-  left: -1.375rem;
-  width: 24.7rem;
-  height: 140px;
-  background-color: rgba(237, 122, 205, 0.9);
-  z-index: -1;
-  animation-name: pink-to-purple;
-  animation-duration: 120s;
-  animation-iteration-count: infinite;
-} */
 
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
@@ -222,7 +207,6 @@ nav div {
   border-radius: 5px;
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
-
 
 nav ul {
   display: inline-block;
@@ -305,11 +289,6 @@ header a:focus h1 {
   filter: drop-shadow(1rem 1rem #2e05131a);
 }
 
-/* header:hover span {
-  filter: drop-shadow(.5rem .5rem #2e05131a);
-  background-color: hotpink;
-} */
-
 a:focus {
   border: dashed 2px black;
   outline: none;
@@ -334,6 +313,7 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
   outline: none;
   background-color:#232323;
 }
+
 
 /************************/
 /*     SHOW BUTTON     */
