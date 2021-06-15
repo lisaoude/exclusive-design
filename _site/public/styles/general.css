@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
@@ -80,6 +79,7 @@ ul li {
   line-height: 2rem;
 }
 
+
 /*********************/
 /*       HEADER      */
 /*********************/
@@ -102,10 +102,10 @@ header span:nth-of-type(1) {
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
+
 /************************/
 /*     halve minor     */
 /**********************/
-
 header h2 {
   font-size: 2rem;
   letter-spacing: .5rem;
@@ -124,7 +124,6 @@ header section {
   z-index: 9;
   transform: rotate(30deg);
 }
-
 
 header span:nth-of-type(2):before {
   content: '';
@@ -186,7 +185,6 @@ header h1::after {
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
 /******************************/
-
 nav {
   position: absolute;
   max-width: 24rem;
@@ -212,7 +210,7 @@ nav ul {
   display: inline-block;
   list-style: none;
   background-color:  #000000;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 0px;
   padding: 1rem;
   margin: 1rem;
   position: fixed;
@@ -267,6 +265,7 @@ nav #klik {
   margin: 1rem;
 }
 
+
 /* state */ 
 nav ul li, nav ul button {
   background-color: #000000;
@@ -279,10 +278,11 @@ nav ul button {
   border-radius: 5px;
 }
 
+
+
 /**********************/
 /*       STATES       */
 /**********************/
-
 header h1:hover,
 header a:focus h1 {
   transform: scale(1.02);
@@ -307,7 +307,6 @@ nav div #klik:focus {
   background-color:#232323;
 }
 
-
 nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus {
   border: white dashed 1px;
   outline: none;
@@ -315,15 +314,16 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
 }
 
 
+
 /************************/
 /*     SHOW BUTTON     */
 /**********************/
-
 .show ul{
   display: inline-block;
   right: 0;
   bottom: 0;
 }
+
 
 /*************************/
 /*  INFO MINOR OVERVIEW  */
@@ -331,6 +331,7 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
 h2 {
   position: relative;
 }
+
 
 /****************************/
 /*  STUDENTENWERK OVERVIEW  */
@@ -409,7 +410,6 @@ footer {
   height: 4rem;
 }
 
-
 footer img{
   width: 12rem;
 }
@@ -420,85 +420,44 @@ footer img{
 /**********************/
 @media (max-width: 720px) {
 
-  img {
-    max-width: 50vw;
-    max-height: 50vw;
-  }
-
-  /* header h1 titel */
-
-  header h1 {
-    position: relative;
-    top: 4rem;
-  }
-
-  header h1::after {
-    top: 2.3rem;
-    left: 3rem;
-    width: 24rem;
-    height: 6.4rem;
-  }
-
-  header h1::before {
-    top: -1rem;
-  }
-
-  /* halve minor */
-  header h2{
-    font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-  }
-
-  header section {
-    /* max-width: 26rem; */
-    top: 0rem;
-    right: 0rem;
-    left: 0rem;
-    transform: rotate(0deg);
-    margin: 0;
-    padding: 1rem;
-    width: 100%;
-  }
-  
   /**********************/
   /*      NAVIGATIE     */
   /**********************/
   nav {
-    display: none;
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  nav p {
+    max-width: 70%;
+    font-size: 1rem;
+  }
+  nav button {
+    border-radius: 50%;
+    height: 4.375rem;
+    min-width: 4.375rem;
+  }
+  .show ul{
+    display: inline-block;
+    right: -6vw;
   }
 
   /***********************/
   /*     INFO MINOR     */
   /***********************/
-
-  .overview {
-    margin-top: 8rem;
-  }
-
   section:nth-of-type(1) {
     width: auto;
   }
-
-}
-
-@media (max-width: 1200px) {
-
-  /**********************/
-  /*      NAVIGATIE     */
-  /**********************/
-  nav {
-    top: 1rem;
-    left: 12rem;
-    max-width: 23rem;
-  }
-
-  nav p {
-    font-size: .9rem;
+  
+  /***********************/
+  /*    STUDENTENWERK    */
+  /***********************/
+  img {
+    width: 40vw;
+    height: auto;
   }
 }
-
-
-
 
 
 
@@ -510,96 +469,76 @@ footer img{
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(150, 216, 231, 0.7);
   }
-
   34% {
     background-color: rgba(150, 158, 231, 0.7);
   }
-
   51% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(150, 158, 231, 0.7);
   }
-
   85% {
     background-color: rgba(150, 216, 231, 0.7);
   }
-
   100% {
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-out;
   }
 }
-
 
 @keyframes pink-to-purple {
   0% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(220, 150, 231, 0.7);
   }
-
   34% {
     background-color: rgba(161, 150, 231, 0.7);
   }
-
   51% {
     background-color: rgba(182, 136, 239, 0.9);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(161, 150, 231, 0.7);
   }
-
   85% {
     background-color: rgba(220, 150, 231, 0.7);
   }
-
   100% {
     background-color: rgba(237, 122, 205, 0.9);
     animation-timing-function: ease-out;
   }
 }
 
-
 @keyframes blue-to-green {
   0% {
     background-color: rgba(139, 225, 231, 0.8);
     animation-timing-function: ease-out;
   }
-
   17% {
     background-color: rgba(139, 231, 214, 0.8);
   }
-
   34% {
     background-color: rgba(139, 231, 198, 0.8);
   }
-
   51% {
     background-color: rgba(150, 231, 168, 0.7);
     animation-timing-function: ease-in-out;
   }
-
   68% {
     background-color: rgba(139, 231, 198, 0.8);
   }
-
   85% {
     background-color: rgba(139, 231, 214, 0.8);
   }
-
   100% {
     background-color: rgba(139, 225, 231, 0.8);
     animation-timing-function: ease-out;
@@ -610,7 +549,6 @@ footer img{
   0% {
     transform: rotate(0deg);
   }
-
   100%{
     transform: rotate(20deg);
   }

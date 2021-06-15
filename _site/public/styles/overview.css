@@ -204,10 +204,21 @@
   z-index: -1;
 }
 
-/*******************/
-/*     STATES     */
-/*****************/
+.overview section:nth-of-type(2) ul + a {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+}
 
+.overview section:nth-of-type(2) > p a {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/**********************/
+/*       STATES       */
+/**********************/
 .overview section:nth-of-type(2) > ul li:hover {
   transform: scale(1.02);
   background-color: rgb(202, 202, 202);
