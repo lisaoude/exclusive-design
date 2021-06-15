@@ -5,7 +5,6 @@
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
-
 /* grid */
 .minor-uitleg {
   display: grid;
@@ -59,7 +58,6 @@
   filter: drop-shadow(1rem 0.75rem #2e05131a);
 }
 
-
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
   font-weight: bold;
@@ -74,10 +72,10 @@
   position: relative;
 }
 
-
 .minor-uitleg section:nth-of-type(1) {
   max-width: 40em;
 }
+
 
 /* BEFORE & AFTERS */
 /* alle articles before */
@@ -98,7 +96,6 @@
   position: absolute;
   z-index: -1;
 }
-
 
 /* article 1 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::before {
@@ -126,7 +123,6 @@
   transform: rotate(-15deg);
 }
 
-
 /* article 2 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::before {
   top: .3rem;
@@ -152,7 +148,6 @@
   background-color: rgba(139, 225, 231, 0.8);
   transform: rotate(105deg);
 }
-
 
 /* article 3 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::before {
@@ -201,7 +196,6 @@
   transform: rotate(-5deg);
 }
 
-
 /* article 4 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::before {
   top: -1rem;
@@ -227,7 +221,6 @@
   background-color: rgba(139, 225, 231, 0.8);
   transform: rotate(-7deg);
 }
-
 
 /* article 5 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::before {
@@ -256,8 +249,6 @@
   z-index: -3;
 }
 
-
-
 /********************************/
 /*    SECTION 2 - LEERDOELEN    */
 /********************************/
@@ -266,7 +257,6 @@
   transform: scale(1.02);
   filter: drop-shadow(0.5rem 0.5rem #2e05131a);
 }
-
 
 /* styling */
 .minor-uitleg section:nth-of-type(2) ul li:not(li:nth-of-type(1)) {
@@ -321,7 +311,6 @@
 }
 
 
-
 /********************************/
 /*   SECTION 3 - SEMESTER/BLOK  */
 /********************************/
@@ -359,6 +348,7 @@
   z-index: -1;
   animation-iteration-count: infinite;
 }
+
 
 /********************************/
 /* SECTION 4 - AANTAL STUDENTEN */
@@ -446,7 +436,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   z-index: -1;
 }
 
-
 /* richtlijnen */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(2) {
   position: absolute;
@@ -468,7 +457,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -1;
 }
-
 
 /* design research */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(3) {
@@ -584,8 +572,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
 }
-
-
 
 /********************************/
 /*   SECTION 7 - ALGEMENE INFO  */
