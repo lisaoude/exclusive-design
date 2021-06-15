@@ -211,9 +211,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/**********************/
+/*******************/
 /*     STATES     */
-/**********************/
+/*****************/
 
 .overview section:nth-of-type(2) > ul li:hover {
   transform: scale(1.02);

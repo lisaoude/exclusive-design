@@ -2,15 +2,6 @@
 /* DETAIL PAGINA - MINOR UITLEG */
 /********************************/
 
-/* Waar is dit voor?? Ik kan het opdracht niet vinden */
-
- /* div > a:first-of-type {
-  position: absolute;
-  top: 8rem;
-  left: 10rem;
-  font-size: 1.5rem;
-} */
-
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
@@ -56,14 +47,6 @@
 /********************************/
 /*   SECTION 1 - MINOR UITLEG   */
 /********************************/
-
-/* Zelfde voor deze? Als ik hem uitcomment verandert er niks hahaha */
-/* .minor-uitleg div > p a {
-  position: absolute;
-  top: 1rem;
-  font-size: 1.5rem;
-} */
-
 
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
