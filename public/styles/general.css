@@ -227,7 +227,7 @@ nav ul {
   display: inline-block;
   list-style: none;
   background-color:  #000000;
-  border-radius: 5px 0px 0px 0px;
+  border-radius: 5px;
   padding: 1rem;
   margin: 1rem;
   position: fixed;
@@ -437,49 +437,84 @@ footer img{
 /**********************/
 @media (max-width: 720px) {
 
+  img {
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+
+  /* header h1 titel */
+
+  header h1 {
+    position: relative;
+    top: 4rem;
+  }
+
+  header h1::after {
+    top: 2.3rem;
+    left: 3rem;
+    width: 24rem;
+    height: 6.4rem;
+  }
+
+  header h1::before {
+    top: -1rem;
+  }
+
+  /* halve minor */
+  header h2{
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  header section {
+    /* max-width: 26rem; */
+    top: 0rem;
+    right: 0rem;
+    left: 0rem;
+    transform: rotate(0deg);
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+  
   /**********************/
   /*      NAVIGATIE     */
   /**********************/
   nav {
-    width: auto;
-    position: relative;
-    top: auto;
-    left: auto;
+    display: none;
   }
-
-  nav p {
-    max-width: 70%;
-    font-size: 1rem;
-  }
-
-  nav button {
-    border-radius: 50%;
-    height: 4.375rem;
-    min-width: 4.375rem;
-  }
-
-  .show ul{
-    display: inline-block;
-    right: -6vw;
-  }
-
 
   /***********************/
   /*     INFO MINOR     */
   /***********************/
+
+  .overview {
+    margin-top: 8rem;
+  }
+
   section:nth-of-type(1) {
     width: auto;
   }
 
-  
-  /***********************/
-  /*    STUDENTENWERK    */
-  /***********************/
-  img {
-    width: 40vw;
-    height: auto;
+}
+
+@media (max-width: 1200px) {
+
+  /**********************/
+  /*      NAVIGATIE     */
+  /**********************/
+  nav {
+    top: 1rem;
+    left: 12rem;
+    max-width: 23rem;
+  }
+
+  nav p {
+    font-size: .9rem;
   }
 }
+
+
 
 
 

@@ -5,6 +5,7 @@
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
+
 /* grid */
 .minor-uitleg {
   display: grid;
@@ -47,6 +48,7 @@
 /********************************/
 /*   SECTION 1 - MINOR UITLEG   */
 /********************************/
+
 
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
