@@ -86,6 +86,7 @@ header {
   /* door margin verschuiven de blokken steeds */
   margin-top: 45px;
   margin-left: 25px;
+  position: relative;
   z-index: 10;
   transition: 1s;
 }
@@ -98,7 +99,7 @@ header h1 {
   transition: .5s;
 }
 
-header h1 span{
+header span:nth-of-type(1) {
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
 
@@ -106,13 +107,13 @@ header h1 span{
 /*     halve minor     */
 /**********************/
 
-header h2{
+header h2 {
   font-size: 2rem;
   letter-spacing: .5rem;
   filter: drop-shadow(.5rem .5rem #2e05131a); 
 }
 
-header section{
+header section {
   margin: 1rem 0rem 0rem 2rem;
   background-color: #ffd92f;
   max-width: 40rem;
@@ -126,7 +127,7 @@ header section{
 }
 
 
-header::before {
+header span:nth-of-type(2):before {
   content: '';
   position: absolute;
   top: -1.5rem;
@@ -140,7 +141,7 @@ header::before {
   animation-iteration-count: infinite;
 }
 
-header::after {
+header span:nth-of-type(2)::after {
   content: '';
   position: absolute;
   top: 6rem;
@@ -158,7 +159,7 @@ header h1::before {
   content: '';
   position: absolute;
   top: -0.5rem;
-  left: 1rem;
+  left: 0.75rem;
   width: 7rem;
   height: 9rem;
   background-color: #ed7acde6;
@@ -172,7 +173,7 @@ header h1::after {
   content: '';
   position: absolute;
   top: 4.5rem;
-  left: 3rem;
+  left: 3.5rem;
   width: 41rem;
   height: 12rem;
   background-color: #96e7a8b3;
@@ -298,14 +299,16 @@ nav ul button {
 /*       STATES       */
 /**********************/
 
-header h1:hover, header a:focus h1 {
+header h1:hover,
+header a:focus h1 {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
 }
 
-header:hover span{
+/* header:hover span {
   filter: drop-shadow(.5rem .5rem #2e05131a);
-}
+  background-color: hotpink;
+} */
 
 a:focus {
   border: dashed 2px black;
