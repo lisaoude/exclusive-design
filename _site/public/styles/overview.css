@@ -240,39 +240,61 @@
     max-height: 45vw;
   }
 
+  .overview section:nth-of-type(2) {  
+    height: 138rem;
+  }
+
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
+  .overview section:nth-of-type(2) h2 {
+    font-size: 24px;
+  }
+
+  .overview section:nth-of-type(2) > ul > li p {
+    width: 21rem;
+  }
 
   .overview section:nth-of-type(2) > ul > li p{
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .overview ul li {
     position: relative;
   }
-
   .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
-    top: 5rem;
-    left: 3rem;
-    transform: rotate(-20deg);
+    top: 8rem;
+    left: 2rem;
+    transform: rotate(-10deg);
+}
+
+.overview section:nth-of-type(2) > ul li:first-of-type {
+  background-color: #8be1e7ae;
 }
 
   /* project 2 */
 
   .overview section:nth-of-type(2) > ul > li:nth-of-type(2) {
-    top: 41rem;
-    left: 5vw;
-    transform: rotate(20deg);
+    top: 40rem;
+    left: 2rem;
+    transform: rotate(10deg);
+  }
+
+  .overview section:nth-of-type(2) > ul li:nth-of-type(2) {
+    background-color: #ed7accae;
   }
 
   /* project 3 */
 
   .overview section:nth-of-type(2) > ul > li:nth-of-type(3) {
     position: absolute;
-    top: 75rem;
-    left: 3rem;
-    transform: rotate(-20deg);
+    top: 80rem;
+    left: 2rem;
+    transform: rotate(-10deg);
+  }
+
+  .overview section:nth-of-type(2) > ul li:nth-of-type(3) {
+    background-color: #96e7a8a0;
   }
 
 }
