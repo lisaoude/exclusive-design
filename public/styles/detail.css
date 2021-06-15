@@ -45,9 +45,20 @@
   font-size: 1.5rem;
 }
 
+
+
 /********************************/
 /*   SECTION 1 - MINOR UITLEG   */
 /********************************/
+/* hover */
+.minor-uitleg section:nth-of-type(1) h2:hover {
+  transform: scale(1.02);
+}
+
+.minor-uitleg section:nth-of-type(1) h2 span:hover {
+  filter: drop-shadow(1rem 0.75rem #2e05131a);
+}
+
 
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
@@ -74,14 +85,12 @@
   content: '';
   position: absolute;
   z-index: -1;
-  animation-iteration-count: infinite;
 }
 
 .minor-uitleg section:nth-of-type(1) article h2::after {
   content: '';
   position: absolute;
   z-index: -2;
-  animation-iteration-count: infinite;
 }
 
 .minor-uitleg section:nth-of-type(1) article p::before {
@@ -183,7 +192,7 @@
   z-index: -2;
 }
 
-.minor-uitleg section:nth-of-type(1)e article:nth-of-type(3) p:last-of-type:before {
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:last-of-type:before {
   top: 0;
   left: 0;
   width: 70px;
@@ -252,6 +261,14 @@
 /********************************/
 /*    SECTION 2 - LEERDOELEN    */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(2) li:nth-of-type(1):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(2) ul li:not(li:nth-of-type(1)) {
   margin: 0 0 0 2rem;
 }
@@ -303,9 +320,19 @@
   color: black;
 }
 
+
+
 /********************************/
 /*   SECTION 3 - SEMESTER/BLOK  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(3):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(3){
   position: relative;
   top: -45rem;
@@ -336,6 +363,14 @@
 /********************************/
 /* SECTION 4 - AANTAL STUDENTEN */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(4):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(4){
   position: relative;
   top: -33rem;
@@ -359,6 +394,14 @@
 /********************************/
 /*     SECTION 5 - COURSES      */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(5) li:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(5) {
   position: relative;
   top: -23rem;
@@ -452,176 +495,109 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 }
 
 
+
 /********************************/
 /*  SECTION 6 - TOELATINGSEISEN  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(6) ul:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(6) {
   position: relative;
   top: -8rem;
-  height: 45rem;
+  height: 54rem;
 }
 
 .minor-uitleg section:nth-of-type(6) ul {
   position: relative;
-  top: -26rem;
+  top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .minor-uitleg section:nth-of-type(6) li {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  list-style: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-  width: 15rem;
-  height: auto;
-  padding: 1rem 2rem;
-  z-index: 1;
+  width: 75%;
+  margin-bottom: 0.5rem;
 }
 
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(1) {
-  justify-content: center;
-  top: 30rem;
-  left: -2rem;
-  width: 13rem;
-  height: 7rem;
-}
+  grid-column-start: 1;
+  grid-row-start: 1;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(2) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(3) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(5) {
+  grid-column-start: 2;
+  grid-row-start: 1;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(6) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(7) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+} 
 
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(1)::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -2rem;
-  width: 16rem;
-  height: 7rem;
-  transform: rotate(-5deg);
-  background-color: rgba(237, 122, 205, 0.9);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(2) {
-  justify-content: center;
-  top: 35rem;
-  left: 12rem;
-  width: 16rem;
-  height: 6rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(2)::before {
-  content: '';
-  position: absolute;
   top: -2rem;
-  left: -1rem;
-  width: 18rem;
-  height: 10rem;
-  transform: rotate(10deg);
-  background-color: rgba(150, 231, 168, 0.7);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(3) {
-  justify-content: flex-start;
-  top: 31rem;
-  left: 30rem;
-  width: 18rem;
-  height: 5rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(3)::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
   left: -2rem;
   width: 20rem;
-  height: 7rem;
-  transform: rotate(-5deg);
-  background-color: rgba(139, 225, 231, 0.8);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(4) {
-  justify-content: center;
-  top: 16rem;
-  left: 48rem;
-  width: 14rem;
-  height: 25rem;
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(4)::before {
-  content: '';
-  position: absolute;
-  top: .5rem;
-  left: -2rem;
-  width: 16rem;
-  height: 24rem;
-  transform: rotate(2deg);
+  height: 27.5rem;
+  transform: rotate(-7deg);
   background-color: rgba(237, 122, 205, 0.9);
-  z-index: -2;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(5) {
-  text-align: right;
-  top: 39rem;
-  left: 56rem;
-  width: 20rem;
-  height: 10rem;
+  z-index: -1;
 }
 
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(5)::before {
   content: '';
   position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 23rem;
-  height: 12rem;
-  transform: rotate(-5deg);
-  background-color: rgba(150, 231, 168, 0.7);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(6) {
-  top: 18rem;
-  left: 65rem;
-  width: 10rem;
-  height: 15rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(6)::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  width: 12rem;
-  height: 20rem;
-  transform: rotate(-25deg);
+  top: -2rem;
+  left: 18rem;
+  width: 17rem;
+  height: 27rem;
+  transform: rotate(27deg);
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
 }
 
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(7) {
-  top: 9rem;
-  left: 49rem;
-  width: 24rem;
-  height: 5rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(7)::before {
-  content: '';
-  position: absolute;
-  top: -2rem;
-  left: -2rem;
-  width: 25rem;
-  height: 9rem;
-  transform: rotate(-8deg);
-  background-color: rgba(150, 231, 168, 0.7);
-  z-index: -1;
-}
 
 
 /********************************/
 /*   SECTION 7 - ALGEMENE INFO  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(7) p:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.75rem 0.75rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(7) {
   margin-bottom: 5rem;
 }
