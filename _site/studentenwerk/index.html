@@ -10,6 +10,7 @@
   <link href="/public/styles/overview.css" rel="stylesheet">
   <link href="/public/styles/detail.css" rel="stylesheet">
   <link href="/public/styles/halve-minor.css" rel="stylesheet">
+  <link href="/public/styles/studentenwerk.css" rel="stylesheet">
   <link rel="icon" 
       type="image/png" 
       href="/public/images/icon-site.png">
@@ -23,73 +24,106 @@
 
   <body>
     <header>
- <a href="/"><h1> <span> Exclu&shy;sive De&shy;sign </span></h1></a>
-
-<section> 
-  <h2> HALVE MINOR</h2>
-  <a href="/halve-minor"> wat houdt dit in?</a>
-</section>
-
-<nav> 
-  <button id="klik">Klik</button>
-
-  <ul>
-    <p> Enig idee hoe het is om deze website te bekijken met een beperking?
-        Test het eens! </p>
-    <li><button id='macula'>Macula Degeneratie (oogaandoening)</button></li>
-    <li><button id='motoriek'>Motorische aandoening</button></li>
-    <li><button id='concentratie'>Concentratiestoornis</button></li>
-    <li><button id='laaggeletterd'>Laaggeletterd</button></li>
-    <li><button id='doof'>Doof</button></li>
-    <a href="#"> verbergen </a>
-  </ul>
-</nav>
-
+  <a href="/">
+    <h1>
+      <span>
+        Exclu&shy;sive De&shy;sign
+      </span>
+    </h1>
+  </a>
+  <section>
+    <h2>
+      HALVE MINOR</h2>
+    <a href="/halve-minor">Kies er dus nog een!</a>
+  </section>
+  <nav>
+    <div>
+      <p>
+        Enig idee hoe het is om deze website te bekijken met een beperking?
+      </p>
+      <button id="klik">Klik</button>
+    </div>
+    <ul>
+      <li>
+        Test het eens!
+      </li>
+      <li>
+        <button id='macula'>Macula Degeneratie (oogaandoening)</button>
+      </li>
+      
+      <li>
+        <button id='concentratie'>Concentratiestoornis</button>
+      </li>
+      
+      <a href="#">
+        verbergen
+      </a>
+    </ul>
+  </nav>
 </header>
-
-
-
-    
 
     <main>
       <!------- Studentenwerk ------->
+<div class="studentenwerk">
+    <h2>Wat maak je dan in deze minor?</h2>
 
-  <section class='werk' id="studentenwerk">
-    <h1>Stud&shy;enten&shy;werk</h1>
+    <p> <strong>Dat is een hele goede vraag.</strong> Omdat de minor Exclusive Design dit jaar voor het eerst bestaat weten we nog 
+      niet precies wat het gaat worden. In het verleden zijn er in andere minoren wel eens vergelijkbare projecten gedaan. 
+      Hieronder een paar voorbeelden. </p>
 
-    <ul>
       <!------- Werk 1 ------->
-      <li>
+      <article id="eric">
         <h2>Een gitaar voor Eric</h2>
-        <img src='/public/images/studentenwerk.productdesign.png' alt='Testen met Erik product muziek maken'>
-      
-        <p>Studentnaam</p>
-        <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
-      </li>
+        <p>
+          <strong>Eric wilde zijn hele leven al gitaar kunnen spelen.</strong> Sterker nog, hij wilde zijn hele leven kunnen <i>improviseren op een gitaar.</i> 
+          Helaas staan zijn handen net verkeerd. <strong> De opdracht aan de studenten was redelijk eenvoudig: zorg dat Eric kan improviseren op de gitaar. </strong> 
+        </p>
+
+        <p>
+          Het team heeft allerlei richtingen onderzocht. Ze hebben mallen gemaakt van zijn handen. Ze hebben overwogen om tools te maken om een gitaar 
+          op afstand mee aan te sturen. Uiteindelijk is het een <strong> compleet nieuw instrument geworden waarop Eric heel prettig kan improviseren. </strong> 
+          Ik wil er eigenlijk ook wel een, zo tof ziet het er uit. 
+         </p>
+          
+         <p> 
+           Op onderstaande video is Eric te zien en te horen als hij de allereerste keer zijn gitaar uitprobeert.
+          </p>
+
+          <video controls src="/public/video/eric-gitaar.mp4"></video>
+      </article>
 
       <!------- Werk 2 ------->
-      <li>
+      <article id="cc">
         <h2>Visueel rijke closed captions</h2>
-        <img src='/public/images/cc-werk.png' alt='Closed caption voor Avengers Infinty War'>
       
-        <p>Studentnaam</p>
-        <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
-      </li>
+        <p>
+          <strong> Voor mensen die niet kunnen horen zijn films vaak veel minder spannend. </strong> Veel van de spanning van films zit namelijk niet in het beeld,
+           maar in het geluid. De standaard manier om deze geluiden toegankelijk te maken is door ze te beschrijven in zogenaamde closed captions.
+           Deze beschrijvingen zijn in een neutraal, wit font, en ze staan meestal tussen vierkante haakjes. Bijvoorbeeld<i> *[langzaam aanzwellende vioolmuziek]*. </i> 
+           Dat kan beter.
+          </p>
+
+          <p>
+            Aan studenten van de minor Visual Interface Design geef ik al een aantal jaar  <strong> de opdracht om te proberen om het geluid wat ze horen in een filmfragment te visualiseren. </strong> 
+            Zorg er dus voor dat de spanning die wij horen zichtbaar wordt. Dit is een kleinere opdracht dan wat je kan verwachten in de minor Exclusive Design.
+          </p>
+
+          <p>
+            Hieronder enkele voorbeelden.
+          </p>
+
+          <img src='/public/images/closed-captions.gif' alt='Closed caption voor Avengers Infinty War'>
+      </article>
 
       <!-- ----- Werk 3 ----- -->
-      <li>
-        <h2>Werk 3</h2>
+      <article id="PROJECT3">
+        <h2>Titel project/opdracht</h2>
+        <p> <i>Hier komt uitleg over een project gefocust op exclusive design gemaakt door studenten.</i></p>
+        <img src='/public/images/dummy_img_01.png' alt='dummy img 01'>
+        <img src='/public/images/dummy_img_02.png' alt='dummy img 02'>
         <img src='/public/images/dummy_img_03.png' alt='dummy img 03'>
-      
-        <p>Studentnaam</p>
-        <p>Verhaaltje Verhaaltje Verhaaltje Verhaaltje</p>
-      </li>
-    </ul> 
-
-    <a href="/studentenwerk"> Meer werk bekijken..</a>
-
-  </section>
-
+      </article>
+  </div>
     </main>
 
     <footer>

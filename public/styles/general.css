@@ -24,6 +24,15 @@ main {
   margin: 0 auto;
 }
 
+main > div {
+  margin: 5rem 0rem 0rem 0rem;
+}
+
+img:not(footer img), video {
+  box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
+}
+
+
 /**********************/
 /*     TYPOGRAFIE     */
 /**********************/
@@ -46,10 +55,11 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Open Sans', sans-serif;
   margin: 1em 0em;
   line-height: 2rem;
+  max-width: 40rem;
 }
 
 a {
@@ -67,10 +77,6 @@ ul li {
   font-size: 1.125rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 2rem;
-}
-
-section:nth-of-type(2) h1 {
-  text-align: right;
 }
 
 /*********************/
@@ -123,9 +129,9 @@ header section{
 header::before {
   content: '';
   position: absolute;
-  top: -1.875rem;
-  left: 21.25rem;
-  width: 60.625rem;
+  top: -1.5rem;
+  left: 21rem;
+  width: 61rem;
   height: 10rem;
   background-color: #8be1e7cc;
   z-index: -1;
@@ -137,10 +143,10 @@ header::before {
 header::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 69.375rem;
-  width: 11.25rem;
-  height: 5.625rem;
+  top: 6rem;
+  left: 73rem;
+  width: 13rem;
+  height: 6rem;
   background-color: #96e7a8b3;
   z-index: -1;
   animation-name: green-to-pink;
@@ -151,10 +157,10 @@ header::after {
 header h1::before {
   content: '';
   position: absolute;
-  top: -0.625rem;
-  left: -0.625rem;
-  width: 6.875rem;
-  height: 8.75rem;
+  top: -0.5rem;
+  left: 1rem;
+  width: 7rem;
+  height: 9rem;
   background-color: #ed7acde6;
   z-index: -1;
   animation-name: pink-to-purple;
@@ -165,10 +171,10 @@ header h1::before {
 header h1::after {
   content: '';
   position: absolute;
-  top: 4.375rem;
-  left: 3.125rem;
-  width: 40.625rem;
-  height: 11.875rem;
+  top: 4.5rem;
+  left: 3rem;
+  width: 41rem;
+  height: 12rem;
   background-color: #96e7a8b3;
   z-index: -2;
   animation-name: green-to-pink;
@@ -176,11 +182,12 @@ header h1::after {
   animation-iteration-count: infinite;
 }
 
+/* 
 nav::after {
   content: '';
   position: absolute;
   top: -3.75rem;
-  left: -9.375rem;
+  left: -1.375rem;
   width: 24.7rem;
   height: 140px;
   background-color: rgba(237, 122, 205, 0.9);
@@ -188,26 +195,33 @@ nav::after {
   animation-name: pink-to-purple;
   animation-duration: 120s;
   animation-iteration-count: infinite;
-}
+} */
 
-/**********************/
-/*      NAVIGATIE     */
-/**********************/
+/********************************/
+/*  NAVIGATIE/menu beperkingen */
+/******************************/
 
 nav {
   position: absolute;
-  width: 10vw;
+  max-width: 24rem;
   height: auto;
   padding: 1rem;
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   margin: 1rem;
   text-align: right; 
-  right: 35rem;
-  top: 6.5rem;
+  right: 26rem;
+  top: 7.5rem;
 }
+
+nav div {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: .3rem;
+  border-radius: 5px;
+  box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
+}
+
 
 nav ul {
   display: inline-block;
@@ -231,7 +245,7 @@ nav ul li {
   margin: 1rem;
 }
 
-nav ul p {
+nav p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -244,6 +258,7 @@ nav ul button {
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   width: auto;
+  max-width: 15rem;
   color: white;
   border: none;
   padding: .5rem;
@@ -252,18 +267,19 @@ nav ul button {
   width: auto;
 }
 
-nav button#klik {
-  background-color: black;
+nav #klik {
+  background-color: rgb(0, 0, 0);
   border-radius: 50%;
-  height: 6.25rem;
-  min-width: 6.25rem;
+  border: white solid 1px;
+  height: 5.25rem;
+  min-width: 5.25rem;
   color: white;
-  border: none;
   transition: .5s ease;
   font-size: 1.75rem;
   font-family: 'Sansita', sans-serif;
   font-weight: 700;
   box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
 }
 
 /* state */ 
@@ -300,20 +316,20 @@ nav ul a:hover {
   color: rgb(205, 205, 205);
 }
 
-nav ul li:hover, nav ul button:hover, nav ul li:hover button {
+nav ul li:hover:not(li:first-of-type),
+nav ul button:hover,
+nav ul li:hover button,
+nav div #klik:hover,
+nav div #klik:focus {
   cursor: pointer;
   background-color:#232323;
 }
 
-nav button#klik:hover, nav button#klik:focus {
-  background-color: rgb(56, 56, 56);
-  cursor: pointer;
-  box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.25);
-}
 
-nav button#klik:focus {
-  transform: scale(1.2);
+nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus {
+  border: white dashed 1px;
   outline: none;
+  background-color:#232323;
 }
 
 /************************/
@@ -322,7 +338,8 @@ nav button#klik:focus {
 
 .show ul{
   display: inline-block;
-  right: -16px;
+  right: 0;
+  bottom: 0;
 }
 
 /*************************/
@@ -332,21 +349,15 @@ h2 {
   position: relative;
 }
 
-div > section:nth-of-type(1) {
-  /* width: 100vw; */
-  /* max-width: 40em; */
-  margin: 5rem 0em 0em 0rem;
-}
-
 /****************************/
 /*  STUDENTENWERK OVERVIEW  */
 /****************************/
 img {
-  width: 20vw;
-  height: auto;
+  max-width: 26vw;
+  max-height: 18vw;
 }
 
-section:nth-of-type(2) a {
+section:nth-of-type(2) > a {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
@@ -415,13 +426,6 @@ footer {
   height: 4rem;
 }
 
-/* footer a {
-  color: #ffffff;
-}
-
-footer a:hover {
-  color: #b6b6b6;
-} */
 
 footer img{
   width: 15vw;
