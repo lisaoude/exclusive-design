@@ -1,0 +1,133 @@
+/***********************************/
+/*       LAAG CONCENTRATIE       */
+/********************************/
+
+/**********************/
+/* TEKST VERPLAATSING*/
+/********************/
+
+.concentratie article:nth-of-type(odd) h2::before,
+.concentratie article:nth-of-type(even) h2::after, 
+.concentratie h1::before, .concentratie .studentenwerk > p, .concentratie .studentenwerk > h2 {
+    animation-name: text-moving;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie article:nth-of-type(odd) h2::after,
+.concentratie article:nth-of-type(even) h2::before, 
+.concentratie header span::before, 
+.concentratie section h1::after {
+    animation-name: text-moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.concentratie article:nth-of-type(even), .concentratie .overview section:nth-of-type(2) > p, .concentratie h2::after,
+.concentratie .minor-uitleg section:nth-of-type(2) ul:nth-of-type(even) li:nth-of-type(1), .concentratie .minor-uitleg section:nth-of-type(6) {
+    animation-name: text-moving;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie article:nth-of-type(odd),  .concentratie h2::before,
+.concentratie .minor-uitleg section:nth-of-type(2) ul:nth-of-type(odd) li:nth-of-type(1), .concentratie .minor-uitleg section:nth-of-type(5){
+    animation-name: text-moving;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+/********************/
+/* DRAAIEN BLOKKEN */
+/******************/
+
+.concentratie .minor-uitleg section:nth-of-type(3), 
+.concentratie .overview section:first-of-type img,
+.concentratie .minor-uitleg section:nth-of-type(4), 
+.concentratie .studentenwerk img  {
+    animation-name:  blocks-rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie .studentenwerk img:nth-of-type(odd)  {
+    animation-name:  blocks-rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie p::before, .concentratie h3::before,
+.concentratie .minor-uitleg section:nth-of-type(6) li:nth-of-type(7)::before  {
+    animation-name:  blocks-rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie .overview section:nth-of-type(2) ul li:nth-of-type(odd), 
+.concentratie .minor-uitleg section:nth-of-type(5) li:nth-of-type(odd)::before,
+.concentratie .minor-uitleg section:nth-of-type(6) li:nth-of-type(1)::before,
+.concentratie .minor-uitleg section:nth-of-type(7) p:nth-of-type(even) {
+    animation-name:  blocks-rotate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.concentratie .overview section:nth-of-type(2) ul li:nth-of-type(even), 
+.concentratie .minor-uitleg section:nth-of-type(5) li:nth-of-type(even)::before, 
+.concentratie .minor-uitleg section:nth-of-type(7) p:nth-of-type(odd) {
+    animation-name:  blocks-rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+/**************************/
+/*       ANIMATION       */
+/**************************/
+
+@keyframes text-moving {
+    0% {
+      transform:translateX(0rem)
+    }
+    25% {
+
+        transform: translateX(3rem);
+    }
+    50% {
+
+        transform:translateY(2rem)
+    }
+    75% {
+        transform:translateX(3rem);
+    }
+    100% {
+        transform:translateY(1rem);
+    }
+  }
+
+  @keyframes blocks-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+
+        transform: rotate(10deg);
+    }
+    50% {
+
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }

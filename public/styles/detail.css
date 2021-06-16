@@ -284,7 +284,7 @@
 .minor-uitleg section:nth-of-type(3){
   position: relative;
   top: -45rem;
-  left: 57rem;
+  left: 50rem;
   max-width: 20rem;
 }
 .minor-uitleg section:nth-of-type(3) h2,
@@ -321,7 +321,7 @@
 .minor-uitleg section:nth-of-type(4){
   position: relative;
   top: -33rem;
-  left: 59rem;
+  left: 50rem;
 }
 .minor-uitleg section:nth-of-type(4)::before {
   content: '';
@@ -454,7 +454,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   grid-template-rows: 1fr;
 }
 .minor-uitleg section:nth-of-type(6) li {
-  width: 75%;
+  width: 85%;
   margin-bottom: 0.5rem;
 }
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(1) {
@@ -475,6 +475,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(4) {
   grid-column-start: 1;
   grid-row-start: 4;
+  grid-column-end: -1;
 } 
 
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(5) {
@@ -498,7 +499,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   top: -2rem;
   left: -2rem;
   width: 20rem;
-  height: 27.5rem;
+  height: 22rem;
   transform: rotate(-7deg);
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -1;
@@ -515,7 +516,7 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   top: -2rem;
   left: 18rem;
   width: 17rem;
-  height: 27rem;
+  height: 23rem;
   transform: rotate(27deg);
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;

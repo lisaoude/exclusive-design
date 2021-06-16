@@ -1,6 +1,12 @@
 <h1>Exclusive Design</h1>
 <p><a href="https://exclusive-design.netlify.app/">Livelink</a></p>
+</br>
 <hr>
+</br>
+<p><img src="https://user-images.githubusercontent.com/57795294/122287333-1cc45080-cef1-11eb-9c39-8e463936abdc.png" alt="overviewpagina mockup"></p>
+</br>
+<hr>
+</br>
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#-opdracht">💬 Opdracht</a>
@@ -14,7 +20,9 @@
 <li><a href="#-npm-packages">📦 npm packages</a></li>
 <li><a href="#-bronnen">📚 Bronnen</a></li>
 </ul>
+</br>
 <hr>
+</br>
 <h2>💬 Opdracht</h2>
 <p>Volgend jaar begint de (halve) <strong>minor Exclusive Design.</strong> Wat jullie hebben gedaan bij het
 vak Human Centered Design gaan andere studenten dan tien weken lang doen. Ze gaan tien
@@ -27,11 +35,14 @@ om het web te bezoeken met beperkingen. Terwijl het tegelijkertijd natuurlijk we
 er nu nog niet, dus wordt er in eerste instantie werk uit andere minoren getoond wat
 aansluit bij de minor. De projecten die jullie bij het vak HCD hebben gedaan
 bijvoorbeeld.</p>
+</br>
 <hr>
+</br>
 <h2>:pencil2: Debrief</h2>
 <p>De volledige debrief is te vinden op <a href="https://www.notion.so/lisaoude/Debrief-991ec9b658554cc7b65f7a474989638f">deze Notion pagina</a>.</p>
 </br>
 <hr>
+</br>
 <h2>:crown: Prioriteitenlijst (MoSCoW):</h2>
 <h3>Must have</h3>
 <ul>
@@ -40,14 +51,14 @@ bijvoorbeeld.</p>
 <li>[x] Benoemen halve minor</li>
 <li>[x] Passende stijl toepassen</li>
 <li>[X] Showcase studentenwerk</li>
-<li>[ ] 2 lagen om te ervaren hoe het is om een beperking te hebben</li>
+<li>[x] 2 lagen om te ervaren hoe het is om een beperking te hebben</li>
 </ul>
 <h3>Should Have</h3>
 <ul>
 <li>[X] Maken in 11ty</li>
+<li>[x] Nonsense toevoegen</li>
 <li>[ ] Meerdere lagen om te ervaren hoe het is om een beperking te hebben</li>
 <li>[ ] Meerdere beperkingen ervaren + optie aan/uit zetten</li>
-<li>[ ] Nonsense toevoegen</li>
 </ul>
 <h3>Could Have</h3>
 <ul>
@@ -59,40 +70,49 @@ bijvoorbeeld.</p>
 <ul>
 <li>[ ] Website ziet er elke keer anders uit als je hem bezoekt</li>
 </ul>
+</br>
 <hr>
+</br>
 <h2>💻 Opbouw Project</h2>
 <p>Binnen dit project werken we met <strong><a href="https://www.11ty.dev/">11ty</a></strong>, dit is een simpele statische site generator. De map <code>_site</code> bevat alle bestanden die <em>client side</em> worden ingeladen en gegenereert zodra de server is opgestart. Dit kan met <code>npm run watch</code> of <code>nmp run start</code>. De map <code>_includes</code>bevat de template van de verschillende pagina's en partials die we inladen in de templates. Dit zijn <em>HTML</em> en <em>Nunjucks</em> bestanden. 11ty werkt samen met <code>.md</code> bestanden, hiermee worden verschillende webpagina's aangemaakt. In de <code>public</code> map staan de bestanden waarin wij binnen het project het meeste werken, dat is de CSS, JavaScript en afbeeldingen die we binnen de website gebruiken. <em>Binnen het project zijn we vooral veel gefocust op de CSS, waarmee we experimenteren met zowel de gehele styling als de opmaak van de teksten.</em></p>
+</br>
 <hr>
-<h2>⬇️ Installeren</h2>
-<ol>
-<li>
-<p>Clone dit project</p>
-<p>In terminal:</p>
+</br>
+<h2>:inbox_tray: Installeren</h2>
+<h3>1. :dancers: Clone deze repository</h3>
+<p>Voordat we van start kunnen gaan, zullen we de repository moeten clonen.<br>
+Dit kan worden gedaan door de volgende regel in de terminal te typen:</p>
 <pre><code>git clone https://github.com/lisaoude/exclusive-design/
 </code></pre>
-</li>
-<li>
-<p>Installeer dependencies</p>
+<br/>
+<h3>2. :computer: Installeer de dependencies</h3>
+<p>Als volgende zullen we de dependencies moeten installeren</p>
 <pre><code>npm install
 </code></pre>
-</li>
-<li>
-<p>Start the server:</p>
+<br/>
+<h3>3. :arrow_forward: Start de server</h3>
+<p>Vervolgens starten we de server op.<br>
+Dit kan worden gedaan door de volgende regel in de terminal te typen:</p>
 <pre><code>npm run start
 </code></pre>
 <p>of als je aanpassingen maakt en meteen wilt dat de server opnieuw opstart:</p>
 <pre><code>npm run watch
 </code></pre>
-</li>
-<li>
-<p>Ga naar localhost</p>
+<br/>
+<h3>4. :globe_with_meridians: Navigeer naar de localhost</h3>
+<p>We zijn er bijna! We hoeven alleen nog naar de localhost in de browser te navigeren.</p>
 <pre><code>http://localhost:8080/
 </code></pre>
-</li>
-</ol>
+<br/>
 <hr>
+</br>
+<h2>:closed_lock_with_key: License</h2>
+<p>Deze repository is gelicentieerd als <a href="https://github.com/lisaoude/exclusive-design/blob/main/LICENSE">MIT</a> by © Sanne Duinker &amp; Lisa Oude Elferink, 2021</p>
+<br/>
+<hr>
+</br>
 <h2>📦 npm packages</h2>
-<p>We hebben de package <a href="https://www.11ty.dev/">11ty</a> gebruikt voor de opbouw van dit project.</p>
+<p>We hebben de package <a href="https://www.11ty.dev/">11ty</a> gebruikt voor de opbouw van dit project.<br>
+11ty is een static site generator. In ons geval gebruiken wij 11ty om van de <code>.md</code> bestanden pagina's te maken. Vervolgens gebruiken wij Nunjucks om templates en template partials aan te maken waar de content uit de HTML bestanden in wordt geplaatst.</p>
+</br>
 <hr>
-<h2>📚 bronnen</h2>
-<p>hier komen bronnen te staan</p>

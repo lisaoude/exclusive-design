@@ -1,7 +1,19 @@
 /**********************************/
 /*  HEADINGS 2 | before, after */
 /********************************/
+/* hovers */
+.halve-minor h2:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(1rem 0.75rem #2e05131a);
+}
 
+.halve-minor h3:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0.75rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .halve-minor h2{
     position: relative;
 }
@@ -217,7 +229,7 @@
 /*********************/
 /*    RESPONSIVE    */
 /*******************/
-@media (max-width: 720px) {
+@media (max-width: 980px) {
 
     .halve-minor section:first-of-type article p:first-of-type{
         grid-column-start: 1;
