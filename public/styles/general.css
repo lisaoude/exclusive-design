@@ -18,6 +18,7 @@ body {
 }
 main {
   width: 88%;
+  max-width: 1150px;
   margin: 0 auto;
 }
 main > div {
@@ -95,7 +96,6 @@ header h2{
 header section{
   margin: 1rem 0rem 0rem 2rem;
   background-color: #ffd92f;
-  max-width: 40rem;
   padding: 10rem 5rem 1rem 10rem;
   text-align: center;
   position: fixed;
@@ -104,6 +104,7 @@ header section{
   z-index: 9;
   transform: rotate(30deg);
 }
+
 header::before {
   content: '';
   position: absolute;
@@ -290,9 +291,10 @@ h2 {
 /*  STUDENTENWERK OVERVIEW  */
 /****************************/
 img {
-  max-width: 26vw;
+  max-width: 20rem;
   max-height: 18vw;
 }
+
 section:nth-of-type(2) > a {
   display: flex;
   justify-content: center;
@@ -300,13 +302,16 @@ section:nth-of-type(2) > a {
   width: 100%;
   margin-bottom: 1rem;
 }
+
 section:not(header section) {
   margin-top: 2rem;
 }
+
 section h1 {
   position: relative;
   margin-bottom: 0.75rem;
 }
+
 section h1::before {
   content: '';
   position: absolute;
@@ -320,6 +325,7 @@ section h1::before {
   animation-duration: 120s;
   animation-iteration-count: infinite;
 }
+
 section h1::after {
   content: '';
   position: absolute;
@@ -333,6 +339,7 @@ section h1::after {
   animation-duration: 60s;
   animation-iteration-count: infinite;
 }
+
 section:nth-of-type(2) article {
   width: 20vw;
   text-align: right;
@@ -341,6 +348,7 @@ section:nth-of-type(2) article p:nth-of-type(1) {
   font-weight: 700;
   font-family: 'Sansita', sans-serif;
 }
+
 /* footer */
 footer {
   position: static;
@@ -361,7 +369,7 @@ footer img{
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
-@media (max-width: 720px) {
+@media (max-width: 980px) {
   img {
     max-width: 50vw;
     max-height: 50vw;
@@ -402,13 +410,6 @@ footer img{
     width: 100%;
   }
 
-  /**********************/
-  /*      NAVIGATIE     */
-  /**********************/
-  nav {
-    display: none;
-  }
-
   /***********************/
   /*     INFO MINOR     */
   /***********************/
@@ -421,6 +422,15 @@ footer img{
     width: auto;
   }
 
+}
+
+@media (max-width:720px) {
+  /**********************/
+/*      NAVIGATIE     */
+/**********************/
+nav {
+  display: none;
+}
 }
 
 @media (max-width: 1200px) {

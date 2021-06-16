@@ -135,7 +135,7 @@
     right: 0;
 }
 .overview section:nth-of-type(2) ul li p {
-  max-width: 26vw;
+  max-width: 20rem;
 }
 .overview section:nth-of-type(1) {
   width: auto;
@@ -228,73 +228,8 @@
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
-@media (max-width: 720px) {
-  .overview section:first-of-type > a img {
-    max-width: 45vw;
-    max-height: 45vw;
-  }
+@media (max-width: 1100px) {
 
-  .overview section:nth-of-type(2) {  
-    height: 138rem;
-  }
-
-  /***********************/
-  /*    STUDENTENWERK    */
-  /***********************/
-  .overview section:nth-of-type(2) h2 {
-    font-size: 24px;
-  }
-
-  .overview section:nth-of-type(2) > ul > li p {
-    width: 21rem;
-  }
-
-  .overview section:nth-of-type(2) > ul > li p{
-    max-width: 100%;
-  }
-
-
-  .overview ul li {
-    position: relative;
-  }
-
-  .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
-      top: 8rem;
-      left: 2rem;
-      transform: rotate(-10deg);
-  }
-
-  .overview section:nth-of-type(2) > ul li:first-of-type {
-    background-color: #8be1e7ae;
-  }
-
-    /* project 2 */
-
-    .overview section:nth-of-type(2) > ul > li:nth-of-type(2) {
-      top: 40rem;
-    left: 2rem;
-    transform: rotate(10deg);
-  }
-
-  .overview section:nth-of-type(2) > ul li:nth-of-type(2) {
-    background-color: #ed7accae;
-  }
-
-  /* project 3 */
-
-  .overview section:nth-of-type(2) > ul > li:nth-of-type(3) {
-    position: absolute;
-    top: 80rem;
-    left: 2rem;
-    transform: rotate(-10deg);
-  }
-
-  .overview section:nth-of-type(2) > ul li:nth-of-type(3) {
-    background-color: #96e7a8a0;
-  }
-
-}
-@media (max-width: 1100px){
   /********************************/
   /*    IMG NAAST INFO MINOR    */
   /*****************************/
@@ -322,7 +257,78 @@
   .overview > section:first-of-type > a { 
     font-size: 20px;
   }
-  /**********************/
-  /*   STUDENTENWERK   */
-  /********************/
+
+  .overview section:first-of-type > a img {
+    max-width: 30vw;
+    max-height: 45vw;
+  }
+
+  .overview section:nth-of-type(2) {  
+    height: 138rem;
+  }
+
+  /***********************/
+  /*    STUDENTENWERK    */
+  /***********************/
+  .overview section:nth-of-type(2) h2 {
+    font-size: 24px;
+  }
+
+  .overview section:nth-of-type(2) > ul > li p {
+    width: 21rem;
+  }
+
+  .overview section:nth-of-type(2) > ul > li p{
+    max-width: 100%;
+  }
+
+
+  .overview ul li {
+    position: relative;
+    max-width: 23rem;
+  }
+
+  .overview section:nth-of-type(2) > ul > li:nth-of-type(1) {
+    top: 8rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(-10deg);
+}
+
+
+
+  .overview section:nth-of-type(2) > ul li:first-of-type {
+    background-color: #8be1e7ae;
+  }
+
+    /* project 2 */
+
+    .overview section:nth-of-type(2) > ul > li:nth-of-type(2) {
+      top: 40rem;
+      right: 0;
+      left: 0;
+      margin: auto;
+     transform: rotate(10deg);
+  }
+
+  .overview section:nth-of-type(2) > ul li:nth-of-type(2) {
+    background-color: #ed7accae;
+  }
+
+  /* project 3 */
+
+  .overview section:nth-of-type(2) > ul > li:nth-of-type(3) {
+    position: absolute;
+    top: 80rem;
+    left: 0;
+    right:0;
+    margin: auto;
+    transform: rotate(-10deg);
+  }
+
+  .overview section:nth-of-type(2) > ul li:nth-of-type(3) {
+    background-color: #96e7a8a0;
+  }
+
 }
