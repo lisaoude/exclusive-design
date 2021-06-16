@@ -2,15 +2,6 @@
 /* DETAIL PAGINA - MINOR UITLEG */
 /********************************/
 
-/* Waar is dit voor?? Ik kan het opdracht niet vinden */
-
- /* div > a:first-of-type {
-  position: absolute;
-  top: 8rem;
-  left: 10rem;
-  font-size: 1.5rem;
-} */
-
 /********************************/
 /*           ALGEMEEN           */
 /********************************/
@@ -19,51 +10,40 @@
   display: grid;
   grid-template-columns: 1fr max-content 5fr;
 }
-
 .minor-uitleg > * {
   grid-column-start: 2;
 }
-
-
 /* section */
 .minor-uitleg section {
   width: 45vw;
 }
-
-
 /* h2 */
 .minor-uitleg h2 {
   font-size: 2.625rem;
 }
-
 .minor-uitleg section article + article h2 {
   margin-top: 2em;
 }
-
-
 /* span */
 .minor-uitleg section article > p > span {
   font-weight: 700;
 }
-
-
 /* markers voor li */
 .minor-uitleg ul li::marker {
   position: absolute;
   font-size: 1.5rem;
 }
-
 /********************************/
 /*   SECTION 1 - MINOR UITLEG   */
 /********************************/
+/* hover */
+.minor-uitleg section:nth-of-type(1) h2:hover {
+  transform: scale(1.02);
+}
 
-/* Zelfde voor deze? Als ik hem uitcomment verandert er niks hahaha */
-/* .minor-uitleg div > p a {
-  position: absolute;
-  top: 1rem;
-  font-size: 1.5rem;
-} */
-
+.minor-uitleg section:nth-of-type(1) h2 span:hover {
+  filter: drop-shadow(1rem 0.75rem #2e05131a);
+}
 
 /* first letters */
 .minor-uitleg section:nth-of-type(1) p::first-letter {
@@ -74,15 +54,14 @@
   line-height: 1em;
   margin: 0 .3em;
 }
-
 .minor-uitleg section:nth-of-type(1) p {
   position: relative;
 }
 
-
 .minor-uitleg section:nth-of-type(1) {
   max-width: 40em;
 }
+
 
 /* BEFORE & AFTERS */
 /* alle articles before */
@@ -90,23 +69,17 @@
   content: '';
   position: absolute;
   z-index: -1;
-  animation-iteration-count: infinite;
 }
-
 .minor-uitleg section:nth-of-type(1) article h2::after {
   content: '';
   position: absolute;
   z-index: -2;
-  animation-iteration-count: infinite;
 }
-
 .minor-uitleg section:nth-of-type(1) article p::before {
   content: '';
   position: absolute;
   z-index: -1;
 }
-
-
 /* article 1 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::before {
   top: .3rem;
@@ -115,7 +88,6 @@
   height: 3rem;
   background-color:rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(1) h2::after {
   top: -.25rem;
   left: 8.75rem;
@@ -123,7 +95,6 @@
   height: 2.75rem;
   background-color: rgba(139, 225, 231, 0.8);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(1) p::before {
   top: .5em;
   left: -.6em;
@@ -132,8 +103,6 @@
   background-color: rgba(150, 231, 168, 0.7);
   transform: rotate(-15deg);
 }
-
-
 /* article 2 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::before {
   top: .3rem;
@@ -142,7 +111,6 @@
   height: 5rem;
   background-color:rgba(150, 231, 168, 0.7);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(2) h2::after {
   top: -.3rem;
   left: 14rem;
@@ -150,7 +118,6 @@
   height: 4rem;
   background-color: rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(2) p::before {
   top: .5em;
   left: -.7em;
@@ -159,8 +126,6 @@
   background-color: rgba(139, 225, 231, 0.8);
   transform: rotate(105deg);
 }
-
-
 /* article 3 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::before {
   top: -.3rem;
@@ -169,7 +134,6 @@
   height: 5rem;
   background-color:rgba(139, 225, 231, 0.8);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(3) h2::after {
   top: 3rem;
   left: 8.5rem;
@@ -177,7 +141,6 @@
   height: 4rem;
   background-color: rgba(150, 231, 168, 0.7);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:nth-of-type(1)::before {
   top: 0;
   left: 0;
@@ -186,7 +149,6 @@
   background-color: rgba(237, 122, 205, 0.9);
   transform: rotate(10deg);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:nth-of-type(1)::after {
   content: '';
   position: absolute;
@@ -199,7 +161,7 @@
   z-index: -2;
 }
 
-.minor-uitleg section:nth-of-type(1)e article:nth-of-type(3) p:last-of-type:before {
+.minor-uitleg section:nth-of-type(1) article:nth-of-type(3) p:last-of-type:before {
   top: 0;
   left: 0;
   width: 70px;
@@ -207,8 +169,6 @@
   background-color: rgba(139, 225, 231, 0.8);
   transform: rotate(-5deg);
 }
-
-
 /* article 4 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::before {
   top: -1rem;
@@ -217,7 +177,6 @@
   height: 4.5rem;
   background-color:rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(4) h2::after {
   top: 2.5rem;
   left: 18rem;
@@ -225,7 +184,6 @@
   height: 5rem;
   background-color: rgba(150, 231, 168, 0.7);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(4) p::before {
   top: .25em;
   left: .25em;
@@ -234,8 +192,6 @@
   background-color: rgba(139, 225, 231, 0.8);
   transform: rotate(-7deg);
 }
-
-
 /* article 5 */
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::before {
   top: -.3rem;
@@ -244,7 +200,6 @@
   height: 3.5rem;
   background-color:rgba(139, 225, 231, 0.8);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(5) h2::after {
   top: 1rem;
   left: 8.5rem;
@@ -252,7 +207,6 @@
   height: 2.75rem;
   background-color:rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(1) article:nth-of-type(5) p::before {
   top: -9em;
   left: 2em;
@@ -262,16 +216,19 @@
   transform: rotate(17deg);
   z-index: -3;
 }
-
-
-
 /********************************/
 /*    SECTION 2 - LEERDOELEN    */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(2) li:nth-of-type(1):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+/* styling */
 .minor-uitleg section:nth-of-type(2) ul li:not(li:nth-of-type(1)) {
   margin: 0 0 0 2rem;
 }
-
 .minor-uitleg section:nth-of-type(2) ul li:nth-of-type(1) {
   font-size: 1.75rem;
   font-family: 'Sansita', sans-serif;
@@ -280,38 +237,32 @@
   list-style: none;
   height: 2.35rem;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(1) li:nth-of-type(1) {
   width: 11.5rem;
   background-color: #fffb00;
   box-shadow: -0.7rem 0 0 0 #fffb00;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(1) {
   width: 14.5rem;
   background-color: #de6ee2;
   box-shadow: -0.7rem 0 0 0 #de6ee2;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(3) li:nth-of-type(1) {
   width: 13rem;
   background-color: #8cd7ed;
   box-shadow: -0.7rem 0 0 0 #8cd7ed;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(4) li:nth-of-type(1) {
   width: 11rem;
   background-color: #8ec84c;
   box-shadow: -0.7rem 0 0 0 #8ec84c;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(4) li:nth-of-type(4) {
   font-size: 1rem;
   font-style: italic;
   list-style: none;
   margin: 1rem 0 0 0;
 }
-
 .minor-uitleg section:nth-of-type(2) ul:nth-of-type(4) li:nth-of-type(4) > a{
   font-size: 1rem;
   font-family: 'Sansita', sans-serif;
@@ -319,31 +270,29 @@
   color: black;
 }
 
-
-
-
-
-
-
-
-
 /********************************/
 /*   SECTION 3 - SEMESTER/BLOK  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(3):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(3){
   position: relative;
   top: -45rem;
   left: 57rem;
   max-width: 20rem;
 }
-
 .minor-uitleg section:nth-of-type(3) h2,
 .minor-uitleg section:nth-of-type(4) h2 {
   font-size: 2rem;
   font-family: 'Sansita', sans-serif;
   font-weight: 700;
 }
-
 .minor-uitleg section:nth-of-type(3)::before {
   content: '';
   position: absolute;
@@ -357,15 +306,23 @@
   animation-iteration-count: infinite;
 }
 
+
 /********************************/
 /* SECTION 4 - AANTAL STUDENTEN */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(4):hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 1rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(4){
   position: relative;
   top: -33rem;
   left: 59rem;
 }
-
 .minor-uitleg section:nth-of-type(4)::before {
   content: '';
   position: absolute;
@@ -378,11 +335,17 @@
   z-index: -1;
   animation-iteration-count: infinite;
 }
-
-
 /********************************/
 /*     SECTION 5 - COURSES      */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(5) li:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(5) {
   position: relative;
   top: -23rem;
@@ -390,7 +353,6 @@
   width: auto;
   height: 18rem;
 }
-
 .minor-uitleg section:nth-of-type(5) li {
   font-size: 1.25rem;
   font-weight: 700;
@@ -399,11 +361,9 @@
   padding: 2rem;
   z-index: 1;
 }
-
 .minor-uitleg section:nth-of-type(5) li span:hover {
 filter: drop-shadow(.3rem .2rem #0000002a);
 }
-
 /* prototyping */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(1) {
   position: absolute;
@@ -414,7 +374,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   width: 25rem;
   height: 6rem;
 }
-
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(1)::before {
   content: '';
   position: absolute;
@@ -426,8 +385,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
 }
-
-
 /* richtlijnen */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(2) {
   position: absolute;
@@ -437,7 +394,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   height: 9rem;
   z-index: 1;
 }
-
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(2)::before {
   content: '';
   position: absolute;
@@ -449,8 +405,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   background-color: rgba(237, 122, 205, 0.9);
   z-index: -1;
 }
-
-
 /* design research */
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(3) {
   position: absolute;
@@ -462,7 +416,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   width: 18rem;
   height: 7rem;
 }
-
 .minor-uitleg section:nth-of-type(5) li:nth-of-type(3)::before {
   content: '';
   position: absolute;
@@ -476,180 +429,111 @@ filter: drop-shadow(.3rem .2rem #0000002a);
 }
 
 
+
 /********************************/
 /*  SECTION 6 - TOELATINGSEISEN  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(6) ul:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.5rem 0.5rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(6) {
   position: relative;
   top: -8rem;
-  height: 45rem;
+  height: 54rem;
 }
-
 .minor-uitleg section:nth-of-type(6) ul {
   position: relative;
-  top: -26rem;
+  top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
-
 .minor-uitleg section:nth-of-type(6) li {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  list-style: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-  width: 15rem;
-  height: auto;
-  padding: 1rem 2rem;
-  z-index: 1;
+  width: 75%;
+  margin-bottom: 0.5rem;
 }
-
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(1) {
-  justify-content: center;
-  top: 30rem;
-  left: -2rem;
-  width: 13rem;
-  height: 7rem;
-}
+  grid-column-start: 1;
+  grid-row-start: 1;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(2) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(3) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(5) {
+  grid-column-start: 2;
+  grid-row-start: 1;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(6) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+} 
+
+.minor-uitleg section:nth-of-type(6) li:nth-of-type(7) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+} 
 
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(1)::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -2rem;
-  width: 16rem;
-  height: 7rem;
-  transform: rotate(-5deg);
-  background-color: rgba(237, 122, 205, 0.9);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(2) {
-  justify-content: center;
-  top: 35rem;
-  left: 12rem;
-  width: 16rem;
-  height: 6rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(2)::before {
-  content: '';
-  position: absolute;
   top: -2rem;
-  left: -1rem;
-  width: 18rem;
-  height: 10rem;
-  transform: rotate(10deg);
-  background-color: rgba(150, 231, 168, 0.7);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(3) {
-  justify-content: flex-start;
-  top: 31rem;
-  left: 30rem;
-  width: 18rem;
-  height: 5rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(3)::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
   left: -2rem;
   width: 20rem;
-  height: 7rem;
-  transform: rotate(-5deg);
-  background-color: rgba(139, 225, 231, 0.8);
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(4) {
-  justify-content: center;
-  top: 16rem;
-  left: 48rem;
-  width: 14rem;
-  height: 25rem;
-  z-index: -1;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(4)::before {
-  content: '';
-  position: absolute;
-  top: .5rem;
-  left: -2rem;
-  width: 16rem;
-  height: 24rem;
-  transform: rotate(2deg);
+  height: 27.5rem;
+  transform: rotate(-7deg);
   background-color: rgba(237, 122, 205, 0.9);
-  z-index: -2;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(5) {
-  text-align: right;
-  top: 39rem;
-  left: 56rem;
-  width: 20rem;
-  height: 10rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(5)::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 23rem;
-  height: 12rem;
-  transform: rotate(-5deg);
-  background-color: rgba(150, 231, 168, 0.7);
   z-index: -1;
 }
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(6) {
-  top: 18rem;
-  left: 65rem;
-  width: 10rem;
-  height: 15rem;
-}
-
-.minor-uitleg section:nth-of-type(6) li:nth-of-type(6)::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  width: 12rem;
-  height: 20rem;
-  transform: rotate(-25deg);
-  background-color: rgba(139, 225, 231, 0.8);
-  z-index: -1;
-}
-
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(7) {
   top: 9rem;
   left: 49rem;
   width: 24rem;
   height: 5rem;
 }
-
 .minor-uitleg section:nth-of-type(6) li:nth-of-type(7)::before {
   content: '';
   position: absolute;
   top: -2rem;
-  left: -2rem;
-  width: 25rem;
-  height: 9rem;
-  transform: rotate(-8deg);
-  background-color: rgba(150, 231, 168, 0.7);
+  left: 18rem;
+  width: 17rem;
+  height: 27rem;
+  transform: rotate(27deg);
+  background-color: rgba(139, 225, 231, 0.8);
   z-index: -1;
 }
-
-
 /********************************/
 /*   SECTION 7 - ALGEMENE INFO  */
 /********************************/
+/* hovers */
+.minor-uitleg section:nth-of-type(7) p:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0.75rem 0.75rem #2e05131a);
+}
+
+
+/* styling */
 .minor-uitleg section:nth-of-type(7) {
   margin-bottom: 5rem;
 }
-
 .minor-uitleg section:nth-of-type(7) article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -657,17 +541,14 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   grid-column-gap: 4rem;
   grid-row-gap: 3rem;
 }
-
 .minor-uitleg section:nth-of-type(7) article p {
   position: relative;
 }
-
 .minor-uitleg section:nth-of-type(7) article p::before {
   content: '';
   position: absolute;
   z-index: -1;
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(1)::before {
   top: -1rem;
   left: -3rem;
@@ -676,7 +557,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(-8deg);
   background-color: rgba(150, 231, 168, 0.7);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(2)::before {
   top: -1rem;
   left: -3rem;
@@ -685,7 +565,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(3deg);
   background-color: rgba(139, 225, 231, 0.8);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(3)::before {
   top: -1.5rem;
   left: -3rem;
@@ -694,7 +573,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(-10deg);
   background-color: rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(4)::before {
   top: -1.5rem;
   left: -3rem;
@@ -703,7 +581,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(3deg);
   background-color: rgba(139, 225, 231, 0.8);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(5)::before {
   top: -1.5rem;
   left: -2rem;
@@ -712,7 +589,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(-8deg);
   background-color: rgba(237, 122, 205, 0.9);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(6)::before {
   top: -1.5rem;
   left: -3rem;
@@ -721,7 +597,6 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   transform: rotate(5deg);
   background-color: rgba(150, 231, 168, 0.7);
 }
-
 .minor-uitleg section:nth-of-type(7) article p:nth-of-type(7)::before {
   top: -2rem;
   left: -3rem;
@@ -729,4 +604,16 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   height: 9rem;
   transform: rotate(-2deg);
   background-color: rgba(150, 231, 168, 0.7);
+}
+
+@media (max-width:1100px){
+
+  .minor-uitleg section, .minor-uitleg section:nth-of-type(5) {
+    width: 20%;
+  }
+
+  .minor-uitleg section:nth-of-type(1) {
+    max-width: 28em;
+  }
+
 }
