@@ -9,7 +9,7 @@ const maculaFilter = document.getElementById("maculaFilter");
 const buttonConcentration = document.querySelector('#concentratie');
 
 const buttonVasilis = document.querySelector('#vasilis');
-const selectForVasilis = document.querySelectorAll('main section');
+const selectForVasilis = document.querySelectorAll('main section') && document.querySelectorAll('.studentenwerk *')
 
 
 buttonMacula.addEventListener('click', () => {
