@@ -252,6 +252,7 @@
   text-decoration: underline;
   color: black;
 }
+
 /********************************/
 /*   SECTION 3 - SEMESTER/BLOK  */
 /********************************/
@@ -608,4 +609,16 @@ filter: drop-shadow(.3rem .2rem #0000002a);
   height: 9rem;
   transform: rotate(-2deg);
   background-color: rgba(150, 231, 168, 0.7);
+}
+
+@media (max-width:1100px){
+
+  .minor-uitleg section, .minor-uitleg section:nth-of-type(5) {
+    width: 22%;
+  }
+
+  .minor-uitleg section:nth-of-type(1) {
+    max-width: 28em;
+  }
+
 }
