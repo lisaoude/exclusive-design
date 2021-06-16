@@ -36,7 +36,7 @@ img:not(footer img), video {
 /**********************/
 h1 {
   /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: max(2.35rem, -0.875rem + 7.1vw);
+  font-size: max(2.35rem, -1.395rem + 7.1vw);
   font-family: 'Asset', cursive;
 }
 h2 {
@@ -173,7 +173,7 @@ nav {
   margin: 1rem;
   text-align: right; 
   right: 26rem;
-  top: 7.5rem;
+  top: 5.5rem;
 }
 nav div {
   display: flex;
@@ -400,7 +400,6 @@ footer img{
   }
 
   header section {
-    /* max-width: 26rem; */
     top: 0rem;
     right: 0rem;
     left: 0rem;
@@ -425,13 +424,43 @@ footer img{
 }
 
 @media (max-width:720px) {
+
   /**********************/
-/*      NAVIGATIE     */
-/**********************/
-nav {
-  display: none;
+  /*      NAVIGATIE     */
+  /**********************/
+
+  nav {
+    display: none;
+  }
+
 }
+
+@media (max-width:900px) {
+
+  /**********************/
+  /*      NAVIGATIE     */
+  /**********************/
+
+  body header nav {
+    top: 5rem;
+    left: 18rem;
+    right: auto;
+    max-width: 26rem;
+  }
+
+  nav div{
+    padding: .5rem;
+  }
+
+  nav #klik {
+    height: 4.25rem;
+    min-width: 4.25rem;
+    font-size: 1.5rem;
+    margin: .5rem .5rem .5rem 1rem;
+  }
+
 }
+
 
 @media (max-width: 1200px) {
 
@@ -439,20 +468,37 @@ nav {
   /*      NAVIGATIE     */
   /**********************/
   nav {
-    top: 1rem;
-    left: 12rem;
-    max-width: 23rem;
+    top: 4.5rem;
+    left: 20rem;
+    max-width: 28rem;
+    right: auto;
   }
 
-  nav p {
+  nav p{
     font-size: .9rem;
   }
+
+  nav div{
+    padding: .5rem;
+  }
+
+  nav #klik {
+    height: 4.25rem;
+    min-width: 4.25rem;
+    font-size: 1.5rem;
+    margin: .5rem .5rem .5rem 1rem;
+  }
 }
+
+
+
+
 
 
 /***********************/
 /*      ANIMATIES      */
 /***********************/
+
 @keyframes green-to-pink {
   0% {
     background-color: rgba(150, 231, 168, 0.7);
@@ -479,6 +525,7 @@ nav {
     animation-timing-function: ease-out;
   }
 }
+
 @keyframes pink-to-purple {
   0% {
     background-color: rgba(237, 122, 205, 0.9);
@@ -505,6 +552,7 @@ nav {
     animation-timing-function: ease-out;
   }
 }
+
 @keyframes blue-to-green {
   0% {
     background-color: rgba(139, 225, 231, 0.8);
@@ -531,11 +579,14 @@ nav {
     animation-timing-function: ease-out;
   }
 }
+
 @keyframes rotate-animate {
   0% {
     transform: rotate(0deg);
   }
+
   100%{
     transform: rotate(20deg);
   }
+
 }
