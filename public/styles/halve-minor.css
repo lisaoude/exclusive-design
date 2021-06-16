@@ -195,6 +195,15 @@
 /*    RESPONSIVE    */
 /*******************/
 @media (max-width: 720px) {
+
+    .halve-minor section:first-of-type article p:first-of-type{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        margin-top: 1rem;
+        max-height: 30rem;
+    }
+
     /*********************/
     /*  LIJSTJES MINORs  */
     /*******************/

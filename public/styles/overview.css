@@ -229,6 +229,10 @@
 /*     RESPONSIVE     */
 /**********************/
 @media (max-width: 1100px) {
+  .overview section:nth-of-type(2) img {
+    max-width: 20rem;
+    max-height: 21rem;
+}
 
   /********************************/
   /*    IMG NAAST INFO MINOR    */
@@ -259,7 +263,7 @@
   }
 
   .overview section:first-of-type > a img {
-    max-width: 30vw;
+    max-width: 42vw;
     max-height: 45vw;
   }
 
