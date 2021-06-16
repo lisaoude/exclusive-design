@@ -1,9 +1,8 @@
 .studentenwerk > article p {
-    width: 40vw;
+  width: 40vw;
 }
-
 .studentenwerk article {
-    margin: 5rem 0rem;
+  margin: 5rem 0rem;
 }
 
 /*******************************/
@@ -34,7 +33,7 @@
     background-color:#ed7acde6;
     z-index: -1;
   }
-  
+
   .studentenwerk  > h2::after {
     content: '';
     position: absolute;
@@ -57,8 +56,18 @@
     z-index: -1;
   }
 
-/*    PROJECT 1     */
+  .studentenwerk > p:first-of-type::before {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: .75rem;
+    width: 5rem;
+    height: 4.75rem;
+    background-color:  #8be1e7cc;
+    z-index: -1;
+  }
 
+/*    PROJECT 1     */
  .studentenwerk article:first-of-type h2::before {
     content: '';
     position: absolute;
@@ -69,7 +78,7 @@
     background-color:#ed7acde6;
     z-index: -1;
   }
-  
+
   .studentenwerk article:first-of-type h2::after {
     content: '';
     position: absolute;
@@ -130,8 +139,20 @@
     z-index: -1;
   }
 
-/*    PROJECT 3     */
 
+  .studentenwerk article:nth-of-type(2) p:first-of-type::before {
+    content: '';
+    position: absolute;
+    top: -.25rem;
+    left: .75rem;
+    width: 3rem;
+    height: 10.75rem;
+    background-color: #8be1e7cc;
+    transform: rotate(30deg);
+    z-index: -1;
+  }
+
+/*    PROJECT 3     */
   .studentenwerk article:nth-of-type(3) h2::before {
     content: '';
     position: absolute;
@@ -214,4 +235,41 @@
   margin: 0rem 1rem 0rem 0rem;
 }
 
- 
+@media (max-width: 820px){
+
+  .studentenwerk > article p {
+    width: 95%;
+  }
+  /************************/
+  /* PROJECT ERIC LAYOUT */
+  /************************/
+
+  .studentenwerk article:first-of-type  {
+      grid-template-columns: 1fr;
+  }
+
+  .studentenwerk article:first-of-type video {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    bottom: 0rem;
+ }
+
+ .studentenwerk article:first-of-type p:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+ }
+}
+@media (max-width:1100px){
+
+  .studentenwerk article:nth-of-type(2) img {
+    max-width: 25rem;
+    max-height: 25rem;
+    display: block;
+    margin: 1rem 0rem;
+  }
+}
+

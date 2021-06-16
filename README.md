@@ -54,9 +54,9 @@ De volledige debrief is te vinden op [deze Notion pagina](https://www.notion.so/
 
 ### Should Have
 - [X] Maken in 11ty
-- [ ] Nonsense toevoegen
 - [ ] Meerdere lagen om te ervaren hoe het is om een beperking te hebben
 - [ ] Meerdere beperkingen ervaren + optie aan/uit zetten
+- [ ] Nonsense toevoegen
 
 ### Could Have
 - [ ] Verbeterde ervaring voor mensen met beperking
