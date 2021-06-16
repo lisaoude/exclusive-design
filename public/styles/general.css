@@ -418,7 +418,7 @@ footer img{
 
 #vasilis:hover {
   color: #ffffff;
-  background-color: hotpink;
+  background-color: rgba(237, 122, 205, 0.9);
   cursor: pointer;
 }
 
@@ -441,7 +441,6 @@ footer img{
   100%{
     transform: rotate(0deg);
   }
-
 }
 
 
