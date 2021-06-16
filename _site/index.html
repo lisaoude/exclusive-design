@@ -11,6 +11,7 @@
   <link href="/public/styles/detail.css" rel="stylesheet">
   <link href="/public/styles/halve-minor.css" rel="stylesheet">
   <link href="/public/styles/studentenwerk.css" rel="stylesheet">
+  <link href="/public/styles/concentratiestoornis.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="/public/images/icon-site.png">
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,11 +23,18 @@
 
   <body>
     <header>
- <a href="/"><h1> <span> Exclu&shy;sive De&shy;sign </span></h1></a>
+  <a href="/">
+    <h1>
+      <span>
+        Exclu&shy;sive De&shy;sign
+      </span>
+      <span></span>
+    </h1>
+  </a>
 
 <section> 
   <h2> HALVE MINOR</h2>
-  <a href="/halve-minor"> wat houdt dit in?</a>
+  <a href="/halve-minor"> Kies er dus nog een!</a>
 </section>
 
 <nav>
@@ -39,13 +47,12 @@
     <p> 
         Test het eens! </p>
     <li><button id='macula'>Macula Degeneratie (oogaandoening)</button></li>
-    
     <li><button id='concentratie'>Concentratiestoornis</button></li>
-    
     <a href="#"> verbergen </a>
   </ul>
 </nav>
 
+<img id="maculaFilter" class="hideMacula" src="../public/images/macula.svg" alt="macula cursor">
 </header>
 
 
@@ -136,7 +143,8 @@
     </main>
 
     <footer>
-  
+  <button id='vasilis'>Vasilis filter</button>
+
   <img src="/public/images/HvA_logo_NL.png" alt="Hogeschool van Amsterdam Logo" >
 </footer>
 

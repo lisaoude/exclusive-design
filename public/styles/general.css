@@ -6,6 +6,7 @@
   padding: 0rem;
   box-sizing: border-box;
 }
+
 html {
   /* src: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
   scroll-behavior: smooth;
@@ -20,23 +21,25 @@ body {
 
 main {
   width: 90%;
-  max-width: 1170px;
   margin: 0 auto;
 }
+
 
 main > div {
   margin: 5rem 0rem 0rem 0rem;
 }
 
-img:not(footer img), video {
+img:not(footer img),
+video {
   box-shadow: 4px 4px 1px 1px rgba(88, 88, 88, 0.25);
 }
+
 /**********************/
 /*     TYPOGRAFIE     */
 /**********************/
 h1 {
   /*bron: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: max(2.35rem, -1.395rem + 7.1vw);
+  font-size: max(2.35rem, -0.795rem + 7.1vw);
   font-family: 'Asset', cursive;
 }
 h2 {
@@ -84,12 +87,26 @@ header {
 header > a {
   text-decoration-line: none;
 }
+
 header h1 {
   transition: .5s;
 }
 
 header span:nth-of-type(1) {
   filter: drop-shadow(.5rem .5rem #2e05131a);
+}
+
+/* macula cursor */
+header #maculaFilter {
+  position: fixed;
+  box-shadow: none;
+  width: 1400px;
+  z-index: 10;
+}
+
+.hideMacula {
+  display: none;
+  opacity: 0;
 }
 
 /************************/
@@ -113,7 +130,7 @@ header section {
   transform: rotate(30deg);
 }
 
-header span:nth-of-type(2):before {
+header span:nth-of-type(2)::before {
   content: '';
   position: absolute;
   top: -1.5rem;
@@ -140,6 +157,7 @@ header span:nth-of-type(2)::after {
   animation-duration: 100s;
   animation-iteration-count: infinite;
 }
+
 header h1::before {
   content: '';
   position: absolute;
@@ -153,6 +171,7 @@ header h1::before {
   animation-duration: 70s;
   animation-iteration-count: infinite;
 }
+
 header h1::after {
   content: '';
   position: absolute;
@@ -166,6 +185,7 @@ header h1::after {
   animation-duration: 50s;
   animation-iteration-count: infinite;
 }
+
 
 /********************************/
 /*  NAVIGATIE/menu beperkingen */
@@ -220,7 +240,7 @@ nav ul button {
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   width: auto;
-  max-width: 15rem;
+  max-width: 10rem;
   color: white;
   border: none;
   padding: .5rem;
@@ -251,7 +271,7 @@ nav ul li, nav ul button {
 }
 nav ul button {
   border: solid 2px white;
-  width: 16vw;
+  /* width: 16vw; */
   border-radius: 5px;
 }
 
@@ -304,11 +324,10 @@ h2 {
   position: relative;
 }
 
-
 /****************************/
 /*  STUDENTENWERK OVERVIEW  */
 /****************************/
-img {
+img:not(header img) {
   max-width: 20rem;
   max-height: 18vw;
 }
@@ -384,6 +403,31 @@ footer img{
   width: 12rem;
 }
 
+/* vasilis filter */
+#vasilis {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  width: 12rem;
+  height: 2.25rem;
+  border: none;
+  color: #000000;
+  background-color: #000000;
+  font-size: 1.1rem;
+}
+
+#vasilis:hover {
+  color: #ffffff;
+  background-color: hotpink;
+  cursor: pointer;
+}
+
+.vasilisOn {
+  transform: rotate(10deg);
+}
+
+
+
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
@@ -427,7 +471,7 @@ footer img{
   /*     INFO MINOR     */
   /***********************/
 
-  main {
+  .overview, .halve-minor, .studentenwerk {
     margin-top: 8rem;
   }
 
@@ -446,7 +490,6 @@ footer img{
   nav {
     display: none;
   }
-
 }
 
 @media (max-width:900px) {
@@ -456,8 +499,8 @@ footer img{
   /**********************/
 
   body header nav {
-    top: 5rem;
-    left: 18rem;
+    top: 6rem;
+    left: 14rem;
     right: auto;
     max-width: 26rem;
   }
@@ -482,7 +525,7 @@ footer img{
   /*      NAVIGATIE     */
   /**********************/
   nav {
-    top: 4.5rem;
+    top: 6.5rem;
     left: 20rem;
     max-width: 28rem;
     right: auto;
@@ -503,10 +546,6 @@ footer img{
     margin: .5rem .5rem .5rem 1rem;
   }
 }
-
-
-
-
 
 /***********************/
 /*      ANIMATIES      */

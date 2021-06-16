@@ -1,6 +1,13 @@
 /***********************/
 /*    IN DE MINOR..    */
 /***********************/
+/* hovers */
+.overview h2:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 0.75rem #2e05131a);
+}
+
+/* styling */
 .overview section:nth-of-type(1) h2::before {
   content: '';
   position: absolute;
@@ -80,8 +87,8 @@
 }
 
 .overview section:first-of-type > a img {
-  /* max-width: 20vw;
-  max-height: 20vw; */
+  max-width: 20vw;
+  max-height: 20vw;
   filter: saturate(80%);
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
@@ -148,7 +155,7 @@
 
 .overview section:nth-of-type(2) {
   position: relative;
-  height: 70rem;
+  height: 85rem;
 }
 
 .overview section:nth-of-type(2) > ul {
@@ -290,15 +297,6 @@
     height: 138rem;
   }
 
-  .overview section:first-of-type > a img {
-    max-width: 45vw;
-    max-height: 45vw;
-  }
-
-  .overview section:nth-of-type(2) {  
-    height: 138rem;
-  }
-
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
@@ -313,7 +311,6 @@
   .overview section:nth-of-type(2) > ul > li p{
     max-width: 100%;
   }
-
 
   .overview ul li {
     position: relative;

@@ -1,3 +1,10 @@
+/* hovers */
+.studentenwerk h2:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(1rem 0.75rem #2e05131a);
+}
+
+/* styling */
 .studentenwerk > article p {
   width: 40vw;
 }
