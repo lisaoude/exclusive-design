@@ -204,10 +204,21 @@
   z-index: -1;
 }
 
-/*******************/
-/*     STATES     */
-/*****************/
+.overview section:nth-of-type(2) ul + a {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+}
 
+.overview section:nth-of-type(2) > p a {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/**********************/
+/*       STATES       */
+/**********************/
 .overview section:nth-of-type(2) > ul li:hover {
   transform: scale(1.02);
   background-color: rgb(202, 202, 202);
@@ -279,6 +290,15 @@
     height: 138rem;
   }
 
+  .overview section:first-of-type > a img {
+    max-width: 45vw;
+    max-height: 45vw;
+  }
+
+  .overview section:nth-of-type(2) {  
+    height: 138rem;
+  }
+
   /***********************/
   /*    STUDENTENWERK    */
   /***********************/
@@ -308,8 +328,6 @@
     transform: rotate(-10deg);
 }
 
-
-
   .overview section:nth-of-type(2) > ul li:first-of-type {
     background-color: #8be1e7ae;
   }
@@ -327,6 +345,9 @@
   .overview section:nth-of-type(2) > ul li:nth-of-type(2) {
     background-color: #ed7accae;
   }
+  .overview > section:first-of-type > a img {
+    margin: 3em 2em 2em 0em;
+  }
 
   /* project 3 */
 
@@ -342,5 +363,7 @@
   .overview section:nth-of-type(2) > ul li:nth-of-type(3) {
     background-color: #96e7a8a0;
   }
-
+  .overview > section:first-of-type > a { 
+    font-size: 20px;
+  }
 }

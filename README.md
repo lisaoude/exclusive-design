@@ -49,7 +49,7 @@ De volledige debrief is te vinden op [deze Notion pagina](https://www.notion.so/
 - [X] Detailpagina met standaard informatie minor
 - [x] Benoemen halve minor
 - [x] Passende stijl toepassen
-- [ ] Showcase studentenwerk
+- [X] Showcase studentenwerk
 - [ ] 2 lagen om te ervaren hoe het is om een beperking te hebben
 
 ### Should Have

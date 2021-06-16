@@ -70,34 +70,38 @@ ul li {
   font-family: 'Open Sans', sans-serif;
   line-height: 2rem;
 }
+
 /*********************/
 /*       HEADER      */
 /*********************/
 header {
-  /* door margin verschuiven de blokken steeds */
   margin-top: 45px;
   margin-left: 25px;
+  position: relative;
   z-index: 10;
-  transition: 1s;
 }
-header > a{
+
+header > a {
   text-decoration-line: none;
 }
 header h1 {
   transition: .5s;
 }
-header h1 span{
+
+header span:nth-of-type(1) {
   filter: drop-shadow(.5rem .5rem #2e05131a);
 }
+
 /************************/
 /*     halve minor     */
 /**********************/
-header h2{
+header h2 {
   font-size: 2rem;
   letter-spacing: .5rem;
   filter: drop-shadow(.5rem .5rem #2e05131a); 
 }
-header section{
+
+header section {
   margin: 1rem 0rem 0rem 2rem;
   background-color: #ffd92f;
   padding: 10rem 5rem 1rem 10rem;
@@ -109,7 +113,7 @@ header section{
   transform: rotate(30deg);
 }
 
-header::before {
+header span:nth-of-type(2):before {
   content: '';
   position: absolute;
   top: -1.5rem;
@@ -122,7 +126,8 @@ header::before {
   animation-duration: 35s;
   animation-iteration-count: infinite;
 }
-header::after {
+
+header span:nth-of-type(2)::after {
   content: '';
   position: absolute;
   top: 6rem;
@@ -139,7 +144,7 @@ header h1::before {
   content: '';
   position: absolute;
   top: -0.5rem;
-  left: 1rem;
+  left: 0.75rem;
   width: 7rem;
   height: 9rem;
   background-color: #ed7acde6;
@@ -152,7 +157,7 @@ header h1::after {
   content: '';
   position: absolute;
   top: 4.5rem;
-  left: 3rem;
+  left: 3.5rem;
   width: 41rem;
   height: 12rem;
   background-color: #96e7a8b3;
@@ -237,6 +242,8 @@ nav #klik {
   box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.25);
   margin: 1rem;
 }
+
+
 /* state */ 
 nav ul li, nav ul button {
   background-color: #000000;
@@ -247,16 +254,16 @@ nav ul button {
   width: 16vw;
   border-radius: 5px;
 }
+
 /**********************/
 /*       STATES       */
 /**********************/
-header h1:hover, header a:focus h1 {
+header h1:hover,
+header a:focus h1 {
   transform: scale(1.02);
   filter: drop-shadow(1rem 1rem #2e05131a);
 }
-header:hover span{
-  filter: drop-shadow(.5rem .5rem #2e05131a);
-}
+
 a:focus {
   border: dashed 2px black;
   outline: none;
@@ -277,6 +284,9 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
   outline: none;
   background-color:#232323;
 }
+
+
+
 /************************/
 /*     SHOW BUTTON     */
 /**********************/
@@ -285,12 +295,16 @@ nav div #klik:focus, nav ul li:focus:not(li:first-of-type), nav ul button:focus 
   right: 0;
   bottom: 0;
 }
+
+
 /*************************/
 /*  INFO MINOR OVERVIEW  */
 /*************************/
 h2 {
   position: relative;
 }
+
+
 /****************************/
 /*  STUDENTENWERK OVERVIEW  */
 /****************************/
@@ -494,7 +508,6 @@ footer img{
 
 
 
-
 /***********************/
 /*      ANIMATIES      */
 /***********************/
@@ -584,7 +597,6 @@ footer img{
   0% {
     transform: rotate(0deg);
   }
-
   100%{
     transform: rotate(20deg);
   }
