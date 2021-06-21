@@ -497,6 +497,52 @@ footer img{
 
 }
 
+@media (max-width:500px) {
+
+  /**********************/
+  /*      NAVIGATIE     */
+  /**********************/
+  header span:nth-of-type(2)::before {
+    top: -0.5rem;
+    left: 4rem;
+    width: 14rem;
+    height: 5rem;
+  }
+
+  header span:nth-of-type(2)::after {
+    display: none;
+  }
+
+  header h1::before {
+    top: -0.5rem;
+    left: -1rem;
+    width: 3.5rem;
+    height: 4.5rem;
+  }
+
+  header h1::after {
+    top: 3rem;
+    left: 1.5rem;
+    width: 20rem;
+    height: 6rem;
+  }
+
+  section h1::before {
+    top: 2rem;
+    left: 2rem;
+    width: 19rem;
+    height: 7rem;
+  }
+  
+  section h1::after {
+    top: 6rem;
+    left: 8rem;
+    width: 10rem;
+    height: 4rem;
+  }
+}
+
+
 @media (max-width:720px) {
 
   /**********************/

@@ -248,11 +248,21 @@
   color: black;
 }
 
+
+
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
-@media (max-width: 1100px) {
+@media (max-width: 500px) {
+  .overview section:nth-of-type(2)::before {
+    top: -3rem;
+    left: 5rem;
+    width: 5rem;
+    height: 18rem;
+  }
+}
 
+@media (max-width: 1100px) {
   .overview section:nth-of-type(2) img {
     max-width: 20rem;
     max-height: 21rem;
