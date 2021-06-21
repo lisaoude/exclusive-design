@@ -1,6 +1,8 @@
 # Exclusive Design
 [Livelink](https://exclusive-design.netlify.app/)
 
+[Link naar design rationale](https://www.notion.so/lisaoude/Exclusive-Design-d595ec5aa18a4ca487e317a1b1fdf3d0)
+
 </br>
 
 ---
